@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // CSS
-import './index.css';
+import 'CSS/index.css';
 
 render( 
   App,
