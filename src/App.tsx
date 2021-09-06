@@ -1,12 +1,16 @@
 import { StrictMode } from 'react';
 // CSS
 import 'CSS/App.css'
+// COMPONENTS
+import Header from 'Sections/Header'
+import Main from 'Sections/Main';
+import Footer from 'Sections/Footer'
 
 const App = (
   <StrictMode>
-    <>
-      Kachii's Frontend Portfolio
-    </>
+    {Header}
+    {Main}
+    {Footer}
   </StrictMode>
 )
 
