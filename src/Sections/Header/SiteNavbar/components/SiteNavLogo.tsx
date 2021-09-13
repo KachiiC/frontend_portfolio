@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 // PROPS
-import { SiteNavLinkProps } from 'Props/HeaderProps'
+import { NavLinkProps } from 'Props/HeaderProps'
 
 
-const SiteNavLogo = (props: SiteNavLinkProps ) => {
+const SiteNavLogo = (props: NavLinkProps ) => {
 
     const linkLogic = props.link ? props.link : ""
 

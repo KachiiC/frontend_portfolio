@@ -4,15 +4,30 @@ import { SiteNavLinkProps } from 'Props/HeaderProps'
 
 const SiteNavLink = (props: SiteNavLinkProps) => {
 
-    const linkTypeLogic = props.type === "full" ? "site-nav-link" : "site-small-link"
+    // Logic dealing with size of the link 
+    const linkSizeLogic = props.type === "small" ? 
+        "site-small-link"
+        : 
+        "site-nav-link"
+
+    // Logic dealing with link type
+    const linkType = props.data.external_link ? 
+        <a href={props.data.external_link} 
+            target="_blank" 
+            rel="noreferrer"
+        >
+            {props.data.title}
+        </a>
+        :
+        <Link to={`/${props.data.link}`}>
+            {props.data.title}
+        </Link>
 
     return (
-        <div className={linkTypeLogic} 
+        <div className={linkSizeLogic} 
             onClick={props.click}
         >
-            <Link to={`/${props.link}`}>
-                {props.title}
-            </Link>
+            {linkType}
         </div>
     )
 }

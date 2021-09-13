@@ -12,10 +12,15 @@ export interface NavMenuProps {
     menu_type: string; 
 }
 
+export interface NavLinkProps {
+    link?: string | undefined; 
+    title?: string | undefined; 
+    external_link?: string;
+}
+
 export interface SiteNavLinkProps { 
     click?: any;
-    link?: string | undefined; 
-    title: string | undefined; 
+    data: NavLinkProps
     type?: string; 
 }
 

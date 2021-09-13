@@ -10,3 +10,11 @@ export interface SiteIconProps {
     type: string | undefined; 
     size: SizeProp | undefined; 
 }
+
+export interface LinkRendererProps {
+    title?: string | undefined; 
+    link?: string | undefined;
+    icon?: string;
+    content?: string | JSX.Element;
+    external_link?: string 
+}

@@ -11,16 +11,11 @@ const NavMenu = (props: NavMenuProps) => {
     const displayedNavLinks = props.data.map(page => {
 
         return props.menu_type === "full" ? 
-            <SiteNavLink
-                link={page.link}
-                title={page.title}
-                type="full"
-            /> 
+            <SiteNavLink data={page} /> 
             : 
             <SiteNavLink
                 click={props.click}
-                link={page.link}
-                title={page.title}
+                data={page}
                 type="small"
             />
 
