@@ -1,9 +1,12 @@
 /* Grid System */
 .site-grid {
-    display: -ms-grid;
     display: grid;
 }
 
+.site-grid-system {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
 
 .site-col-1 {
     grid-column: span 1;

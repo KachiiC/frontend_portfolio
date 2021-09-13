@@ -1,8 +1,11 @@
+// CSS
 import './Main.css'
+// COMPONENTS
+import PagesRouter from './Router/PagesRouter'
 
 const SiteMain = (
     <main>
-        Main Section
+        {PagesRouter}
     </main>
 )
 

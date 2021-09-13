@@ -1,13 +1,13 @@
 // COMPONENTS
-import {render} from 'react-dom';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {render} from 'react-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
 // CSS
-import 'CSS/index.css';
+import 'CSS/index.css'
 
-render( 
+render(
   App,
   document.getElementById('root')
 )
 
-reportWebVitals();
+reportWebVitals()

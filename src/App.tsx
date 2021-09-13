@@ -1,17 +1,21 @@
-import { StrictMode } from 'react';
+import { StrictMode } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 // CSS
 import 'CSS/App.css'
-// COMPONENTS
-import Header from 'Sections/Header'
-import Main from 'Sections/Main';
-import Footer from 'Sections/Footer'
+import 'CSS/KachiiStrap.css'
+// SECTIONS
+import SiteMain from 'Sections/Main'
+import SiteHeader from 'Sections/Header'
+import SiteFooter from 'Sections/Footer'
 
 const App = (
   <StrictMode>
-    {Header}
-    {Main}
-    {Footer}
+    <BrowserRouter>
+      {SiteHeader}
+      {SiteMain}
+      {SiteFooter}
+    </BrowserRouter>
   </StrictMode>
 )
 
-export default App;
+export default App
