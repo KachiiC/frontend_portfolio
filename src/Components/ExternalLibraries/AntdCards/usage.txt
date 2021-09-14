@@ -1,0 +1,14 @@
+Usage: 
+    <AntdCards 
+        data={HomeData.cards} 
+    />
+
+Example Data:
+
+const ExampleData = [
+    {
+        title: "Example Title",
+        description: "Example Description",
+        image: ExampleImage
+    }
+]
