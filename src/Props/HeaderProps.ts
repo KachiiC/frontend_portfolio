@@ -2,6 +2,7 @@ import { pageDataProps } from "./MainProps";
 
 export interface SiteNavbarProps { 
     title: string; 
+    menu_number: number;
     data: pageDataProps[]
 }
 

@@ -8,6 +8,7 @@ const SiteHeader = (
         <SiteNavbar
             title="Kachi's Portfolio" 
             data={PagesData}
+            menu_number={5}
         />
     </header>
 )

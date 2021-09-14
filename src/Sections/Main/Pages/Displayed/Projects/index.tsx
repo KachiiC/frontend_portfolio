@@ -1,5 +1,5 @@
 // COMPONENTS
-import AntdTabs from 'Components/ExternalLibraries/AntdTabs/index.d'
+import AntdTabs from 'Components/ExternalLibraries/AntdTabs'
 // DATA
 import ProjectsData from 'Data/Main/Displayed/ProjectsData'
 

@@ -12,6 +12,7 @@ const AntdTabs = (props: AntdTabsProps) => {
     const { TabPane } = Tabs;
 
     const sizeLogic = props.size ? props.size : "small"
+    const positionLogic = props.position ? props.position : "top"
     
     const renderTabs = props.data.map(tab =>
         <TabPane 
@@ -28,6 +29,7 @@ const AntdTabs = (props: AntdTabsProps) => {
 
     return (
         <Tabs 
+            tabPosition={positionLogic}
             centered
             defaultActiveKey="0"
             size={sizeLogic}

@@ -1,7 +1,11 @@
-const About = (
-    <>
-        <h1>About Content</h1>
-    </>
-)
+const About = () => {
+
+    return (
+        <>
+            <h1>About</h1>
+        </>
+    );
+}
+
 
 export default About

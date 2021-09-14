@@ -13,7 +13,10 @@ const SiteNavbar = (props: SiteNavbarProps) => {
 
     const [smallMenu, setSmallMenu] = useState(false)
     const displayLogic = () => {
-        !smallMenu ? setSmallMenu(true) : setSmallMenu(false)
+        !smallMenu ? 
+            setSmallMenu(true) 
+            : 
+            setSmallMenu(false)
     }
     
     return (
@@ -22,7 +25,7 @@ const SiteNavbar = (props: SiteNavbarProps) => {
                 <SiteNavLogo title={props.title} />
                 <NavMenu 
                     data={props.data} 
-                    menu_number={5}
+                    menu_number={props.menu_number}
                     menu_type="full"
                 />
                 <SmallMenuIcon click={displayLogic}/>

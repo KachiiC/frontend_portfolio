@@ -7,12 +7,10 @@ import SiteIcon from "Tools/SiteIcon";
 export const FooterHeading = (props: {heading?: string}) => {
     // IF HEADING, display heading
     const headingLogic = () => {
-        if (props.heading) return <h3>{props.heading}</h3>
+        if (props.heading) return props.heading
     }
 
-    return (
-        <>{headingLogic()}</>
-    )
+    return <h3>{headingLogic()}</h3>
     
 }
 

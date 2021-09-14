@@ -10,7 +10,7 @@ import { FooterHeading, FooterCopyRight } from './components/FooterItems'
 const SiteFooter = (
     <footer>
         <FooterHeading 
-            heading=""
+            heading="Useful Links" 
         />
         <FooterSection 
             data={FooterLogoData} 
@@ -26,4 +26,5 @@ const SiteFooter = (
         />
     </footer>
 )
+
 export default SiteFooter

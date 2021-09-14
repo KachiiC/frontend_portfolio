@@ -5,11 +5,10 @@ const DataOverview = {
         instagram: "basically_mma",
         github: "KachiiC",
         twitter: "twitter",
-        html: ""
-        // pintrest: "pintrest",
-        // snapchat: "snapchat",
-        // tiktok: "tiktok",
-        // youtube: "youtube",
+        pintrest: "pintrest",
+        snapchat: "snapchat",
+        tiktok: "tiktok",
+        youtube: "youtube",
     },
     footer_pages: {
         // Replace this with your own pages or remove key and value if not required 

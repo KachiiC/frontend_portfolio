@@ -3,6 +3,14 @@ import { SingleTabProps } from "../AntdTabsProps"
 
 const SingleTab = (props: SingleTabProps) => {
 
+    const titleLogic = () => {
+        if (props.title) return (
+            <h1 className="tabs-title">
+                {props.title}
+            </h1>
+        )
+    }
+
     const descriptionLogic = () => {
         if (props.description) return (
             <p className="tabs-description">
@@ -13,9 +21,7 @@ const SingleTab = (props: SingleTabProps) => {
 
     return (
         <>
-            <h1 className="tabs-title">
-                {props.title}
-            </h1>
+            {titleLogic()}
             {descriptionLogic()}
             <div className="tabs-content">
                 {props.content}
