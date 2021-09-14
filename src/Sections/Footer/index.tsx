@@ -3,28 +3,19 @@ import { FooterLogoData, FooterPages } from 'Data/Footer/FooterData'
 // CSS
 import './Footer.css'
 // COMPONENTS
-import FooterSection from './components/FooterSection'
-import { FooterHeading, FooterCopyRight } from './components/FooterItems'
+import SiteFooter from './components/SiteFooter'
 
 
-const SiteFooter = (
+const Footer = (
     <footer>
-        <FooterHeading 
-            heading="Useful Links" 
-        />
-        <FooterSection 
-            data={FooterLogoData} 
-            type="logos"
-        />
-        <FooterSection 
-            data={FooterPages} 
-            type="links"
-        />
-        <FooterCopyRight 
-            name="Kachi Cheong" 
-            year="2021" 
+        <SiteFooter 
+            heading="Useful Links"
+            logo_data={FooterLogoData}
+            links_data={FooterPages}
+            name="Kachi Cheong"
+            year="2021"
         />
     </footer>
 )
 
-export default SiteFooter
+export default Footer
