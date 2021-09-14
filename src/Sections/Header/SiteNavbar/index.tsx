@@ -22,7 +22,7 @@ const SiteNavbar = (props: SiteNavbarProps) => {
                 <SiteNavLogo title={props.title} />
                 <NavMenu 
                     data={props.data} 
-                    menu_number={4}
+                    menu_number={5}
                     menu_type="full"
                 />
                 <SmallMenuIcon click={displayLogic}/>

@@ -5,6 +5,7 @@ const DataOverview = {
         instagram: "basically_mma",
         github: "KachiiC",
         twitter: "twitter",
+        html: ""
         // pintrest: "pintrest",
         // snapchat: "snapchat",
         // tiktok: "tiktok",
@@ -19,8 +20,5 @@ const DataOverview = {
         code: <h1>Code</h1>
     }
 }
-
-// Remove when using your own pages
-// FooterPagesExampleRender(DataOverview.footer_pages)
 
 export default DataOverview

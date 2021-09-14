@@ -1,13 +1,12 @@
-// CSS
-import './Projects.css'
 // COMPONENTS
-
+import AntdTabs from 'Components/ExternalLibraries/AntdTabs/index.d'
+// DATA
+import ProjectsData from 'Data/Main/Displayed/ProjectsData'
 
 const Projects = (
     <>
-        <h1>Projects Content</h1>
-        <div className="">
-        </div>
+        <h1>Kachii's Projects</h1>
+        <AntdTabs data={ProjectsData} />
     </>
 )
 

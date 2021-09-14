@@ -19,7 +19,7 @@ const PagesData = [
         content: About
     },
     {
-        title: "Source Code",
+        title: "Code",
         external_link: "https://github.com/KachiiC/portfolio"
     }
 ]
