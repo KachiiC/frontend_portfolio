@@ -1,10 +1,9 @@
+// PROPS
+import { SectionExampleProps } from 'Props/DataProps'
 // COMPONENTS
 import SectionExample from 'Components/SiteComponents/SectionExampleComponent'
 // DATA
 import NavSectionData from 'Data/Main/Displayed/Components/MyComponents/NavbarData'
-// PROPS
-import { SectionExampleProps } from 'Props/DataProps'
-
 
 const displaySections = NavSectionData.map((nav: SectionExampleProps) => (
     <SectionExample
