@@ -48,3 +48,27 @@ export interface ModalComponent {
     content: JSX.Element; 
     type: "blank" | "modal" 
 }
+
+// TABS COMPONENTS
+export interface singleTabProps {
+    title: string; 
+    content: JSX.Element
+    width?: number
+}
+
+export interface TabProps {
+    width?: number; 
+    data: singleTabProps[]
+}
+
+export interface TabHeadingProps { 
+    click: any; 
+    direction: string; 
+    title: string; 
+    width: number | undefined
+}
+
+export interface TabContentProps { 
+    width: number | undefined; 
+    content: JSX.Element 
+}

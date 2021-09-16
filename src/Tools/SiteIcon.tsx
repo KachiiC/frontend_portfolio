@@ -13,7 +13,7 @@ import {
     faTwitter, 
     faYoutube 
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const SiteIcon = (props: SiteIconProps) => {
 
@@ -22,6 +22,9 @@ const SiteIcon = (props: SiteIconProps) => {
     switch(props.type) {
         case "bars":
             icon = faBars
+            break;
+        case "down":
+            icon = faCaretDown
             break;
         case "facebook":
             icon = faFacebook
@@ -32,8 +35,14 @@ const SiteIcon = (props: SiteIconProps) => {
         case "instagram":
             icon = faInstagram
             break;
+        case "left":
+            icon = faCaretLeft
+            break;
         case "pintrest":
             icon = faPinterest
+            break;
+        case "right":
+            icon = faCaretRight
             break;
         case "snapchat":
             icon = faSnapchat
@@ -46,6 +55,9 @@ const SiteIcon = (props: SiteIconProps) => {
             break;
         case "twitter":
             icon = faTwitter
+            break;
+        case "up":
+            icon = faCaretUp
             break;
         case "youtube":
             icon = faYoutube

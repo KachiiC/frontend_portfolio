@@ -1,5 +1,4 @@
-// COMPONENTS
-// DATA
+import './About.css'
 
 const About = () => {
 

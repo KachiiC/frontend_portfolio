@@ -1,0 +1,25 @@
+.site-tabs-container {
+    margin: 20px auto;
+}
+
+.tab-icon {
+    float: right;
+    margin-right: 10px 
+}
+
+.site-tab {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+}
+
+.site-tab-content {
+    border: 1px solid black;
+}
+
+.site-tab,
+.site-tab-content {
+    padding: 10px;
+}

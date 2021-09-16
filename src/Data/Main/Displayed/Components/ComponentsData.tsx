@@ -1,25 +1,36 @@
 // COMPONENTS
 import AntdTabs from "Components/ExternalLibraries/AntdTabs"
 import GalleryComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/GalleryComponent"
-import SiteNavbarComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/NavbarComponent"
-import SiteFooterComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/SiteFooterComponent"
+import ModalComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ModalComponent"
+import NavbarComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/NavbarComponent"
+import FooterComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/FooterComponent"
+import TabsComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/TabsComponent"
 
-export const ComponentsLibraryData = [
+export const MyComponentsData = [
+    {
+        title: "Site Navbar",
+        content: NavbarComponent,
+    },
+    {
+        title: "Site Footer",
+        content: FooterComponent,
+    },
     {
         title: "Site Gallery",
         content: GalleryComponent
     },
     {
-        title: "Site Navbar",
-        content: SiteNavbarComponent,
+        title: "Site Modal",
+        content: ModalComponent,
     },
     {
-        title: "Site Footer",
-        content: SiteFooterComponent,
-    },
+        title: "Site Tabs",
+        content: TabsComponent
+    }
+
 ]
 
-export const MyComponentsData = [
+export const ComponentsLibraryData = [
     {
         title: "Antd Tables",
         description: "Antd Tables description",
@@ -39,13 +50,13 @@ export const MyComponentsData = [
 
 export const ComponentsData = [
     {
+        title: "My Components",
+        description: "Components Built by Kachii",
+        content: <AntdTabs data={MyComponentsData} position="left" />,
+    },
+    {
         title: "Component Libraries",
         description: "This is list of components built by myself with React and typescript",
         content: <AntdTabs data={ComponentsLibraryData} position="left" />,
     },
-    {
-        title: "My Components",
-        description: "Components Built by Kachii",
-        content: <AntdTabs data={MyComponentsData} position="left" />,
-    }
 ]
