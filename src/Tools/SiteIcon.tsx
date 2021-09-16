@@ -4,7 +4,7 @@ import { SiteIconProps } from "Props/ToolProps";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { 
     faFacebook, 
-    faGithub, 
+    faGithub,
     faHtml5, 
     faInstagram, 
     faPinterest, 
@@ -13,7 +13,7 @@ import {
     faTwitter, 
     faYoutube 
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const SiteIcon = (props: SiteIconProps) => {
 
@@ -40,6 +40,9 @@ const SiteIcon = (props: SiteIconProps) => {
             break;
         case "tiktok":
             icon = faTiktok
+            break;
+        case "times":
+            icon = faTimes
             break;
         case "twitter":
             icon = faTwitter

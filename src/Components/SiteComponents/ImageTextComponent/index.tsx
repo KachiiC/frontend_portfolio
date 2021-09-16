@@ -1,7 +1,7 @@
 // CSS
 import './ImageText.css'
 // PROPS
-import { ImageTextComponentProps } from "./ImageTextProps"
+import { ImageTextComponentProps } from 'Props/ComponentProps'
 // COMPONENTS
 import ImageTextRow from "./components/ImageTextRow"
 

@@ -1,6 +1,5 @@
 // PROPS
-import { ImageTextRowProps } from "../ImageTextProps"
-
+import { ImageTextRowProps } from "Props/ComponentProps"
 
 const ImageTextRow = (props: ImageTextRowProps) => (
     <>

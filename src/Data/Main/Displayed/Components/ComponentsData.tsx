@@ -1,9 +1,14 @@
 // COMPONENTS
 import AntdTabs from "Components/ExternalLibraries/AntdTabs"
+import GalleryComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/GalleryComponent"
 import SiteNavbarComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/NavbarComponent"
 import SiteFooterComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/SiteFooterComponent"
 
 export const ComponentsLibraryData = [
+    {
+        title: "Site Gallery",
+        content: GalleryComponent
+    },
     {
         title: "Site Navbar",
         content: SiteNavbarComponent,

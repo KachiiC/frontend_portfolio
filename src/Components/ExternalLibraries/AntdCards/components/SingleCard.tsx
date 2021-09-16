@@ -6,23 +6,25 @@ import CardComponent from "./CardComponent"
 
 const SingleCard = (props: singleCardProps) => {
 
+    const { description, image, link, title } = props
+
     const cardComponent = (
         <CardComponent
-            image={props.image}
-            title={props.title}
-            description={props.description}
+            image={image}
+            title={title}
+            description={description}
         />
     )
 
-    const linkLogic = props.link ? 
-        <a href={props.link} 
+    const linkLogic = link ? 
+        <a href={link} 
             target="_blank" 
             rel="noreferrer"
         >
             {cardComponent}
         </a>
         :
-        <Link to={`/${props.title}`}>
+        <Link to={`/${title}`}>
             {cardComponent}
         </Link>
 
