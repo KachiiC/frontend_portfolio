@@ -1,0 +1,8 @@
+.filter-table {
+    width: 100%;
+}
+
+.filter-table td,
+.filter-table th {
+    border: 1px solid black;
+}

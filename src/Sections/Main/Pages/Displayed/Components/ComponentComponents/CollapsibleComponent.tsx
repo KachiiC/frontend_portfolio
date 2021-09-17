@@ -5,6 +5,7 @@ import SiteTabsComponent from "Components/SiteComponents/SiteCollapsible"
 
 const CollapsibleTabsComponent = (
     <>
+        <p>This is a collapsible component.</p>
         <SiteTabsComponent data={CollapsibleData} />
     </>
 )

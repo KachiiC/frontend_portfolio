@@ -12,6 +12,7 @@
     padding: 15px;
     font-size: 15px;
     min-width: 200px;
+    user-select: none;
 }
 
 .site-tab-link:last-child {
@@ -21,5 +22,10 @@
 .site-tab-content {
     color: white;
     padding: 20px;
-    min-height: 350px
+    min-height: 350px;
+    overflow-y: scroll;
+}
+
+.site-tab-rows::-webkit-scrollbar {
+    display: none;
 }

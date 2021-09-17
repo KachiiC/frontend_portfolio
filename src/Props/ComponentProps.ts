@@ -51,7 +51,7 @@ export interface ModalComponent {
     type: "blank" | "modal" 
 }
 
-// TABS COMPONENTS
+// COLLAPSIBLE COMPONENT
 export interface singleCollapsibleProps {
     title: string; 
     content: JSX.Element
@@ -77,14 +77,15 @@ export interface CollapsibleContentProps {
 
 // TAB PROPS
 
-export interface SiteTabsProps {
-    data: {
-        title: string; 
-        content: JSX.Element
-    }[]
-    width?: number
+export interface SingleTab {
+    title: string; 
+    content: JSX.Element
 }
 
+export interface SiteTabsProps {
+    data: SingleTab[]
+    width?: number
+}
 
 export interface TabLinkProps { 
     click: MouseEventHandler<HTMLDivElement>;
@@ -93,4 +94,30 @@ export interface TabLinkProps {
 
 export interface TabContentProps { 
     content: JSX.Element 
+}
+
+// FLIP CARD PROPS
+
+export interface SiteFlipCardProps { 
+    dimensions?: number | string | undefined; 
+    front: string; 
+    back: JSX.Element 
+}
+
+export interface FlipFrontProps {
+    image: string;
+    height: number | string | undefined; 
+    width: number | string | undefined; 
+}
+
+export interface FlipBackProps {
+    content: JSX.Element
+}
+
+// YOUTUBE PROPS
+
+export interface YoutubeProps {
+    id: string;
+    width?: string;
+    height?: string;
 }

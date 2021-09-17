@@ -24,6 +24,10 @@
     overflow-y: scroll;
 }
 
+.modal-container-content::-webkit-scrollbar {
+    display: none;
+}
+
 /* The Close Button */
 .blank-close {
     position: absolute;
@@ -42,3 +46,4 @@
 .blank-close:focus {
     color: rgb(208, 201, 0);
 }
+

@@ -9,30 +9,29 @@ import TabsComponent from "Sections/Main/Pages/Displayed/Components/ComponentCom
 
 export const MyComponentsData = [
     {
-        title: "Site Navbar",
+        title: "Navbar",
         content: NavbarComponent,
     },
     {
-        title: "Site Footer",
+        title: "Footer",
         content: FooterComponent,
     },
     {
-        title: "Site Collapsible",
+        title: "Collapsible",
         content: CollapsibleComponent
     },
     {
-        title: "Site Gallery",
+        title: "Gallery",
         content: GalleryComponent
     },
     {
-        title: "Site Modal",
+        title: "Modal",
         content: ModalComponent,
     },
     {
-        title: "Site Tabs",
+        title: "Tabs",
         content: TabsComponent
-    },
-
+    }
 ]
 
 export const ComponentsLibraryData = [

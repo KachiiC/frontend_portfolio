@@ -13,7 +13,6 @@ const RowImage = (props: GalleryImageProps) => {
                 onClick={click}
             />
         </div>
-
     )
 }
 

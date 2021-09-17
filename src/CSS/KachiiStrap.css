@@ -3,6 +3,10 @@
     display: grid;
 }
 
+.site-flex {
+    display: flex;
+}
+
 .site-grid-system {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
