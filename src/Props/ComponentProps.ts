@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 // IMAGE TEXT PROPS
 export interface ImageTextRowProps {
     title: string;
@@ -21,7 +23,7 @@ export interface SectionExampleProps {
 export interface GalleryImageProps {
     title: string;
     image: string;
-    click?: any;
+    click?: MouseEventHandler<HTMLDivElement>;
     width?: number
 }
 
@@ -34,12 +36,12 @@ export interface GalleryProps {
 // MODAL PROPS
 export interface modalContentProps { 
     content: JSX.Element;
-    click: any;
+    click: MouseEventHandler<HTMLDivElement>;
     type: "blank" | "modal";
 }
 
 export interface closeButtonProps {
-    click: any; 
+    click: MouseEventHandler<HTMLDivElement>; 
     type: "blank" | "modal"
 }
 
@@ -50,25 +52,45 @@ export interface ModalComponent {
 }
 
 // TABS COMPONENTS
-export interface singleTabProps {
+export interface singleCollapsibleProps {
     title: string; 
     content: JSX.Element
     width?: number
 }
 
-export interface TabProps {
+export interface CollapsibleProps {
     width?: number; 
-    data: singleTabProps[]
+    data: singleCollapsibleProps[]
 }
 
-export interface TabHeadingProps { 
-    click: any; 
+export interface CollapsibleHeadingProps { 
+    click: MouseEventHandler<HTMLDivElement>; 
     direction: string; 
     title: string; 
     width: number | undefined
 }
 
-export interface TabContentProps { 
+export interface CollapsibleContentProps { 
     width: number | undefined; 
+    content: JSX.Element 
+}
+
+// TAB PROPS
+
+export interface SiteTabsProps {
+    data: {
+        title: string; 
+        content: JSX.Element
+    }[]
+    width?: number
+}
+
+
+export interface TabLinkProps { 
+    click: MouseEventHandler<HTMLDivElement>;
+    title: string;
+} 
+
+export interface TabContentProps { 
     content: JSX.Element 
 }

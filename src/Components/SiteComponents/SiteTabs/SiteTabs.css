@@ -1,0 +1,25 @@
+.site-tab-rows {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.site-tab-link {
+    background-color: black;
+    border-right: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 15px;
+    font-size: 15px;
+    min-width: 200px;
+}
+
+.site-tab-link:last-child {
+    border: none;
+}
+
+.site-tab-content {
+    color: white;
+    padding: 20px;
+    min-height: 350px
+}

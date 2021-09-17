@@ -1,13 +1,13 @@
-.site-tabs-container {
+.site-collapsible-container {
     margin: 20px auto;
 }
 
-.tab-icon {
+.collapsible-icon {
     float: right;
     margin-right: 10px 
 }
 
-.site-tab {
+.site-collapsible {
     font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
@@ -15,11 +15,11 @@
     color: white;
 }
 
-.site-tab-content {
+.site-collapsible-content {
     border: 1px solid black;
 }
 
-.site-tab,
-.site-tab-content {
+.site-collapsible,
+.site-collapsible-content {
     padding: 10px;
 }

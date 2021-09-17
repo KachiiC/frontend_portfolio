@@ -1,28 +1,28 @@
 import { useState } from "react"
 // PROPS
-import { singleTabProps } from "Props/ComponentProps"
-import { TabContent, TabHeading } from "./TabParts"
+import { singleCollapsibleProps } from "Props/ComponentProps"
+import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
 
-const SingleTabComponent = (props: singleTabProps) => {
+const SingleTabComponent = (props: singleCollapsibleProps) => {
 
     const [displayContent, setDisplayContent] = useState(false)
-    const [tabDirection, setTabDirection] = useState("left")
+    const [collapisbleDirection, setCollapisbleDirection] = useState("left")
 
     const clickLogic = () => {
         !displayContent ? setDisplayContent(true) : setDisplayContent(false);
-        tabDirection === "left" ? setTabDirection("down") : setTabDirection("left")
+        collapisbleDirection === "left" ? setCollapisbleDirection("down") : setCollapisbleDirection("left")
     }
 
     return (
         <>
-            <TabHeading
+            <CollapsibleHeading
                 width={props.width}
-                direction={tabDirection}
+                direction={collapisbleDirection}
                 click={() => clickLogic()}
                 title={props.title}
             />
             {displayContent && (
-                <TabContent 
+                <CollapsibleContent 
                     width={props.width} 
                     content={props.content} 
                 />

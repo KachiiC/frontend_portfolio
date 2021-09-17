@@ -1,3 +1,4 @@
+// CSS
 import './About.css'
 
 const About = () => {

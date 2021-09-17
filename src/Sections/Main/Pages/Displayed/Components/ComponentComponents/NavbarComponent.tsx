@@ -1,7 +1,7 @@
 // PROPS
 import { SectionExampleProps } from 'Props/DataProps'
 // COMPONENTS
-import SectionExample from 'Components/SiteComponents/SectionExampleComponent'
+import SectionExample from 'Components/SiteComponents/SectionExample'
 // DATA
 import NavSectionData from 'Data/Main/Displayed/Components/MyComponents/NavbarData'
 

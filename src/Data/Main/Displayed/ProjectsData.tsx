@@ -1,6 +1,6 @@
 // COMPONENTS
 import AntdCards from "Components/ExternalLibraries/AntdCards"
-import ImageTextComponent from "Components/SiteComponents/ImageTextComponent"
+import ImageTextComponent from "Components/SiteComponents/ImageText"
 // IMAGES
 import PlaykrownImage from 'Images/Playkrown.png'
 import SnuggleBunnyImage from 'Images/SnuggleBunny.png'

@@ -1,11 +1,11 @@
 // CSS
-import './SiteTabs.css'
+import './SiteCollapsible.css'
 // PROPS
-import { TabProps } from "Props/ComponentProps"
+import { CollapsibleProps } from "Props/ComponentProps"
 // COMPONENTS
-import SingleTabComponent from "./component/SingleTabComponent"
+import SingleTabComponent from "./component/SingleCollapsible"
 
-const SiteTabsComponent = (props: TabProps) => {
+const SiteTabsComponent = (props: CollapsibleProps) => {
 
     const widthLogic = props.width ? props.width : 100
     
@@ -18,7 +18,7 @@ const SiteTabsComponent = (props: TabProps) => {
     ))
 
     return (
-        <div className={`w-${widthLogic} site-tabs-container`}>
+        <div className={`w-${widthLogic} site-collapsible-container`}>
             {displayedTabs}
         </div>
     )

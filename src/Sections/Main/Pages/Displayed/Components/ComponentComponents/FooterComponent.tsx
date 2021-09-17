@@ -1,5 +1,5 @@
 // COMPONENTS
-import SectionExample from 'Components/SiteComponents/SectionExampleComponent'
+import SectionExample from 'Components/SiteComponents/SectionExample'
 // DATA
 import FooterSectionData from 'Data/Main/Displayed/Components/MyComponents/FooterData'
 // PROPS

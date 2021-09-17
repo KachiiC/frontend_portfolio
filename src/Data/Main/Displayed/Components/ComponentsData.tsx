@@ -4,6 +4,7 @@ import GalleryComponent from "Sections/Main/Pages/Displayed/Components/Component
 import ModalComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ModalComponent"
 import NavbarComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/NavbarComponent"
 import FooterComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/FooterComponent"
+import CollapsibleComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/CollapsibleComponent"
 import TabsComponent from "Sections/Main/Pages/Displayed/Components/ComponentComponents/TabsComponent"
 
 export const MyComponentsData = [
@@ -16,6 +17,10 @@ export const MyComponentsData = [
         content: FooterComponent,
     },
     {
+        title: "Site Collapsible",
+        content: CollapsibleComponent
+    },
+    {
         title: "Site Gallery",
         content: GalleryComponent
     },
@@ -26,7 +31,7 @@ export const MyComponentsData = [
     {
         title: "Site Tabs",
         content: TabsComponent
-    }
+    },
 
 ]
 

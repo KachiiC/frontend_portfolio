@@ -1,3 +1,4 @@
+import { MouseEventHandler } from "react";
 import { pageDataProps } from "./MainProps";
 
 export interface SiteNavbarProps { 
@@ -7,7 +8,7 @@ export interface SiteNavbarProps {
 }
 
 export interface NavMenuProps { 
-    click?: any
+    click?: MouseEventHandler<HTMLDivElement>
     data: pageDataProps[]; 
     menu_number?: number | undefined; 
     menu_type: string; 
@@ -20,16 +21,16 @@ export interface NavLinkProps {
 }
 
 export interface SiteNavLinkProps { 
-    click?: any;
+    click?: MouseEventHandler<HTMLDivElement>;
     data: NavLinkProps
     type?: string; 
 }
 
 export interface SmallMenuBlockProps { 
     data: pageDataProps[]; 
-    click: any 
+    click: MouseEventHandler<HTMLDivElement>
 }
 
 export interface SmallMenuIconProps {
-    click: any
+    click: MouseEventHandler<HTMLDivElement>
 }

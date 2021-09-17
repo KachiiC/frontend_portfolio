@@ -1,5 +1,5 @@
 // COMPONENTS
-import Gallery from "Components/SiteComponents/SiteGalleryComponent"
+import Gallery from "Components/SiteComponents/SiteGallery"
 // DATA
 import GalleryData from "Data/Main/Displayed/Components/MyComponents/GalleryData"
 

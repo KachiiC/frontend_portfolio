@@ -1,4 +1,4 @@
-import SiteModalComponent from "Components/SiteComponents/SiteModalComponent"
+import SiteModalComponent from "Components/SiteComponents/SiteModal"
 
 const ModalComponent = (
     <>

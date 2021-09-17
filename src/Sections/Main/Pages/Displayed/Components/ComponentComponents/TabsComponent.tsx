@@ -1,12 +1,12 @@
+// COMPONENTS
+import SiteTabs from "Components/SiteComponents/SiteTabs"
 // DATA
 import TabsData from "Data/Main/Displayed/Components/MyComponents/TabsData"
-// COMPONENTS
-import SiteTabsComponent from "Components/SiteComponents/SiteTabsComponent"
 
-const CollapsibleTabsComponent = (
+const TabsComponent = (
     <>
-        <SiteTabsComponent data={TabsData} />
+        <SiteTabs data={TabsData} />
     </>
 )
 
-export default CollapsibleTabsComponent
+export default TabsComponent

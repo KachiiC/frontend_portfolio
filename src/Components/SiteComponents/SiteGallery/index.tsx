@@ -6,7 +6,7 @@ import { GalleryProps } from "Props/ComponentProps"
 // COMPONENTS
 import GalleryImage from "./components/GalleryImage"
 import RowImage from "./components/RowImage"
-import SiteModalComponent from "../SiteModalComponent"
+import SiteModalComponent from "../SiteModal"
 
 const GalleryComponent = (props: GalleryProps) => {
 
