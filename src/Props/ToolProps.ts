@@ -5,6 +5,14 @@ export interface ObjectDataProps {
     [x: string]: string | JSX.Element | undefined
 }
 
+
+export interface targetProps { 
+    target: { 
+        value: any; 
+    }
+}
+
+
 // SITE ICON
 export interface SiteIconProps {
     type: string | undefined; 

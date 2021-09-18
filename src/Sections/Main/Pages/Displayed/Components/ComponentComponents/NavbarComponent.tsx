@@ -10,6 +10,7 @@ const displaySections = NavSectionData.map((nav: SectionExampleProps) => (
         title={nav.title}
         image={nav.image}
         description={nav.description}
+        key={nav.title}
     />
 ))
 

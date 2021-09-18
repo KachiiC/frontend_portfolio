@@ -25,6 +25,7 @@ const SiteTabs = (props: SiteTabsProps) => {
             <TabLink
                 click={() => clickLogic()}
                 title={tab.title}
+                key={tab.title}
             />
         )
     })

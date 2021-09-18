@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { ChangeEventHandler, MouseEventHandler } from "react";
 
 // IMAGE TEXT PROPS
 export interface ImageTextRowProps {
@@ -120,4 +120,37 @@ export interface YoutubeProps {
     id: string;
     width?: string;
     height?: string;
+}
+
+// FILTER PROPS
+
+export interface FilterProps { 
+    data: any[]; 
+    placeholder: string;
+    default_column?: string;
+    width?: number | string 
+}
+
+export interface FilterInputProps {
+    on_change: any;
+    placeholder: string;
+    value: string;
+}
+
+export interface FilterSelectProps { 
+    data: any[]; 
+    function: ChangeEventHandler<HTMLSelectElement> | undefined; default: string | number | readonly string[] | undefined 
+}
+
+export interface FilterSearchProps { 
+    data: any[]; 
+    function: ChangeEventHandler<HTMLSelectElement> | undefined; default: string | number | readonly string[] | undefined 
+    value: string; 
+    on_change: any; 
+    placeholder: string 
+}
+
+export interface FilterTableProps {
+    data: any[];
+    results_data?: any;
 }

@@ -13,7 +13,10 @@ export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
             >
             {title}
             <div className="collapsible-icon">
-                <SiteIcon type={direction} size="1x"/>
+                <SiteIcon 
+                    type={direction} 
+                    size="1x"
+                />
             </div>
         </div>
     )

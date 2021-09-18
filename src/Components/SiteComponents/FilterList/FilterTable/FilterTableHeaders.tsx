@@ -1,13 +1,19 @@
-const FilterTableHeaders = (props: {data: any[]}) => {
+import { FilterTableProps } from "Props/ComponentProps"
+
+const FilterTableHeaders = (props: FilterTableProps) => {
 
     const table_headings = Object.keys(props.data[0])
 
-    const displayHeaders = table_headings.map((data: string) => <th>{data.toUpperCase()}</th>)
+    const displayHeaders = table_headings.map((data: string) => (
+        <th key={data}>{data.toUpperCase()}</th>
+    ))
 
     return (
-        <tr key={table_headings[0]}>
-            {displayHeaders}
-        </tr>
+        <thead>
+            <tr key={table_headings[0]}>
+                {displayHeaders}
+            </tr>
+        </thead>
     )
 }
 

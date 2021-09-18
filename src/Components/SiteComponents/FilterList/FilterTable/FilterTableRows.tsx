@@ -1,10 +1,8 @@
-interface FilterTableRowProps {
-    data: any[];
-}
+import { FilterTableProps } from "Props/ComponentProps"
 
-const FilterTableRows = (props: FilterTableRowProps) => {
+const FilterTableRows = (props: FilterTableProps) => {
 
-    const table_rows = props.data.map((data: any) => {
+    const table_rows = props.data.map((data, index) => {
 
         const values_list = Object.values(data)
 
@@ -15,16 +13,16 @@ const FilterTableRows = (props: FilterTableRowProps) => {
         ))
 
         return (
-            <tr>
+            <tr key={index}>
                 {displayed_value}
             </tr>
         )
     })
 
     return (
-        <>
+        <tbody>
             {table_rows}
-        </>
+        </tbody>
     )
 }
 

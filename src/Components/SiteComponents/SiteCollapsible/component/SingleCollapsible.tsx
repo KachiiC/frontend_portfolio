@@ -3,14 +3,21 @@ import { useState } from "react"
 import { singleCollapsibleProps } from "Props/ComponentProps"
 import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
 
-const SingleTabComponent = (props: singleCollapsibleProps) => {
+const SingleCollapsible = (props: singleCollapsibleProps) => {
 
     const [displayContent, setDisplayContent] = useState(false)
     const [collapisbleDirection, setCollapisbleDirection] = useState("left")
 
     const clickLogic = () => {
-        !displayContent ? setDisplayContent(true) : setDisplayContent(false);
-        collapisbleDirection === "left" ? setCollapisbleDirection("down") : setCollapisbleDirection("left")
+        !displayContent ?
+            setDisplayContent(true) 
+            : 
+            setDisplayContent(false);
+        
+        collapisbleDirection === "left" ? 
+            setCollapisbleDirection("down") 
+            : 
+            setCollapisbleDirection("left")
     }
 
     return (
@@ -31,4 +38,4 @@ const SingleTabComponent = (props: singleCollapsibleProps) => {
     )
 }
 
-export default SingleTabComponent
+export default SingleCollapsible

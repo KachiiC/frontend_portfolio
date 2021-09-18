@@ -1,8 +1,31 @@
+.filter-list {
+    margin: 25px auto;
+}
+
+.filter-search select {
+    /* color: red; */
+    padding: 10px
+}
+
+.filter-search input {
+    padding: 8px 15px;
+}
+
 .filter-table {
-    width: 100%;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.filter-table tr {
+    border: 1px solid black;
+}
+
+.filter-table th {
+    border: 1px solid black;
 }
 
 .filter-table td,
 .filter-table th {
-    border: 1px solid black;
+    padding: 10px;
+    font-size: 15px;
 }

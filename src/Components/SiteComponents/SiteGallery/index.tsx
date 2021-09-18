@@ -35,6 +35,7 @@ const GalleryComponent = (props: GalleryProps) => {
     
             return (
                 <RowImage
+                    key={item.title}
                     title={item.title}
                     image={item.image}
                     click={clickFunction}

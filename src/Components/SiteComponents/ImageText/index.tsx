@@ -13,6 +13,7 @@ const ImageTextComponent = (props: ImageTextComponentProps) => {
             image={project.image}
             link={project.link}
             description={project.description}
+            key={project.title}
         />
     ))
 

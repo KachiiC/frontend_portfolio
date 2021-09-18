@@ -1,34 +1,48 @@
 import { useState } from 'react'
 // CSS
 import './FilterList.css'
+// PROPS
+import { FilterProps } from 'Props/ComponentProps'
+import { targetProps } from 'Props/ToolProps'
+// TOOLS
+import { parseIntChecker } from 'Tools/IntergerTools'
 // COMPONENTS
-import FilterInput from './FilterTable/FilterInput'
+import FilterSearch from './FilterTable/FilterInput'
 import FilterTable from './FilterTable'
-
-interface FilterProps { 
-    data: any[]; 
-    placeholder: string
-}
 
 const FilterList = (props: FilterProps) => {
 
-    const { data, placeholder } = props
+    const { data, default_column, placeholder, width } = props
 
+    // COLUMNS
+    const columnOptions = Object.keys(data[0])
+    const columnLogic = default_column ? default_column : columnOptions[0]
+    const [column, setColumn] = useState(columnLogic)
+    const columnFunction = (e : targetProps) => {
+        setColumn(e.target.value)
+    }
+
+    // STATES
     const [input, setInput] = useState('');
     const [foundResults, setFoundResults] = useState(data);
 
-    const filterFunction = (e: { target: { value: any; }; }) => {
+    // WIDTH
+
+    const widthLogic = width ? width : 90
+    
+    const filterFunction = (e: targetProps) => {
         const keyword = e.target.value;
 
-        if (keyword !== '') {
-            const results = data.filter((result: any) => {
-                return result.name.toLowerCase().startsWith(keyword.toLowerCase());
-            })
-            setFoundResults(results);
-        } else {
-            setFoundResults(props.data);
-        }
-        setInput(keyword);
+        const resultsLogic = data.filter(result => 
+            parseIntChecker(result[column]) ?
+                parseInt(result[column]) === parseInt(keyword)
+                : 
+                result[column].toLowerCase().startsWith(keyword.toLowerCase())
+        )
+
+        keyword !== '' ? setFoundResults(resultsLogic) : setFoundResults(data)
+        
+        setInput(keyword)
     }
 
     const tableLogic = foundResults && foundResults.length > 0 ? 
@@ -37,15 +51,20 @@ const FilterList = (props: FilterProps) => {
             results_data={foundResults} 
         />
         : 
-        <div>No results found!</div>
+        <div>
+            <h2>No results found!</h2>
+        </div>
 
     return (
-        <div className="">
-            <FilterInput
-                value={input}
+        <div className={`filter-list w-${widthLogic}`}>
+            <FilterSearch
+                data={columnOptions}
+                default={default_column}
+                function={columnFunction}
                 on_change={filterFunction}
                 placeholder={placeholder}
-            /> 
+                value={input}
+            />
             {tableLogic}
         </div>
     )
