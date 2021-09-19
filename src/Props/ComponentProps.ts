@@ -1,5 +1,19 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
 
+export interface MyComponentsDataProps {
+    title: string;
+    introduction: string;
+    sections: componentSectionProps[];
+    component?: JSX.Element;
+    content?: JSX.Element;
+}
+
+export interface componentSectionProps {
+    title: string
+    image: any
+    description: string
+}
+
 // IMAGE TEXT PROPS
 export interface ImageTextRowProps {
     title: string;
@@ -28,6 +42,7 @@ export interface GalleryImageProps {
 }
 
 export interface GalleryProps {
+    number?: number
     title?: string;
     width: number;
     data: GalleryImageProps[]
@@ -126,7 +141,7 @@ export interface YoutubeProps {
 
 export interface FilterProps { 
     data: any[]; 
-    placeholder: string;
+    placeholder?: string;
     default_column?: string;
     width?: number | string 
 }

@@ -184,6 +184,9 @@
     text-align: right;
 }
 
+.text-white {
+    color: white;
+}
 /* overflow */
 .site-overflow {
     overflow: scroll;

@@ -10,10 +10,12 @@ import SiteModalComponent from "../SiteModal"
 
 const GalleryComponent = (props: GalleryProps) => {
 
-    const { data, title, width } = props
+    const { data, title, width, number } = props
 
     // WIDTH LOGIC
     const widthLogic = width ? width : 80
+    // NUMBER LOGIC
+    const numberLogic = number ? number : 4
 
     // TITLE LOGIC
     const titleLogic = () => {
@@ -24,7 +26,7 @@ const GalleryComponent = (props: GalleryProps) => {
     const [displayedImage, setDisplayedImage] = useState(0)
 
     const imageRowLogic = {
-        "gridTemplateColumns":`repeat(${data.length}, 1fr)`
+        "gridTemplateColumns":`repeat(${numberLogic}, 1fr)`
     }
 
     const GalleryRows = () => {
@@ -41,7 +43,7 @@ const GalleryComponent = (props: GalleryProps) => {
                     click={clickFunction}
                 />
             )
-        })
+        }).slice(0, numberLogic)
 
         return (
             <div className="site-grid" 

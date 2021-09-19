@@ -26,6 +26,7 @@
     overflow-y: scroll;
 }
 
-.site-tab-rows::-webkit-scrollbar {
+.site-tab-rows::-webkit-scrollbar,
+.site-tab-content::-webkit-scrollbar {
     display: none;
 }

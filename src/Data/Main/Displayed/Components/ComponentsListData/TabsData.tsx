@@ -1,4 +1,20 @@
-const TabsData = [
+import TabsUsage from 'Images/TabsUsage.png'
+import TabsDataImg from 'Images/TabsData.png'
+
+export const TabsSectionExample = [
+    {
+        title:"How does it work?",
+        image: TabsUsage,
+        description: "The component takes data as an argument and returns each object as tabs. The title of each object will displayed on the tab, whilst the 'content' is displayed when the tab is clicked."
+    },
+    {
+        title:"Example Data:",
+        image: TabsDataImg,
+        description: "The data must be an array of objects. Each object must contain a title (must be a string) and contents (JSX Element)."
+    }
+]
+
+export const TabsData = [
     {
         title: "first tab",
         content: <h1>Content 1</h1>

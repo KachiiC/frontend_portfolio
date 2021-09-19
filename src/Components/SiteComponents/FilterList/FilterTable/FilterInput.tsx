@@ -22,7 +22,7 @@ export const FilterSelect = (props: FilterSelectProps) => {
         <option value={column} 
             key={column}
         >
-            {column}
+            {column.toUpperCase()}
         </option>
     ))
 

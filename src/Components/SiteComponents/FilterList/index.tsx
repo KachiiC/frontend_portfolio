@@ -26,9 +26,9 @@ const FilterList = (props: FilterProps) => {
     const [input, setInput] = useState('');
     const [foundResults, setFoundResults] = useState(data);
 
-    // WIDTH
-
+    // DEFAULTS
     const widthLogic = width ? width : 90
+    const placeholderLogic = placeholder ? placeholder : `search ${columnLogic}s`
     
     const filterFunction = (e: targetProps) => {
         const keyword = e.target.value;
@@ -62,7 +62,7 @@ const FilterList = (props: FilterProps) => {
                 default={default_column}
                 function={columnFunction}
                 on_change={filterFunction}
-                placeholder={placeholder}
+                placeholder={placeholderLogic}
                 value={input}
             />
             {tableLogic}

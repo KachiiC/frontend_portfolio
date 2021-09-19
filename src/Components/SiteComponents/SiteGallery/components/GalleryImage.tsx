@@ -24,7 +24,14 @@ const GalleryImage = (props: any) => {
             <div className="cursor-pointer site-border-white">
                 {displayedImage}
             </div>
-        ) : displayedImage
+        ) : (
+            <>
+                <h2 className="gallery-modal-title">
+                    {title}
+                </h2>
+                {displayedImage}
+            </>
+        )
     
     return displayLogic
 }

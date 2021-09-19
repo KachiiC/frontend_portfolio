@@ -3,7 +3,6 @@
 }
 
 .filter-search select {
-    /* color: red; */
     padding: 10px
 }
 
@@ -28,4 +27,13 @@
 .filter-table th {
     padding: 10px;
     font-size: 15px;
+}
+
+.filter-table tr th {
+    background: black;
+    color: white;
+}
+
+.filter-table tr:nth-child(odd) {
+    background: rgb(230, 230, 230);
 }
