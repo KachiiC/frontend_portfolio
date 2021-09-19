@@ -5,7 +5,7 @@ import { CollapsibleProps } from "Props/ComponentProps"
 // COMPONENTS
 import SingleTabComponent from "./component/SingleCollapsible"
 
-const SiteTabsComponent = (props: CollapsibleProps) => {
+const SiteCollapsibleComponent = (props: CollapsibleProps) => {
 
     const widthLogic = props.width ? props.width : 100
     
@@ -13,7 +13,6 @@ const SiteTabsComponent = (props: CollapsibleProps) => {
         <SingleTabComponent
             title={tab.title}
             content={tab.content}
-            width={widthLogic}
             key={tab.title}
         />
     ))
@@ -25,4 +24,4 @@ const SiteTabsComponent = (props: CollapsibleProps) => {
     )
 }
 
-export default SiteTabsComponent
+export default SiteCollapsibleComponent

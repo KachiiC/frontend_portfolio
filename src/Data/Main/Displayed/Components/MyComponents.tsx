@@ -3,6 +3,7 @@ import { MyComponentsDataProps } from "Props/ComponentProps"
 // DATA
 import { CollapsibleSectionsData } from "./ComponentsListData/CollapsibleData"
 import { FilterListSectionData } from "./ComponentsListData/FilterListData"
+import { FilterCollapsibleData } from "./ComponentsListData/FilterCollapsibleData"
 import { FooterSectionData } from "./ComponentsListData/FooterData"
 import { GallerySectionData } from "./ComponentsListData/GalleryData"
 import { ModalSectionExample } from "./ComponentsListData/ModalData"
@@ -12,11 +13,14 @@ import { TabsSectionExample } from "./ComponentsListData/TabsData"
 import ComponentsTab from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentTab"
 import { 
     CollapsibleExample, 
+    FilterCollapsibleExample, 
     FilterListExample, 
     GalleryExample, 
     ModalComponentExample, 
-    TabsExample 
+    TabsExample, 
+    TimelineExample
 } from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
+import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
 
 export const MyComponentsData = [
     {
@@ -34,6 +38,12 @@ export const MyComponentsData = [
         introduction: "This is a collapsible component built with react hooks.",
         sections: CollapsibleSectionsData,
         component: CollapsibleExample,
+    },
+    {
+        title: "Filter Collapsible",
+        introduction: "This is a filter collapsible component built with react hooks, typscript and forms.",
+        sections: FilterCollapsibleData,
+        component: FilterCollapsibleExample,
     },
     {
         title: "Filter List",
@@ -58,6 +68,12 @@ export const MyComponentsData = [
         introduction: "This is a tabs component built with react hooks",
         sections: TabsSectionExample,
         component: TabsExample,
+    },
+    {
+        title: "Timeline",
+        introduction: "This is a timeline component built with react hooks",
+        sections: TimelineSectionExample,
+        component: TimelineExample,
     }
 ]
 

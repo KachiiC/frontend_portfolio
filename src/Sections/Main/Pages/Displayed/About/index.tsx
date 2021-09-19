@@ -1,6 +1,7 @@
 // CSS
 import './About.css'
 // COMPONENTS
+// DATA
 
 const About = () => {
 

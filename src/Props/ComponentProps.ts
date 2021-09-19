@@ -82,7 +82,7 @@ export interface CollapsibleHeadingProps {
     click: MouseEventHandler<HTMLDivElement>; 
     direction: string; 
     title: string; 
-    width: number | undefined
+    // width: number | undefined
 }
 
 export interface CollapsibleContentProps { 
@@ -168,4 +168,25 @@ export interface FilterSearchProps {
 export interface FilterTableProps {
     data: any[];
     results_data?: any;
+}
+
+// FILTER COLLAPSIBLE PROPS
+
+export interface FilterCollapsibleProps {
+    data: singleCollapsibleProps[]
+    width: number; 
+    placeholder?: string;
+}
+
+// TIMELINE PROPS
+
+export interface TimelineEventProps {
+    event: string;
+    year: number;
+    description: string;
+}
+
+export interface SiteTimelineProps { 
+    data: TimelineEventProps[]
+    width?: number
 }

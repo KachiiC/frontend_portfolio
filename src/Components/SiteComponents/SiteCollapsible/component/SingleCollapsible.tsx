@@ -23,7 +23,6 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
     return (
         <>
             <CollapsibleHeading
-                width={props.width}
                 direction={collapisbleDirection}
                 click={() => clickLogic()}
                 title={props.title}

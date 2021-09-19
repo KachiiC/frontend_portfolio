@@ -5,10 +5,10 @@ import SiteIcon from "Tools/SiteIcon"
 
 export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
 
-    const {click, direction, title, width} = props
+    const {click, direction, title} = props
 
     return (
-        <div className={`site-collapsible w-${width} m-auto cursor-pointer`} 
+        <div className={`site-collapsible m-auto cursor-pointer`} 
             onClick={click}
             >
             {title}
