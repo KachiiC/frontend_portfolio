@@ -190,3 +190,28 @@ export interface SiteTimelineProps {
     data: TimelineEventProps[]
     width?: number
 }
+
+// CARD PROPS
+
+export interface SiteSingleCardProps { 
+    title: string; 
+    description: string; 
+    image: any; 
+    span?: number;
+    type?: string 
+}
+
+export interface SiteCardProps  { 
+    data: SiteSingleCardProps[] 
+    card_size?: 'xs'|'small'|'medium'|'large'|'xl'; 
+}
+
+export interface filterButtonProps {
+    title: string
+    click: any;
+}
+
+export interface FilterGalleryProps { 
+    data: SiteSingleCardProps[]
+    card_size?: 'xs'|'small'|'medium'|'large'|'xl'; 
+}

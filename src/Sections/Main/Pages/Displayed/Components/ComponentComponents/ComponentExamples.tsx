@@ -1,11 +1,14 @@
 import FilterCollapsible from "Components/SiteComponents/FilterCollapsible"
+import FilterGallery from "Components/SiteComponents/FilterGallery"
 import FilterList from "Components/SiteComponents/FilterList"
+import SiteCards from "Components/SiteComponents/SiteCards"
 import Collapsible from "Components/SiteComponents/SiteCollapsible"
 import Gallery from "Components/SiteComponents/SiteGallery"
 import Modal from "Components/SiteComponents/SiteModal"
 import Tabs from "Components/SiteComponents/SiteTabs"
 import Timeline from "Components/SiteComponents/SiteTimeline"
 // DATA
+import { CardsData } from "Data/Main/Displayed/Components/ComponentsListData/CardsData"
 import { CollapsibleData } from "Data/Main/Displayed/Components/ComponentsListData/CollapsibleData"
 import { FilterListData } from "Data/Main/Displayed/Components/ComponentsListData/FilterListData"
 import { GalleryData } from "Data/Main/Displayed/Components/ComponentsListData/GalleryData"
@@ -13,19 +16,33 @@ import { ModalData } from "Data/Main/Displayed/Components/ComponentsListData/Mod
 import { TabsData } from "Data/Main/Displayed/Components/ComponentsListData/TabsData"
 import { TimelineData } from "Data/Main/Displayed/Components/ComponentsListData/TimelineData"
 
+export const CardsExample = (
+    <SiteCards
+        data={CardsData}
+        card_size="large"
+    />
+)
+
 export const CollapsibleExample = (
-        <Collapsible 
-            data={CollapsibleData} 
-            width={90} 
-        />
-    )
+    <Collapsible 
+        data={CollapsibleData} 
+        width={90} 
+    />
+)
 
 export const FilterListExample = (
-        <FilterList 
-            data={FilterListData} 
-            default_column="name"
-            width={80}
-            placeholder="example placeholder"
+    <FilterList 
+        data={FilterListData} 
+        default_column="name"
+        width={80}
+        placeholder="example placeholder"
+    />
+)
+
+export const FilterGalleryExample = (
+        <FilterGallery 
+            data={CardsData}
+            card_size="medium"
         />
     )
 

@@ -12,8 +12,10 @@ import { TabsSectionExample } from "./ComponentsListData/TabsData"
 // COMPONENTS
 import ComponentsTab from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentTab"
 import { 
+    CardsExample,
     CollapsibleExample, 
     FilterCollapsibleExample, 
+    FilterGalleryExample, 
     FilterListExample, 
     GalleryExample, 
     ModalComponentExample, 
@@ -21,6 +23,8 @@ import {
     TimelineExample
 } from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
 import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
+import { CardsSectionData } from "./ComponentsListData/CardsData"
+import { FilterGallerySectionsData } from "./ComponentsListData/FilterGalleryData"
 
 export const MyComponentsData = [
     {
@@ -34,6 +38,12 @@ export const MyComponentsData = [
         sections: FooterSectionData,
     },
     {
+        title: "Cards",
+        introduction: "This is a cards component built with react.",
+        sections: CardsSectionData,
+        component: CardsExample,
+    },
+    {
         title: "Collapsible",
         introduction: "This is a collapsible component built with react hooks.",
         sections: CollapsibleSectionsData,
@@ -44,6 +54,12 @@ export const MyComponentsData = [
         introduction: "This is a filter collapsible component built with react hooks, typscript and forms.",
         sections: FilterCollapsibleData,
         component: FilterCollapsibleExample,
+    },
+    {
+        title: "Filter Gallery",
+        introduction: "This is a filter gallery component built with react hooks, use effect and typscript",
+        sections: FilterGallerySectionsData,
+        component: FilterGalleryExample,
     },
     {
         title: "Filter List",

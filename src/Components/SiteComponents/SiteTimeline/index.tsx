@@ -13,6 +13,7 @@ const SiteTimeline = (props: SiteTimelineProps) => {
 
     const displayEvents = data.map((event) => (
         <TimelineEvent
+            key={event.event}
             event={event.event}
             year={event.year}
             description={event.description}

@@ -1,7 +1,5 @@
 // CSS
 import './About.css'
-// COMPONENTS
-// DATA
 
 const About = () => {
 
@@ -11,6 +9,5 @@ const About = () => {
         </>
     );
 }
-
 
 export default About
