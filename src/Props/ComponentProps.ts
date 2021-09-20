@@ -1,9 +1,10 @@
 import { ChangeEventHandler, MouseEventHandler } from "react";
+import { SectionExampleProps } from "./DataProps";
 
 export interface MyComponentsDataProps {
     title: string;
     introduction: string;
-    sections: componentSectionProps[];
+    sections: SectionExampleProps[];
     component?: JSX.Element;
     content?: JSX.Element;
 }
@@ -24,13 +25,6 @@ export interface ImageTextRowProps {
 
 export interface ImageTextComponentProps {
     data: ImageTextRowProps[]
-}
-
-// SECTION EXAMPLE PROPS
-export interface SectionExampleProps {
-    title: string
-    image: string
-    description: string
 }
 
 // GALLERY PROPS 

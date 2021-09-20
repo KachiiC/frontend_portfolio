@@ -1,5 +1,6 @@
 export interface SectionExampleProps {
     title: string
-    image: string
+    example?: any
+    image?: string
     description: string
 }

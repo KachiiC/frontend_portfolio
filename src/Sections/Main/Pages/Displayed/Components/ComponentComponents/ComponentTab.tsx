@@ -1,5 +1,5 @@
 // PROPS
-import { SectionExampleProps } from "Props/ComponentProps"
+import { SectionExampleProps } from "Props/DataProps"
 // COMPONENTS
 import SectionExample from "Components/SiteComponents/SectionExample"
 
@@ -10,6 +10,7 @@ const ComponentsTab = (props: any) => {
     const displaySections = sections.map((nav: SectionExampleProps) => (
         <SectionExample
             title={nav.title}
+            example={nav.example}
             image={nav.image}
             description={nav.description}
             key={nav.title}

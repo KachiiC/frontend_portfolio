@@ -30,6 +30,21 @@ export const CollapsibleExample = (
     />
 )
 
+export const FilterCollapsibleExample = (
+    <FilterCollapsible
+        data={CollapsibleData} 
+        width={80}
+        placeholder="example placeholder"
+    />
+)
+
+export const FilterGalleryExample = (
+    <FilterGallery 
+        data={CardsData}
+        card_size="medium"
+    />
+)
+
 export const FilterListExample = (
     <FilterList 
         data={FilterListData} 
@@ -38,21 +53,6 @@ export const FilterListExample = (
         placeholder="example placeholder"
     />
 )
-
-export const FilterGalleryExample = (
-        <FilterGallery 
-            data={CardsData}
-            card_size="medium"
-        />
-    )
-
-export const FilterCollapsibleExample = (
-        <FilterCollapsible
-            data={CollapsibleData} 
-            width={80}
-            placeholder="example placeholder"
-        />
-    )
 
 export const GalleryExample = (
         <Gallery
@@ -93,7 +93,6 @@ export const TimelineExample = (
                 width={100}
             />
         </div>
-
     )
 
 
