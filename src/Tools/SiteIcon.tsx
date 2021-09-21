@@ -13,7 +13,14 @@ import {
     faTwitter, 
     faYoutube 
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faCaretDown, faCaretLeft, faCaretRight, faCaretUp, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { 
+    faBars, 
+    faCaretDown, 
+    faCaretLeft, 
+    faCaretRight, 
+    faCaretUp, 
+    faTimes 
+} from "@fortawesome/free-solid-svg-icons";
 
 const SiteIcon = (props: SiteIconProps) => {
 

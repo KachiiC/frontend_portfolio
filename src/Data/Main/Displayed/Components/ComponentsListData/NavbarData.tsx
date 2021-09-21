@@ -1,8 +1,31 @@
 // IMAGES
 import NavbarImage from 'Images/NavbarImage.png'
 import NavbarResponsiveImage from 'Images/NavbarResponsiveImage.png'
-import NavbarDataImage from 'Images/NavbarData.png'
-import NavbarUsageImage from 'Images/NavbarUsage.png'
+
+const NavbarExampleUsage = `
+    <header>
+        <SiteNavbar
+            title="Navbar Title" 
+            data={data}
+            menu_number={5}
+        />
+    </header>
+`
+
+const NavbarExampleData = `[
+    {
+        title: "projects",
+        link: "projects"
+    },
+    {
+        title: "about",
+        link: "about-page"
+    },
+    {
+        title: "code",
+        link: "https://github.com/KachiiC/portfolio"
+    },
+]`
 
 export const NavSectionData = [
     {
@@ -17,12 +40,12 @@ export const NavSectionData = [
     },
     {
         title: "Example Usage",
-        image: NavbarUsageImage,
+        example: NavbarExampleUsage,
         description: "The component takes a title, data and number of menus (optional) as an argument during usage."
     },
     {
         title:"Example Data",
-        image: NavbarDataImage,
+        example: NavbarExampleData,
         description:"The data set must be an array of objects which east must contain a title and link (or external link) key. Link keys will direct users to another page via react-router-dom, whilst external page directs them to an external page."
     },
 ]

@@ -1,6 +1,21 @@
+.components-page-container p{
+    width: 60%;
+    margin: 25px auto;
+}
+
+@media screen and (max-width: 1080px) {
+    .components-page-container p {
+        width: 80%;
+    }
+}
+
 @media screen and (max-width: 640px) {
     .section-tab-content {
         height: 500px;
         overflow-y: scroll;
+    }
+
+    .components-page-container p {
+        width: 90%;
     }
 }

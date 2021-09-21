@@ -1,6 +1,6 @@
 // COMPONENTS
-import AntdCards from "Components/ExternalLibraries/AntdCards"
 import ImageTextComponent from "Components/SiteComponents/ImageText"
+import SiteCards from "Components/SiteComponents/SiteCards"
 // IMAGES
 import PlaykrownImage from 'Images/Playkrown.png'
 import SnuggleBunnyImage from 'Images/SnuggleBunny.png'
@@ -53,7 +53,7 @@ export const FreelanceProjects = [
     },
     {
         title: "PlayKrown Ent",
-        description: "This is a playkrown ent",
+        description: "This is playkrown ent",
         image: PlaykrownImage,
         link: "https://playkrown.co.uk/"
     }
@@ -63,7 +63,7 @@ const ProjectsData = [
     {
         title: "My Projects",
         description: "This is list of my projects built with React and typescript.",
-        content: <AntdCards data={MyProjectsData} />
+        content: <SiteCards data={MyProjectsData} card_size="medium"/>
     },
     {
         title: "Freelance Projects",

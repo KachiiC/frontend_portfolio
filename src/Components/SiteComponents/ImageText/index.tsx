@@ -18,7 +18,7 @@ const ImageTextComponent = (props: ImageTextComponentProps) => {
     ))
 
     return (
-        <div className="site-grid-system">
+        <div className="image-text-container">
             {displayRows}
         </div>
     )

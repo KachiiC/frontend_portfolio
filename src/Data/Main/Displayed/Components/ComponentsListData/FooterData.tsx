@@ -1,7 +1,18 @@
 // IMAGES
 import FooterDataImage from 'Images/FooterData.png'
-import FooterUsageImage from 'Images/FooterUsage.png'
 import FooterImage from 'Images/FooterImage.png'
+
+const FooterUsageExample = `
+    <footer>
+        <SiteFooter 
+            heading="Useful Links"
+            logo_data={FooterLogoData}
+            links_data={FooterPages}
+            name="Desinger"
+            year="2021"
+        />
+    </footer>
+`
 
 export const FooterSectionData = [
     {
@@ -11,7 +22,7 @@ export const FooterSectionData = [
     },
     {
         title: "Example Usage",
-        image: FooterUsageImage,
+        example: FooterUsageExample,
         description: "A footer header and a copyright notice can be included in the footer by passing it through the components useage"
     },
     {

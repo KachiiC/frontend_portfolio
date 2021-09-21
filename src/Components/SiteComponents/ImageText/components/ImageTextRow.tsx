@@ -2,8 +2,8 @@
 import { ImageTextRowProps } from "Props/ComponentProps"
 
 const ImageTextRow = (props: ImageTextRowProps) => (
-    <>
-        <div className="site-col-6 row-image">
+    <div className="site-flex">
+        <div className="row-image">
             <a href={props.link} 
                 target="_blank" 
                 rel="noreferrer"
@@ -14,11 +14,11 @@ const ImageTextRow = (props: ImageTextRowProps) => (
                 />
             </a>
         </div>
-        <div className="site-col-6 row-description">
+        <div className="row-description">
             <h2>{props.title}</h2>
             <p>{props.description}</p>
         </div>
-    </>
+    </div>
 )
 
 export default ImageTextRow
