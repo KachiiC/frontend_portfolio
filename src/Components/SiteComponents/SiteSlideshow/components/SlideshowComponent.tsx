@@ -16,14 +16,15 @@ const SlideshowComponent = (props: SlideshowComponentProps) => {
         select_image,
         setFunction,
         thumbnails,
+        width
     } = props
      
     return (
 
-        <div className="slideshow-container">
+        <div className={`slideshow-container w-${width} m-auto`}>
             <img src={select_image}
                 alt="displayed_slide"
-                className="site-responsive-image site-border"
+                className="site-responsive-image site-shadow"
             />
             <ClickButton 
                 type="previous"

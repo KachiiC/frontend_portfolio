@@ -2,15 +2,18 @@ import { useState } from 'react';
 // CSS
 import './SiteSlideshow.css';
 // COMPONENTS
+import SlideshowComponent from './components/SlideshowComponent';
 // PROPS
 import { SiteSlideShowProps } from 'Props/ComponentProps';
-import SlideshowComponent from './components/SlideshowComponent';
+// TOOPS
+import { setLogic } from 'Tools/ObjectDataTools';
 
 const SiteSlideshow  = (props: SiteSlideShowProps) => {
 
-    const { data, thumbnails } = props
+    const { data, thumbnails, width } = props
         
     const thumbnailsLogic = thumbnails ? thumbnails : 4
+    const widthLogic = width ? width : 80
     
     const [selectedImage, setselectedImage] = useState(0)
     const [displayedSlides, setDisplayedSlides] = useState({
@@ -19,27 +22,34 @@ const SiteSlideshow  = (props: SiteSlideShowProps) => {
     })
 
     const { first, last } = displayedSlides
-    
-    const setLogic = (set_first: number, set_last: number) => {
-        return setDisplayedSlides({
-            first: set_first,
-            last: set_last
-        })
-    }
 
     // CLICK BUTTON
     const lastSlide = data.length - 1
     
     // BUTTON ICON
-    const nextLogic = () => last > lastSlide ? 
-        setLogic(0, thumbnailsLogic) 
-        : 
-        setLogic(first + 1, last + 1)
+    const ImageLogic = (type: string) => {
+        type === "next" ? 
+            setselectedImage(image => image + 1) 
+            : 
+            setselectedImage(image => image - 1)
+    }
 
-    const prevLogic = () => first === 0 ? 
-        setLogic(lastSlide - thumbnailsLogic + 1, data.length)
+    const rowLogic = (type: string) => {
+        type === "next" ?
+            last > lastSlide ? 
+                setLogic(0, thumbnailsLogic, setDisplayedSlides)
+                : 
+                setLogic(first + 1, last + 1, setDisplayedSlides)
         :
-        setLogic(first - 1, last - 1)
+            first === 0 ? 
+                setLogic(lastSlide - thumbnailsLogic + 1, data.length, setDisplayedSlides)
+                :
+                setLogic(first - 1, last - 1, setDisplayedSlides)
+    }
+
+    const clickLogic = (type: string) => {
+        
+    }
 
     return (
         <SlideshowComponent
@@ -47,11 +57,12 @@ const SiteSlideshow  = (props: SiteSlideShowProps) => {
             caption={data[selectedImage].caption}
             first={first}
             last={last}
-            next={() => nextLogic()}
-            previous={() => prevLogic()}
+            next={() => {rowLogic("next"); ImageLogic("next")}}
+            previous={() => rowLogic("previous")}
             select_image={data[selectedImage].image}
             setFunction={setselectedImage}
             thumbnails={thumbnailsLogic}
+            width={widthLogic}
         />
     )
 }

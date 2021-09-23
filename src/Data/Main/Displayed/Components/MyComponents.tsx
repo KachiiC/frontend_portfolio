@@ -1,14 +1,18 @@
 // PROPS
 import { MyComponentsDataProps } from "Props/ComponentProps"
 // DATA
+import { CardsSectionData } from "./ComponentsListData/CardsData"
 import { CollapsibleSectionsData } from "./ComponentsListData/CollapsibleData"
 import { FilterListSectionData } from "./ComponentsListData/FilterListData"
 import { FilterCollapsibleData } from "./ComponentsListData/FilterCollapsibleData"
+import { FilterGallerySectionsData } from "./ComponentsListData/FilterGalleryData"
 import { FooterSectionData } from "./ComponentsListData/FooterData"
 import { GallerySectionData } from "./ComponentsListData/GalleryData"
 import { ModalSectionExample } from "./ComponentsListData/ModalData"
 import { NavSectionData } from "./ComponentsListData/NavbarData"
+import { SlideshowSectionData } from "./ComponentsListData/SlideshowData"
 import { TabsSectionExample } from "./ComponentsListData/TabsData"
+import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
 // COMPONENTS
 import ComponentsTab from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentTab"
 import { 
@@ -19,12 +23,11 @@ import {
     FilterListExample, 
     GalleryExample, 
     ModalComponentExample, 
+    SlideshowExample, 
     TabsExample, 
     TimelineExample
 } from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
-import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
-import { CardsSectionData } from "./ComponentsListData/CardsData"
-import { FilterGallerySectionsData } from "./ComponentsListData/FilterGalleryData"
+
 
 export const MyComponentsData = [
     {
@@ -78,6 +81,12 @@ export const MyComponentsData = [
         introduction: "This is a modal component built for with react hooks",
         sections: ModalSectionExample,
         component: ModalComponentExample,
+    },
+    {
+        title: "Slideshow",
+        introduction: "This is a Slideshow component built for with react hooks",
+        sections: SlideshowSectionData,
+        component: SlideshowExample,
     },
     {
         title: "Tabs",

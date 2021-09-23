@@ -1,26 +1,16 @@
-
-/* Position the image container (needed to position the left and right arrows) */
 .slideshow-container {
     position: relative;
-    width: 50%;
-}
-
-.slideshow-container {
     vertical-align: middle;
-}
-
-.displayed-slide {
-
 }
 
 /* Next & previous buttons */
 .slideshow-button {
+    color: black;
     position: absolute;
     top: 40%;
     width: auto;
     padding: 10px;
     margin-top: -50px;
-    color: black;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -28,23 +18,23 @@
     -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .right {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.slideshow-button:hover {
-    background-color: black;
-    color: white;
-}
-
-/* Container for image text */
 .caption-container {
     text-align: center;
-    background-color: #222;
     padding: 2px 16px;
+}
+
+.caption-container,
+.slideshow-button:hover {
+    background: black;
+}
+
+.caption-container,
+.slideshow-button:hover {
     color: white;
 }
 
@@ -53,15 +43,12 @@
     clear: both;
 }
 
-/* Six columns side by side */
 .slideshow-column {
     float: left;
     opacity: 0.6;
 }
 
-.slideshow-column:hover {
-    opacity: 1;
-}
+.slideshow-column:hover,
 .slideshow-button {
     opacity: 1;
 }

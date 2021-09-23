@@ -34,3 +34,9 @@ export const UnqiueValues = (data: any, value: any) =>  {
     return uniqueArray
 }
 
+export const setLogic = (first: number | string, last: number | string, setFunction: Function) => {
+    return setFunction({
+        first: first,
+        last: last
+    })
+}

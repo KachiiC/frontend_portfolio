@@ -220,6 +220,7 @@ export interface SlideshowData {
 export interface SiteSlideShowProps {
     data: SlideshowData[];
     thumbnails?: number;
+    width? : number
 }
 
 export interface slideshowButtonProps {
@@ -255,4 +256,5 @@ export interface SlideshowComponentProps {
     next: Function;
     previous: Function;
     select_image: string | undefined;
+    width: number
 }
