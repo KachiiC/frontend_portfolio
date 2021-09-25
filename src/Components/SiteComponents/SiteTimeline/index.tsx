@@ -1,7 +1,7 @@
 // CSS
 import './SiteTimeline.css'
 // PROPS
-import { SiteTimelineProps } from 'Props/ComponentProps'
+import { SiteTimelineProps } from "Props/Components/TimlineProps"
 // COMPONENTS
 import TimelineEvent from './components/TimelineEvent'
 

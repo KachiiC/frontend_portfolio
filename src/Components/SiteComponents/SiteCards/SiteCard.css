@@ -1,11 +1,10 @@
+.site-single-card,
 .site-single-card img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .site-single-card {
     margin: 25px auto;
-    width: 90%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .site-text-container {

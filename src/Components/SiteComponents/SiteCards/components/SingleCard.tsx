@@ -1,11 +1,13 @@
-import { SiteSingleCardProps } from "Props/ComponentProps"
+// PROPS
+import { SiteSingleCardProps } from "Props/Components/CardProps"
 
-export const SingleCard = (props: SiteSingleCardProps) => {
+
+const SingleCard = (props: SiteSingleCardProps) => {
 
     const { title, description, image, span } = props
 
     return (
-        <div className={`site-single-card site-col-${span}`}
+        <div className={`site-single-card w-90 site-col-${span}`}
             key={title} 
         >
             <img src={image}
@@ -19,3 +21,5 @@ export const SingleCard = (props: SiteSingleCardProps) => {
         </div>
     )
 }
+
+export default SingleCard

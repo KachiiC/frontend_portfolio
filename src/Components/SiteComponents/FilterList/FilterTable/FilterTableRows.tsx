@@ -1,4 +1,5 @@
-import { FilterTableProps } from "Props/ComponentProps"
+// PROPS
+import { FilterTableProps } from "Props/Components/FilterProps"
 
 const FilterTableRows = (props: FilterTableProps) => {
 

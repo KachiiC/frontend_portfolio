@@ -1,5 +1,5 @@
 // PROPS
-import { CollapsibleContentProps, CollapsibleHeadingProps } from "Props/ComponentProps"
+import { CollapsibleContentProps, CollapsibleHeadingProps } from "Props/Components/CollapsibleProps"
 // TOOLS
 import SiteIcon from "Tools/SiteIcon"
 

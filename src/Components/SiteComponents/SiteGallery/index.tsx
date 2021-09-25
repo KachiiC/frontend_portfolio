@@ -2,7 +2,9 @@ import { useState } from "react"
 // CSS
 import './GalleryComponent.css'
 // PROPS
-import { GalleryProps } from "Props/ComponentProps"
+import { GalleryProps } from "Props/Components/GalleryProps"
+// TOOLS
+import { GridStyle } from "Tools/GridTools"
 // COMPONENTS
 import GalleryImage from "./components/GalleryImage"
 import RowImage from "./components/RowImage"
@@ -25,10 +27,6 @@ const GalleryComponent = (props: GalleryProps) => {
     // IMAGE LOGIC
     const [displayedImage, setDisplayedImage] = useState(0)
 
-    const imageRowLogic = {
-        "gridTemplateColumns":`repeat(${numberLogic}, 1fr)`
-    }
-
     const GalleryRows = () => {
 
         const displayedRows = data.map(item => {
@@ -47,7 +45,7 @@ const GalleryComponent = (props: GalleryProps) => {
 
         return (
             <div className="site-grid" 
-                style={imageRowLogic}
+                style={GridStyle(numberLogic)}
             >
                 {displayedRows}
             </div>

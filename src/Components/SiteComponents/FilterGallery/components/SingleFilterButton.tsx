@@ -1,4 +1,5 @@
-import { filterButtonProps } from "Props/ComponentProps"
+// PROPS
+import { filterButtonProps } from "Props/Components/FilterGalleryProps"
 
 const SingleFilterButton = (props: filterButtonProps) => (
     <div className="filter-button cursor-pointer site-col-1" 

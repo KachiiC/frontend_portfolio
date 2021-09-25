@@ -1,20 +1,18 @@
 // PROPS
-import { FilterInputProps, FilterSearchProps, FilterSelectProps } from "Props/ComponentProps"
+import { 
+    FilterInputProps, 
+    FilterSearchProps, 
+    FilterSelectProps 
+} from "Props/Components/FilterProps"
 
-export const FilterInput = (props: FilterInputProps) => {
-    
-    const {value, on_change, placeholder} = props
-
-    return (
-        <input
-            className="filter-input"
-            type="search"
-            value={value}
-            onChange={on_change}
-            placeholder={placeholder}
-        />  
-    )
-}
+export const FilterInput = (props: FilterInputProps) => (
+    <input type="search"
+        className="filter-input"
+        value={props.value}
+        onChange={props.on_change}
+        placeholder={props.placeholder}
+    />
+)
 
 export const FilterSelect = (props: FilterSelectProps) => {
 

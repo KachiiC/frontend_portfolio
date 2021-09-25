@@ -4,7 +4,7 @@ import './SiteSlideshow.css';
 // COMPONENTS
 import SlideshowComponent from './components/SlideshowComponent';
 // PROPS
-import { SiteSlideShowProps } from 'Props/ComponentProps';
+import { SiteSlideShowProps } from 'Props/Components/SlideshowProps';
 // TOOPS
 import { setLogic } from 'Tools/ObjectDataTools';
 
@@ -25,39 +25,35 @@ const SiteSlideshow  = (props: SiteSlideShowProps) => {
 
     // CLICK BUTTON
     const lastSlide = data.length - 1
-    
-    // BUTTON ICON
-    const ImageLogic = (type: string) => {
-        type === "next" ? 
-            setselectedImage(image => image + 1) 
-            : 
-            setselectedImage(image => image - 1)
-    }
 
     const rowLogic = (type: string) => {
         type === "next" ?
-            last > lastSlide ? 
-                setLogic(0, thumbnailsLogic, setDisplayedSlides)
-                : 
-                setLogic(first + 1, last + 1, setDisplayedSlides)
+        
+        // NEXT LOGIC
+        last > lastSlide ? 
+            setLogic(0, thumbnailsLogic, setDisplayedSlides)
+            : 
+            setLogic(first + 1, last + 1, setDisplayedSlides)
         :
-            first === 0 ? 
-                setLogic(lastSlide - thumbnailsLogic + 1, data.length, setDisplayedSlides)
-                :
-                setLogic(first - 1, last - 1, setDisplayedSlides)
+        
+        // PREV LOGIC
+        first === 0 ? 
+            setLogic(lastSlide - thumbnailsLogic + 1, data.length, setDisplayedSlides)
+            :
+            setLogic(first - 1, last - 1, setDisplayedSlides)
     }
 
     const clickLogic = (type: string) => {
-        
+        last === selectedImage ? rowLogic("next"): rowLogic("previous")
     }
-
+    
     return (
         <SlideshowComponent
             data={data}
             caption={data[selectedImage].caption}
             first={first}
             last={last}
-            next={() => {rowLogic("next"); ImageLogic("next")}}
+            next={() => clickLogic("next")}
             previous={() => rowLogic("previous")}
             select_image={data[selectedImage].image}
             setFunction={setselectedImage}

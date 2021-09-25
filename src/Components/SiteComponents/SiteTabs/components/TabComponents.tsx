@@ -1,4 +1,6 @@
-import { TabContentProps, TabLinkProps } from "Props/ComponentProps"
+// PROPS
+import { TabContentProps, TabLinkProps } from "Props/Components/TabProps"
+
 
 export const TabLink = (props: TabLinkProps) => (
     <div className="site-tab-link cursor-pointer"

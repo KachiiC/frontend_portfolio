@@ -2,13 +2,13 @@ import { useEffect, useState } from "react"
 // CSS 
 import './FilterGallery.css'
 // PROPS
-import { SiteCardProps } from "Props/ComponentProps"
+import { SiteCardProps } from "Props/Components/CardProps"
 // TOOLS
 import { UnqiueValues } from "Tools/ObjectDataTools"
+import { GridStyle } from "Tools/GridTools"
 // COMPONENTS
 import SiteCards from "../SiteCards"
 import SingleFilterButton from "./components/SingleFilterButton"
-import { GridStyle } from "Tools/GridTools"
 
 const FilterGallery = (props: SiteCardProps) => {
 

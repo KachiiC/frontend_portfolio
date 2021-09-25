@@ -1,5 +1,5 @@
 // PROPS
-import { slideshowButtonProps } from "Props/ComponentProps"
+import { slideshowButtonProps } from "Props/Components/SlideshowProps"
 // TOOLS
 import SiteIcon from "Tools/SiteIcon"
 

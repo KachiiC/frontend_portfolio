@@ -1,6 +1,6 @@
 import { useState } from "react"
 // PROPS
-import { SiteTabsProps } from "Props/ComponentProps"
+import { SiteTabsProps } from "Props/Components/TabProps"
 // CSS
 import './SiteTabs.css'
 // COMPONENTS

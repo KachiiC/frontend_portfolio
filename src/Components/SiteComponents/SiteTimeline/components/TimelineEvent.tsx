@@ -1,5 +1,5 @@
 // PROPS
-import { TimelineEventProps } from "Props/ComponentProps"
+import { TimelineEventProps } from "Props/Components/TimlineProps"
 
 const TimelineEvent = (props: TimelineEventProps) => (
     <div className="timeline-container">

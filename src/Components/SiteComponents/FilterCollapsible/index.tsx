@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState } from "react"
 // CSS
 import './FilterCollapsible.css'
 // PROPS
-import { targetProps } from "Props/ToolProps";
-import { FilterCollapsibleProps } from "Props/ComponentProps";
+import { targetProps } from "Props/ToolProps"
+// PROPS
+import { FilterCollapsibleProps } from "Props/Components/FilterCollapsibleProps"
 // COMPONENTS
-import SiteCollapsible from "../SiteCollapsible";
+import SiteCollapsible from "../SiteCollapsible"
 
 const FilterCollapsible = (props: FilterCollapsibleProps) => {
 

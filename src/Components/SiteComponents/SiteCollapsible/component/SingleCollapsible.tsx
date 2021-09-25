@@ -1,6 +1,7 @@
 import { useState } from "react"
 // PROPS
-import { singleCollapsibleProps } from "Props/ComponentProps"
+import { singleCollapsibleProps } from "Props/Components/CollapsibleProps"
+// COMPONENTS
 import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
 
 const SingleCollapsible = (props: singleCollapsibleProps) => {

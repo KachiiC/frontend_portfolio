@@ -1,7 +1,7 @@
 // PROPS
-import { GalleryImageProps } from "Props/ComponentProps"
+import { GalleryRowProps } from "Props/Components/GalleryProps"
 
-const RowImage = (props: GalleryImageProps) => {
+const RowImage = (props: GalleryRowProps) => {
 
     const {image, title, click} = props
 

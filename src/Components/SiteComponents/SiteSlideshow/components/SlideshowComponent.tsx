@@ -1,5 +1,6 @@
+// PROPS
+import { SlideshowComponentProps } from "Props/Components/SlideshowProps"
 // COMPONENTS
-import { SlideshowComponentProps } from "Props/ComponentProps"
 import ClickButton from "./SlideshowButton"
 import { SlideshowCaption, SlideshowRows } from "./SlideshowRowImages"
 
@@ -22,13 +23,13 @@ const SlideshowComponent = (props: SlideshowComponentProps) => {
     return (
 
         <div className={`slideshow-container w-${width} m-auto`}>
-            <img src={select_image}
-                alt="displayed_slide"
-                className="site-responsive-image site-shadow"
-            />
             <ClickButton 
                 type="previous"
                 click={previous} 
+            />
+            <img src={select_image}
+                alt="displayed_slide"
+                className="site-responsive-image site-shadow"
             />
             <ClickButton 
                 type="next"  

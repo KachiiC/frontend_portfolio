@@ -2,7 +2,7 @@ import { useState } from 'react'
 // CSS
 import './FilterList.css'
 // PROPS
-import { FilterProps } from 'Props/ComponentProps'
+import { FilterProps } from "Props/Components/FilterProps"
 import { targetProps } from 'Props/ToolProps'
 // TOOLS
 import { parseIntChecker } from 'Tools/IntergerTools'

@@ -2,7 +2,7 @@ import { useState } from 'react'
 // CSS
 import './SiteModal.css'
 // PROPS
-import { ModalComponent } from 'Props/ComponentProps'
+import { ModalComponent } from 'Props/Components/ModalProps'
 // COMPONENTS
 import ModalContent from './component/ModalContent'
 

@@ -1,25 +1,27 @@
 // CSS
 import './SiteCard.css'
-// COMPONENTS
-import { SingleCard } from "./components/SingleCard"
+// PROPS
+import { SiteCardProps } from 'Props/Components/CardProps'
+// TOOLS
 import { GridSpanSwitcher } from 'Tools/GridTools'
-import { SiteCardProps } from 'Props/ComponentProps'
+// COMPONENTS
+import SingleCard from "./components/SingleCard"
 
 const SiteCards = (props: SiteCardProps) => {
 
     const { card_size , data } = props
     
-    const displayCards = data.map((data: any) => (
+    const displayCards = data.map(card => (
         <SingleCard
-            image={data.image}
-            title= {data.title}
-            description={data.description}
+            image={card.image}
+            title= {card.title}
+            description={card.description}
             span={GridSpanSwitcher(card_size)}
         />
     ))
 
     return (
-        <div className="site-grid-system site-card-grid">
+        <div className="site-grid-system">
             {displayCards}
         </div>
     )

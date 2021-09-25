@@ -1,7 +1,7 @@
 // CSS
 import './SiteCollapsible.css'
 // PROPS
-import { CollapsibleProps } from "Props/ComponentProps"
+import { CollapsibleProps } from 'Props/Components/CollapsibleProps'
 // COMPONENTS
 import SingleTabComponent from "./component/SingleCollapsible"
 

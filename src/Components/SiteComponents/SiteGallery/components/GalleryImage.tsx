@@ -1,6 +1,9 @@
-const GalleryImage = (props: any) => {
+// PROPS
+import { GalleryImageProps } from "Props/Components/GalleryProps"
 
-    const {width, image, title, click, type} = props
+const GalleryImage = (props: GalleryImageProps) => {
+
+    const { width, image, title, click, type } = props
 
     const clickLogic = () => {
         if (click) return click

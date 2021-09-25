@@ -1,5 +1,5 @@
 // PROPS
-import { ImageTextRowProps } from "Props/ComponentProps"
+import { ImageTextRowProps } from "Props/Components/ImageText"
 
 const ImageTextRow = (props: ImageTextRowProps) => (
     <div className="site-flex">

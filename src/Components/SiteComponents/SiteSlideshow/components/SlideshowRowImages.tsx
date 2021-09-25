@@ -1,5 +1,9 @@
 // PROPS
-import { SlideshowCaptionProps, SlideshowRowImageProps, SlideshowRowsProps } from "Props/ComponentProps"
+import { 
+    SlideshowCaptionProps, 
+    SlideshowRowImageProps, 
+    SlideshowRowsProps 
+} from "Props/Components/SlideshowProps"
 // TOOLS
 import { GridStyle } from "Tools/GridTools"
 

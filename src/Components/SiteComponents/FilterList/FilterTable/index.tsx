@@ -1,4 +1,6 @@
-import { FilterTableProps } from "Props/ComponentProps"
+// PROPS
+import { FilterTableProps } from "Props/Components/FilterProps"
+// COMPONENTS
 import FilterTableHeaders from "./FilterTableHeaders"
 import FilterTableRows from "./FilterTableRows"
 
