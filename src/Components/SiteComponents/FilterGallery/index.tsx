@@ -5,7 +5,6 @@ import './FilterGallery.css'
 import { SiteCardProps } from "Props/Components/CardProps"
 // TOOLS
 import { UnqiueValues } from "Tools/ObjectDataTools"
-import { GridStyle } from "Tools/GridTools"
 // COMPONENTS
 import SiteCards from "../SiteCards"
 import SingleFilterButton from "./components/SingleFilterButton"
@@ -39,9 +38,7 @@ const FilterGallery = (props: SiteCardProps) => {
     
     return (
         <>
-            <div className="site-grid" 
-                style={GridStyle(filterButtons.length)}
-            >
+            <div className="filter-buttons-container w-80 m-auto" >
                 {filterButtons}
             </div>
             <SiteCards 
