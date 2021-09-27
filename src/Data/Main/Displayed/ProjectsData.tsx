@@ -8,46 +8,52 @@ import SnuggleBunnyImage from 'Images/SnuggleBunny.png'
 export const MyProjectsData = [
     {
         title: "Basically MMA",
-        description: "A full stack MMA platform built with react, typescript and django restframework",
+        description: "A full stack MMA platform built with react, typescript and django restframework.",
         image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=Basically%20MMA",
-        link: "https://github.com/KachiiC/basically_mma"
+        link: "https://github.com/KachiiC/basically_mma",
+        link_type: "external"
     },
     {
-        description: "A full stack fantasy premier league tool built with react and django restframework",
         title: "FPL App",
+        description: "A full stack fantasy premier league tool built with react and django restframework.",
         image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=FPL%20App",
-        link: "https://github.com/KachiiC/fpl_fullstack"
+        link: "https://github.com/KachiiC/fpl_fullstack",
+        link_type: "external"
     },
     {
-        description: "A full stack fantasy premier league tool built with react and django restframework",
         title: "Finance Stack",
+        description: "A full stack fantasy premier league tool built with react and django restframework.",
         image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=Finance%20Stack",
-        link: "https://github.com/KachiiC/finance_stack"
+        link: "https://github.com/KachiiC/finance_stack",
+        link_type: "external"
     },
     {
-        description: "An ecommerce template which can be populated with your own data",
         title: "E-commerce App",
+        description: "An ecommerce template which can be populated with your own data.",
         image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=E-commerce%20App",
-        link: ""
+        link: "",
+        link_type: "external"
     },
     {
         title: "HSK App",
-        description: "This a learning platform built with react for people who are learning mandarin",
+        description: "This a learning platform built with react for people who are learning mandarin.",
         image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=HSK%20App",
-        link: "https://github.com/KachiiC/HSK"
+        link: "https://github.com/KachiiC/HSK",
+        link_type: "external"
     },
     {
         title: "Tweet Me App",
-        description: "A full stack twitter clone built with react and django restframework ",
+        description: "A full stack twitter clone built with react and django restframework.",
         image: "https://via.placeholder.com/300x200/000000/FFFFFF?text=Tweet%20Me%20App",
-        link: "https://github.com/KachiiC/tweet_me"
-    },
+        link: "https://github.com/KachiiC/tweet_me",
+        link_type: "external"
+    }
 ]
 
 export const FreelanceProjects = [
     {
         title: "Snuggle Bunny Clothing",
-        description: "This is a ...",
+        description: "This is a clothing e-commerce website built with shopify",
         image: SnuggleBunnyImage,
         link: "https://www.snugglebunnyclothing.com/",
     },

@@ -5,7 +5,7 @@ export interface SiteSingleCardProps {
     span?: number;
     type?: string;
     link?: string;
-    link_type?: string; 
+    link_type?: string;
 }
 
 export interface SiteCardProps  { 

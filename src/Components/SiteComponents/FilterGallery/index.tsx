@@ -6,8 +6,8 @@ import { SiteCardProps } from "Props/Components/CardProps"
 // TOOLS
 import { UnqiueValues } from "Tools/ObjectDataTools"
 // COMPONENTS
-import SiteCards from "../SiteCards"
-import SingleFilterButton from "./components/SingleFilterButton"
+import DisplayedFilterButtons from "./components/FilterButtons"
+import FilterGalleryComponent from "./components/FilterGalleryComponent"
 
 const FilterGallery = (props: SiteCardProps) => {
 
@@ -20,32 +20,20 @@ const FilterGallery = (props: SiteCardProps) => {
         }
     },[filterType, props.data])
 
-    const typesList = UnqiueValues(props.data, "type")
-
-    const filterButtons = typesList.map((type: string) => (
-        <SingleFilterButton
-            title={type}
-            click={() => setFilterType(type)}
-        />
-    )) 
-
-    filterButtons.unshift(
-        <SingleFilterButton
-            title="All"
-            click={() => setResultsData(props.data)}
+    const filterButtons = (
+        <DisplayedFilterButtons
+            data={UnqiueValues(props.data, "type")}
+            setFilterFunction={setFilterType}
+            setAll={() => setResultsData(props.data)}
         />
     )
     
     return (
-        <>
-            <div className="filter-buttons-container w-80 m-auto" >
-                {filterButtons}
-            </div>
-            <SiteCards 
-                data={resultsData} 
-                card_size={props.card_size}
-            />
-        </>
+        <FilterGalleryComponent 
+            buttons={filterButtons}
+            data={resultsData}
+            card_size={props.card_size}
+        />
     )
 }
 

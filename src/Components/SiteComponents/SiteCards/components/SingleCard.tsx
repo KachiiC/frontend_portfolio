@@ -13,10 +13,10 @@ const SingleCard = (props: SiteSingleCardProps) => {
                 <a href={props.link} target="_blank" rel="noreferrer">
                     {comp.component}
                 </a>
-            :
-            <Link to={`/${props.link}`}>
-                {comp.component}
-            </Link>
+                :
+                <Link to={`/${props.link}`}>
+                    {comp.component}
+                </Link>
         }
         
         return (
