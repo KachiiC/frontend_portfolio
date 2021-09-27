@@ -1,9 +1,11 @@
-export interface SiteSingleCardProps { 
+export interface SiteSingleCardProps {
     title: string; 
     description: string; 
     image: string; 
     span?: number;
-    type?: string 
+    type?: string;
+    link?: string;
+    link_type?: string; 
 }
 
 export interface SiteCardProps  { 

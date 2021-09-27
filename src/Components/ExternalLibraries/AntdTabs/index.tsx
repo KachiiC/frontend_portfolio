@@ -20,6 +20,7 @@ const AntdTabs = (props: AntdTabsProps) => {
             tab={tab.title} 
         >
             <SingleTab
+                link={tab.link}
                 title={tab.title}
                 content={tab.content}
                 description={tab.description}

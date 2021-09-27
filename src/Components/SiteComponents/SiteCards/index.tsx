@@ -13,6 +13,8 @@ const SiteCards = (props: SiteCardProps) => {
     
     const displayCards = data.map(card => (
         <SingleCard
+            link={card.link}
+            link_type={card.link_type}
             image={card.image}
             title= {card.title}
             description={card.description}

@@ -10,7 +10,7 @@ import { FooterSectionData } from "./ComponentsListData/FooterData"
 import { GallerySectionData } from "./ComponentsListData/GalleryData"
 import { ModalSectionExample } from "./ComponentsListData/ModalData"
 import { NavSectionData } from "./ComponentsListData/NavbarData"
-import { SlideshowSectionData } from "./ComponentsListData/SlideshowData"
+// import { SlideshowSectionData } from "./ComponentsListData/SlideshowData"
 import { TabsSectionExample } from "./ComponentsListData/TabsData"
 import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
 // COMPONENTS
@@ -23,45 +23,53 @@ import {
     FilterListExample, 
     GalleryExample, 
     ModalComponentExample, 
-    SlideshowExample, 
+    // SlideshowExample, 
     TabsExample, 
     TimelineExample
 } from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
+
+const githubDirect = "https://github.com/KachiiC/"
 
 
 export const MyComponentsData = [
     {
         title: "Navbar",
         introduction: "The navigation bar for this portfolio is a responsive component built with react and typscript.",
-        sections: NavSectionData
+        sections: NavSectionData,
+        link: githubDirect + "React_Navbar"
     },
     {
         title: "Footer",
         introduction: "The Footer for this portfolio is a responsive component built with react and typscript.",
         sections: FooterSectionData,
+        link: githubDirect + "React_footer",
     },
     {
         title: "Cards",
         introduction: "This is a cards component built with react.",
         sections: CardsSectionData,
         component: CardsExample,
+        link: githubDirect + "react_cards",
     },
     {
         title: "Collapsible",
         introduction: "This is a collapsible component built with react hooks.",
         sections: CollapsibleSectionsData,
         component: CollapsibleExample,
+        link: githubDirect + "react_collapsible",
     },
     {
         title: "Filter Collapsible",
         introduction: "This is a filter collapsible component built with react hooks, typscript and forms.",
         sections: FilterCollapsibleData,
         component: FilterCollapsibleExample,
+        link: githubDirect + "react_filter_collapsible",
     },
     {
         title: "Filter Gallery",
         introduction: "This is a filter gallery component built with react hooks, use effect and typscript",
         sections: FilterGallerySectionsData,
+        link: githubDirect + "react_filter_gallery",
         component: FilterGalleryExample,
     },
     {
@@ -69,11 +77,13 @@ export const MyComponentsData = [
         introduction: "This is a filter list component built with react hooks, typscript and forms.",
         sections: FilterListSectionData,
         component: FilterListExample,
+        link: githubDirect + "react_filter_list",
     },
     {
         title: "Gallery",
         introduction: "This is a gallery component built using react hooks.",
         sections: GallerySectionData,
+        link: githubDirect + "react_gallery",
         component: GalleryExample,
     },
     {
@@ -81,25 +91,28 @@ export const MyComponentsData = [
         introduction: "This is a modal component built for with react hooks",
         sections: ModalSectionExample,
         component: ModalComponentExample,
-    },
-    {
-        title: "Slideshow",
-        introduction: "This is a Slideshow component built for with react hooks",
-        sections: SlideshowSectionData,
-        component: SlideshowExample,
+        link: githubDirect + "react_modal",
     },
     {
         title: "Tabs",
         introduction: "This is a tabs component built with react hooks",
         sections: TabsSectionExample,
         component: TabsExample,
+        link: githubDirect + "react_tabs",
     },
     {
         title: "Timeline",
         introduction: "This is a timeline component built with react hooks",
         sections: TimelineSectionExample,
         component: TimelineExample,
-    }
+        link: githubDirect + "react_timeline",
+    },
+    // {
+    //     title: "Slideshow",
+    //     introduction: "This is a Slideshow component built for with react hooks",
+    //     sections: SlideshowSectionData,
+    //     component: SlideshowExample,
+    // },
 ]
 
 MyComponentsData.map((data: MyComponentsDataProps) => {
