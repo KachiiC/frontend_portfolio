@@ -17,6 +17,7 @@ export interface targetProps {
 export interface SiteIconProps {
     type: string | undefined; 
     size: SizeProp | undefined; 
+    color?: string;
 }
 
 export interface LinkRendererProps {

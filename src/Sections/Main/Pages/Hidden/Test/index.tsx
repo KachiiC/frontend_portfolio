@@ -1,15 +1,13 @@
-import FilterGallery from "Components/SiteComponents/FilterGallery"
-import { CardsData } from "Data/Main/Displayed/Components/ComponentsListData/CardsData"
+import FilterIcons from "Components/SiteComponents/FilterIcons"
+import SkillsData from "Data/Main/Displayed/About/SkillsData"
+
 
 const Test = () => {
     return (
         <>
             <h1>Test</h1>
             <p>Test Content</p>
-            <FilterGallery 
-                data={CardsData}
-                card_size="medium"
-            />
+            <FilterIcons data={SkillsData} />
         </>
     )
 }

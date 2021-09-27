@@ -7,7 +7,7 @@ const Home = (
     <div className="w-90 m-auto">
         <SiteCards
             data={HomeCardsData}
-            card_size="large"
+            card_size="medium"
         />
     </div>
 )
