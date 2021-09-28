@@ -1,24 +1,12 @@
-import { useState } from 'react';
 // CSS
 import './Test.css'
-import SiteCollapsibleComponent from 'Components/SiteComponents/SiteCollapsible'
-import { CollapsibleData } from 'Data/Main/Displayed/Components/ComponentsListData/CollapsibleData'
+// COMPONENTS
 
 const Test = () => {
-    const [itemVisible, setItemVisible] = useState(false)
-
-    const clickLogic = () => !itemVisible ? setItemVisible(true) : setItemVisible(false)
 
     return (
         <>
-            <button className="test-button" 
-                onClick={clickLogic} 
-            >
-                Show Item
-            </button>
-            <SiteCollapsibleComponent 
-                data={CollapsibleData} 
-            /> 
+            <h1>Test</h1>
         </>
     )
 }
