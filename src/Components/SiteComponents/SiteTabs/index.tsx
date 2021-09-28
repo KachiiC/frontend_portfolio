@@ -31,7 +31,7 @@ const SiteTabs = (props: SiteTabsProps) => {
     })
 
     return (
-        <div className={`w-${widthLogic} m-auto`}>
+        <div className={`site-tabs-component w-${widthLogic} m-auto`}>
             <div className="site-tab-rows">
                 {displayedTabs}
             </div>
@@ -39,7 +39,6 @@ const SiteTabs = (props: SiteTabsProps) => {
                 content={data[displayTab].content} 
             />
         </div>
-
     )
 } 
 

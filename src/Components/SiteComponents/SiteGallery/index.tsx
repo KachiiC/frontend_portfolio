@@ -70,7 +70,7 @@ const GalleryComponent = (props: GalleryProps) => {
     )
 
     return (
-        <>
+        <div className="site-gallery-component">
             {titleLogic()}
             <SiteModalComponent
                 type="blank"
@@ -80,7 +80,7 @@ const GalleryComponent = (props: GalleryProps) => {
             <div className={`w-${widthLogic} m-auto`}>
                 <GalleryRows />
             </div>
-        </>
+        </div>
     )
 }
 

@@ -10,6 +10,7 @@
 .tabs-content {
     width: 85%;
     margin: 25px auto;
+    animation: fadeInUp 1s;
 }
 
 @media screen and (max-width: 1080px) {

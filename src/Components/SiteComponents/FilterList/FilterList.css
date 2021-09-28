@@ -1,5 +1,6 @@
 .filter-list {
     margin: 25px auto;
+    animation: fadeIn 2s;
 }
 
 .filter-search select {

@@ -1,4 +1,6 @@
 import { useState } from "react"
+// CSS
+import { CSSTransition} from 'react-transition-group';
 // PROPS
 import { singleCollapsibleProps } from "Props/Components/CollapsibleProps"
 // COMPONENTS
@@ -28,12 +30,18 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
                 click={() => clickLogic()}
                 title={props.title}
             />
-            {displayContent && (
+            <CSSTransition
+                in={displayContent}
+                timeout={500}
+                classNames="collapsible-transition"
+                unmountOnExit
+                // appear
+            >
                 <CollapsibleContent 
                     width={props.width} 
                     content={props.content} 
                 />
-            )}
+            </CSSTransition>
         </>
     )
 }

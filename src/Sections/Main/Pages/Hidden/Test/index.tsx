@@ -1,13 +1,24 @@
-import FilterIcons from "Components/SiteComponents/FilterIcons"
-import SkillsData from "Data/Main/Displayed/About/SkillsData"
-
+import { useState } from 'react';
+// CSS
+import './Test.css'
+import SiteCollapsibleComponent from 'Components/SiteComponents/SiteCollapsible'
+import { CollapsibleData } from 'Data/Main/Displayed/Components/ComponentsListData/CollapsibleData'
 
 const Test = () => {
+    const [itemVisible, setItemVisible] = useState(false)
+
+    const clickLogic = () => !itemVisible ? setItemVisible(true) : setItemVisible(false)
+
     return (
         <>
-            <h1>Test</h1>
-            <p>Test Content</p>
-            <FilterIcons data={SkillsData} />
+            <button className="test-button" 
+                onClick={clickLogic} 
+            >
+                Show Item
+            </button>
+            <SiteCollapsibleComponent 
+                data={CollapsibleData} 
+            /> 
         </>
     )
 }

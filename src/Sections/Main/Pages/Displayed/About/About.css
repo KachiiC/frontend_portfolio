@@ -4,6 +4,7 @@
     margin: 20px;
 }
 
+/* INTRODUCTION */
 .about-introduction {
     margin: 25px auto;
 }
@@ -19,8 +20,21 @@
     margin: auto 0px;
 }
 
+/* DESCRIPTION */
+.about-description {
+    padding: 50px 25px;
+}
+
+/* SKILLS */
+.about-skills-container {
+    padding: 35px 0px;
+    min-height: 420px;
+}
+
+/* CONTACT */
 .about-contact {
     padding: 25px;
+    animation: fadeInUp 2s;
 }
 
 .about-contact h1,
@@ -31,15 +45,12 @@
 .contact-card {
     margin: 25px auto;
 }
-
+.about-title,
+.about-introduction,
+.about-description,
+.about-contact,
 .about-skills-container {
-    
-    padding: 35px 0px;
-    min-height: 420px;
-}
-
-.about-description {
-    padding: 50px 25px;
+    animation: fadeInUp 2s;
 }
 
 .about-description,
@@ -48,6 +59,8 @@
 }
 
 @media screen and (max-width: 1080px) {
+
+    /* INTRODUCTION */
     
     .about-image {
         width: 75%;
@@ -57,6 +70,7 @@
         font-size: 14px;
     }
 
+    /* DESCRIPTION */
     .about-description .site-col-4 {
         grid-column: span 12;
         margin: 25px 0px;
