@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/kach-portfolio/static/css/main.f59a9702.chunk.css",
+    "main.js": "/kach-portfolio/static/js/main.00e8448c.chunk.js",
+    "main.js.map": "/kach-portfolio/static/js/main.00e8448c.chunk.js.map",
+    "runtime-main.js": "/kach-portfolio/static/js/runtime-main.8d31bad4.js",
+    "runtime-main.js.map": "/kach-portfolio/static/js/runtime-main.8d31bad4.js.map",
+    "static/css/2.786ae0dd.chunk.css": "/kach-portfolio/static/css/2.786ae0dd.chunk.css",
+    "static/js/2.d5c96dc8.chunk.js": "/kach-portfolio/static/js/2.d5c96dc8.chunk.js",
+    "static/js/2.d5c96dc8.chunk.js.map": "/kach-portfolio/static/js/2.d5c96dc8.chunk.js.map",
+    "static/js/3.e4d40296.chunk.js": "/kach-portfolio/static/js/3.e4d40296.chunk.js",
+    "static/js/3.e4d40296.chunk.js.map": "/kach-portfolio/static/js/3.e4d40296.chunk.js.map",
+    "index.html": "/kach-portfolio/index.html",
+    "static/css/2.786ae0dd.chunk.css.map": "/kach-portfolio/static/css/2.786ae0dd.chunk.css.map",
+    "static/css/main.f59a9702.chunk.css.map": "/kach-portfolio/static/css/main.f59a9702.chunk.css.map",
+    "static/js/2.d5c96dc8.chunk.js.LICENSE.txt": "/kach-portfolio/static/js/2.d5c96dc8.chunk.js.LICENSE.txt",
+    "static/media/About_Image.7074687c.jpeg": "/kach-portfolio/static/media/About_Image.7074687c.jpeg",
+    "static/media/FooterData.1f31703a.png": "/kach-portfolio/static/media/FooterData.1f31703a.png",
+    "static/media/FooterImage.c6736bd7.png": "/kach-portfolio/static/media/FooterImage.c6736bd7.png",
+    "static/media/HomeImage.9038a413.png": "/kach-portfolio/static/media/HomeImage.9038a413.png",
+    "static/media/NavbarImage.d4bb3ae8.png": "/kach-portfolio/static/media/NavbarImage.d4bb3ae8.png",
+    "static/media/NavbarResponsiveImage.42555391.png": "/kach-portfolio/static/media/NavbarResponsiveImage.42555391.png",
+    "static/media/Playkrown.65c74134.png": "/kach-portfolio/static/media/Playkrown.65c74134.png",
+    "static/media/SnuggleBunny.66c36258.png": "/kach-portfolio/static/media/SnuggleBunny.66c36258.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d31bad4.js",
+    "static/css/2.786ae0dd.chunk.css",
+    "static/js/2.d5c96dc8.chunk.js",
+    "static/css/main.f59a9702.chunk.css",
+    "static/js/main.00e8448c.chunk.js"
+  ]
+}
