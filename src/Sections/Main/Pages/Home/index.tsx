@@ -1,15 +1,17 @@
+// CSS
+import './Home.css'
 // COMPONENTS
-import SiteCards from "Components/SiteComponents/SiteCards"
-// DATA
-import HomeCardsData from "Data/Main/Displayed/Home/HomeCardsData"
+import HomeHeader from "./components/HomeHeader"
+import AboutSkills from "../Displayed/About/components/AboutSkills"
+import HomePortfolio from './components/HomePortfolio'
+
 
 const Home = (
-    <div className="w-90 m-auto">
-        <SiteCards
-            data={HomeCardsData}
-            card_size="medium"
-        />
-    </div>
+    <>
+        {HomeHeader}
+        {HomePortfolio}
+        {AboutSkills}
+    </>
 )
 
 export default Home

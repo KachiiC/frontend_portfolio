@@ -16,7 +16,7 @@ const PagesData = [
     },
     {
         title: "About",
-        content: <About />
+        content: About
     },
     {
         title: "Code",

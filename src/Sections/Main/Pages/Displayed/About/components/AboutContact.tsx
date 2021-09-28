@@ -1,13 +1,14 @@
 // TOOLS
 import SiteIcon from "Tools/SiteIcon"
+// DATA
+import ContactInfomation from "Data/ContactInformation"
 
-const AboutContact = (props: {data: Object}) => {
-
-    const keys = Object.keys(props.data)
+const DisplayContact = () => {
+    const keys = Object.keys(ContactInfomation)
     
     const displayedInformation = keys.map((key, index) => {
 
-        const value = Object.values(props.data)[index]
+        const value = Object.values(ContactInfomation)[index]
         
         return (
             <div className="contact-card">
@@ -18,13 +19,19 @@ const AboutContact = (props: {data: Object}) => {
     })
 
     return (
-        <div className="about-contact">
-            <h1>Contact Kachi Cheong :</h1>
-            <div className="site-flex">
-                {displayedInformation}
-            </div>
+        <div className="site-flex">
+            {displayedInformation}
         </div>
+
     )
+
 }
+
+const AboutContact = (
+    <div className="about-contact">
+        <h1>Contact Kachi Cheong :</h1>
+        <DisplayContact />
+    </div>
+)
 
 export default AboutContact
