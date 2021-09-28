@@ -2,7 +2,7 @@
   "name": "kach_portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://KachiiC.github.io/kach_portfolio",
+  "homepage": "https://kachiic.github.io/kach_portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
