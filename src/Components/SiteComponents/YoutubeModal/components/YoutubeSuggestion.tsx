@@ -1,6 +1,9 @@
+// PROPS
+import { SingleYoutubeSuggestionProps, YoutubeSuggestionProps } from "Props/Components/YoutubeModalProps"
+// TOOLS
 import { TitleTrimmer } from "Tools/StringTools"
 
-const SingleYoutubeSuggestion = (props: any) => (
+const SingleYoutubeSuggestion = (props: SingleYoutubeSuggestionProps) => (
     <div className="site-flex suggestion-row">
         <div className="youtube-suggestion-title m-auto">
             {TitleTrimmer(props.video_title, 50)}
@@ -14,9 +17,9 @@ const SingleYoutubeSuggestion = (props: any) => (
     </div>
 )
 
-const YoutubeSuggestions = (props: any) => {
+const YoutubeSuggestions = (props: YoutubeSuggestionProps) => {
 
-    const displaySuggestions = props.data.map((obj: any) => (
+    const displaySuggestions = props.data.map(obj => (
         <SingleYoutubeSuggestion
             video_title={obj.video_title}
             video_thumbnail={obj.video_thumbnail}

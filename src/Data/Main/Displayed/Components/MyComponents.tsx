@@ -25,8 +25,10 @@ import {
     ModalComponentExample, 
     // SlideshowExample, 
     TabsExample, 
-    TimelineExample
+    TimelineExample,
+    YoutubeModalPlayerExample
 } from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
+import { YoutubeModalExample } from "./ComponentsListData/YoutubeModalData"
 
 const githubDirect = "https://github.com/KachiiC/"
 
@@ -106,6 +108,13 @@ export const MyComponentsData = [
         sections: TimelineSectionExample,
         component: TimelineExample,
         link: githubDirect + "react_timeline",
+    },
+    {
+        title: "Youtube Modal Player",
+        introduction: "This is a youtube player component built with react hooks, in coperating iframe and the modal component.",
+        sections: YoutubeModalExample,
+        component: YoutubeModalPlayerExample,
+        // link: githubDirect + "react_timeline",
     },
     // {
     //     title: "Slideshow",

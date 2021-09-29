@@ -8,6 +8,7 @@ import Modal from "Components/SiteComponents/SiteModal"
 import SiteSlideshow from "Components/SiteComponents/SiteSlideshow"
 import Tabs from "Components/SiteComponents/SiteTabs"
 import Timeline from "Components/SiteComponents/SiteTimeline"
+import YoutubeModal from "Components/SiteComponents/YoutubeModal"
 // DATA
 import { CardsData } from "Data/Main/Displayed/Components/ComponentsListData/CardsData"
 import { CollapsibleData } from "Data/Main/Displayed/Components/ComponentsListData/CollapsibleData"
@@ -17,6 +18,7 @@ import { ModalData } from "Data/Main/Displayed/Components/ComponentsListData/Mod
 import { SlideShowData } from "Data/Main/Displayed/Components/ComponentsListData/SlideshowData"
 import { TabsData } from "Data/Main/Displayed/Components/ComponentsListData/TabsData"
 import { TimelineData } from "Data/Main/Displayed/Components/ComponentsListData/TimelineData"
+import { YoutubeModalCurrentExample, YoutubeModalData } from "Data/Main/Displayed/Components/ComponentsListData/YoutubeModalData"
 
 export const CardsExample = (
     <SiteCards
@@ -105,4 +107,22 @@ export const TimelineExample = (
         </div>
     )
 
+
+export const YoutubeModalPlayerExample = (
+    <>
+        <h3>Click on the image to open modal!</h3>
+        <YoutubeModal 
+            component={
+                <div className="w-30 m-auto cursor-pointer">
+                    <img src={YoutubeModalCurrentExample.video_thumbnail} 
+                        alt="component" 
+                        className="site-responsive-image"
+                    />
+                </div>
+            } 
+            current={YoutubeModalCurrentExample} 
+            data={YoutubeModalData} 
+        />
+    </>
+)
 
