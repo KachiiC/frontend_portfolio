@@ -4,11 +4,10 @@ import './GalleryComponent.css'
 // PROPS
 import { GalleryProps } from "Props/Components/GalleryProps"
 // TOOLS
-import { GridStyle } from "Tools/GridTools"
 // COMPONENTS
-import GalleryImage from "./components/GalleryImage"
-import RowImage from "./components/RowImage"
 import SiteModalComponent from "../SiteModal"
+import GalleryImage from "./components/GalleryImage"
+import GalleryImagesRow from "./components/GalleryImagesRow"
 
 const GalleryComponent = (props: GalleryProps) => {
 
@@ -27,31 +26,7 @@ const GalleryComponent = (props: GalleryProps) => {
     // IMAGE LOGIC
     const [displayedImage, setDisplayedImage] = useState(0)
 
-    const GalleryRows = () => {
-
-        const displayedRows = data.map(item => {
-
-            const clickFunction = () => setDisplayedImage(data.indexOf(item))
-    
-            return (
-                <RowImage
-                    key={item.title}
-                    title={item.title}
-                    image={item.image}
-                    click={clickFunction}
-                />
-            )
-        }).slice(0, numberLogic)
-
-        return (
-            <div className="site-grid" 
-                style={GridStyle(numberLogic)}
-            >
-                {displayedRows}
-            </div>
-        )
-    }
-
+    // The displayed selected image which opens the modal
     const gallerySelectedImage = (
         <GalleryImage 
             image={data[displayedImage].image} 
@@ -60,7 +35,8 @@ const GalleryComponent = (props: GalleryProps) => {
             type="display"
         />
     )
-
+    
+    // The image displayed in the modal when clicked
     const galleryModalImage = (
         <GalleryImage 
             image={data[displayedImage].image}
@@ -78,7 +54,11 @@ const GalleryComponent = (props: GalleryProps) => {
                 content={galleryModalImage}
             />
             <div className={`w-${widthLogic} m-auto`}>
-                <GalleryRows />
+                <GalleryImagesRow 
+                    data={data}
+                    function={setDisplayedImage}
+                    row_number={numberLogic}
+                />
             </div>
         </div>
     )

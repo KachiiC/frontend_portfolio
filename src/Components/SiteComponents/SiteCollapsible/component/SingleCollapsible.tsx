@@ -8,10 +8,13 @@ import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
 
 const SingleCollapsible = (props: singleCollapsibleProps) => {
 
+    // Each tabs content is open or closed depending on this state
     const [displayContent, setDisplayContent] = useState(false)
+    // if tab is open, direction will point down, if closed will point left (default)
     const [collapisbleDirection, setCollapisbleDirection] = useState("left")
 
     const clickLogic = () => {
+        // Each tabs content is open or closed depending on state
         !displayContent ?
             setDisplayContent(true) 
             : 
@@ -26,8 +29,9 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
     return (
         <>
             <CollapsibleHeading
-                direction={collapisbleDirection}
+                // on click will change direction and show or clsose content
                 click={() => clickLogic()}
+                direction={collapisbleDirection}
                 title={props.title}
             />
             <CSSTransition
@@ -35,7 +39,7 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
                 timeout={500}
                 classNames="collapsible-transition"
                 unmountOnExit
-                // appear
+                appear
             >
                 <CollapsibleContent 
                     width={props.width} 

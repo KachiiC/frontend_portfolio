@@ -1,6 +1,6 @@
 import FilterCollapsible from "Components/SiteComponents/FilterCollapsible"
 import FilterGallery from "Components/SiteComponents/FilterGallery"
-import FilterList from "Components/SiteComponents/FilterList"
+import FilterList from "Components/SiteComponents/FilterTable"
 import SiteCards from "Components/SiteComponents/SiteCards"
 import Collapsible from "Components/SiteComponents/SiteCollapsible"
 import Gallery from "Components/SiteComponents/SiteGallery"

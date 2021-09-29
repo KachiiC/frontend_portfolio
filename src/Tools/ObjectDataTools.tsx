@@ -40,3 +40,7 @@ export const setLogic = (first: number | string, last: number | string, setFunct
         last: last
     })
 }
+
+export const ArrrayObjectKeys = (data: Object[]) => {
+    return Object.keys(data[0])
+}

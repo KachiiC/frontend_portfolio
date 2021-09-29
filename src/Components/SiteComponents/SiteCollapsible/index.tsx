@@ -6,8 +6,6 @@ import { CollapsibleProps } from 'Props/Components/CollapsibleProps'
 import SingleTabComponent from "./component/SingleCollapsible"
 
 const SiteCollapsibleComponent = (props: CollapsibleProps) => {
-
-    const widthLogic = props.width ? props.width : 100
     
     const displayedTabs = props.data.map(tab => (
         <SingleTabComponent
@@ -18,7 +16,7 @@ const SiteCollapsibleComponent = (props: CollapsibleProps) => {
     ))
 
     return (
-        <div className={`w-${widthLogic} site-collapsible-container`}>
+        <div className={`w-${props.width} site-collapsible-container`}>
             {displayedTabs}
         </div>
     )

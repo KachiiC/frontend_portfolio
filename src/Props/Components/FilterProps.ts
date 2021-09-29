@@ -14,7 +14,7 @@ export interface FilterInputProps {
 }
 
 export interface FilterSelectProps { 
-    data: any[]; 
+    data: string[]; 
     function: ChangeEventHandler<HTMLSelectElement> | undefined; default: string | number | readonly string[] | undefined 
 }
 
@@ -27,6 +27,14 @@ export interface FilterSearchProps {
 }
 
 export interface FilterTableProps {
-    data: any[];
-    results_data?: any;
+    data: any[]
+    keys: string[]
+}
+
+export interface FilterTableHeaderProps {
+    keys: string[]
+}
+
+export interface FilterTableRowProps {
+    data: Object[];
 }

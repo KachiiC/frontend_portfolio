@@ -6,6 +6,8 @@ import {
 } from "Props/Components/FilterProps"
 
 export const FilterInput = (props: FilterInputProps) => (
+    // input component which takes value and placeholder.
+    // onChange is detirmined on the level above.
     <input type="search"
         className="filter-input"
         value={props.value}
@@ -16,6 +18,7 @@ export const FilterInput = (props: FilterInputProps) => (
 
 export const FilterSelect = (props: FilterSelectProps) => {
 
+    // Takes a array of strings and returns an option for each one
     const displayOptions = props.data.map(column => (
         <option value={column} 
             key={column}
@@ -25,6 +28,8 @@ export const FilterSelect = (props: FilterSelectProps) => {
     ))
 
     return (
+        // When column is selected, the level above sets the column for useState
+        // default value is defined on level above
         <select name="columns"
             onChange={props.function} 
             defaultValue={props.default}

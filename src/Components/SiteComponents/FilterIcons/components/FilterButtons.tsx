@@ -1,12 +1,18 @@
-import { UnqiueValues } from "Tools/ObjectDataTools"
+// PROPS
+import { FilterIconButtonsProps } from "Props/Components/FilterIconProps"
 
-const FilterButtons = (props: any) => {
-    const displayButtons = UnqiueValues(props.data, "type").map((stack: string) => (
+const FilterButtons = (props: FilterIconButtonsProps) => {
+    
+    // For each string in the array, returns a SingleFilterButton.
+    // The setFunction is fed in and sets the current button to the state on the level above
+    const displayButtons = props.data.map(stack => (
         <button onClick={() => props.setFunction(stack)}>
             {stack}
         </button>
     ))
 
+    // Add a button named "all" at front of list, 
+    // setAll property will be defined on level above to return all objects in the array 
     displayButtons.unshift(
         <button onClick={props.setAll}>
             All
@@ -19,7 +25,6 @@ const FilterButtons = (props: any) => {
                 {displayButtons}
             </div>
         </div>
-
     )
 }
 

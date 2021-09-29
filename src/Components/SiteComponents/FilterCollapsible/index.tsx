@@ -10,29 +10,39 @@ import SiteCollapsible from "../SiteCollapsible"
 
 const FilterCollapsible = (props: FilterCollapsibleProps) => {
 
-    const {data, width, placeholder} = props
+    const { data, width, placeholder } = props
 
-    const [input, setInput] = useState('');
+    // The input string used to filter
+    const [input, setInput] = useState('')
+    // The results which match the input, intial value is the entire data set
     const [foundResults, setFoundResults] = useState(data)
 
+    // Filters the data and returns the titles which begin with the same letters as input 
     const filterFunction = (e: targetProps) => {
         const keyword = e.target.value;
 
+        // words that begin with input are returned
         const resultsLogic = data.filter(result => 
             result.title.toLowerCase().startsWith(keyword.toLowerCase())
         )
 
+        // logic only kicks in when keyword is not empty string
         keyword !== '' ? setFoundResults(resultsLogic) : setFoundResults(data)
         
         setInput(keyword)
     }
 
+    // If no placeholder is specified, "search" is used as the placeholder
     const placeholderLogic = placeholder ? placeholder : "search"
 
+    // Width is 100% by default 
+    const widthLogic = width ? width : 100
+
+    // Filters the collpasible component titles and returns "No results found!" foundResults is empty.
     const filterLogic = foundResults && foundResults.length > 0 ? 
         <SiteCollapsible 
             data={foundResults} 
-            width={width}
+            width={widthLogic}
         />
         : 
         <div>
@@ -41,8 +51,9 @@ const FilterCollapsible = (props: FilterCollapsibleProps) => {
 
     return (
         <div className="filter-collapsible">
+            {/* Filter begins on change */}
             <input onChange={filterFunction} 
-                className={`w-${width}`}
+                className={`w-${widthLogic}`}
                 placeholder={placeholderLogic}
             />
             {filterLogic}

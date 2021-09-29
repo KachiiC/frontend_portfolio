@@ -4,15 +4,15 @@ import { FilterTableProps } from "Props/Components/FilterProps"
 import FilterTableHeaders from "./FilterTableHeaders"
 import FilterTableRows from "./FilterTableRows"
 
-const FilterTable = (props: FilterTableProps) => (
+const FilterTableComponent = (props: FilterTableProps) => (
     <table className="filter-table">
         <FilterTableHeaders 
-            data={props.data} 
+            keys={props.keys} 
         />
         <FilterTableRows 
-            data={props.results_data} 
+            data={props.data} 
         />
     </table>
 )
 
-export default FilterTable
+export default FilterTableComponent

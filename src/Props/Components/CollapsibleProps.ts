@@ -3,11 +3,11 @@ import { MouseEventHandler } from "react";
 export interface singleCollapsibleProps {
     title: string; 
     content: JSX.Element
-    width?: number
+    width?: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100; 
 }
 
 export interface CollapsibleProps {
-    width?: number; 
+    width?: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100 | undefined; 
     data: singleCollapsibleProps[]
 }
 
@@ -18,6 +18,6 @@ export interface CollapsibleHeadingProps {
 }
 
 export interface CollapsibleContentProps { 
-    width: number | undefined; 
+    width: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100 | undefined; 
     content: JSX.Element 
 }

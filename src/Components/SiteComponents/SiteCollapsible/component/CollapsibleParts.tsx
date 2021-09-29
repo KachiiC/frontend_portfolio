@@ -6,11 +6,12 @@ import SiteIcon from "Tools/SiteIcon"
 export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
 
     const {click, direction, title} = props
-
+    
+    // Direction is detirmined by whether tab is open or not
     return (
         <div className={`site-collapsible m-auto cursor-pointer`} 
             onClick={click}
-            >
+        >
             {title}
             <div className="collapsible-icon">
                 <SiteIcon 
