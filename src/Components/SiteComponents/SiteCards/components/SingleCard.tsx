@@ -27,9 +27,7 @@ const SingleCard = (props: SiteSingleCardProps) => {
     }
 
     return (
-        <div className={`site-single-card w-90 site-col-${span}`}
-            key={title} 
-        >
+        <div className={`site-single-card w-90 site-col-${span}`} >
             {/* If link is passed, returns a link based on type, else it will just return the image */}
             <LinkLogic 
                 component={

@@ -127,7 +127,8 @@ export const MyComponentsData = [
 MyComponentsData.map((data: MyComponentsDataProps) => {
     
     data.content = (
-        <ComponentsTab 
+        <ComponentsTab
+            key={data.title}
             introduction={data.introduction}
             component={data.component}
             sections={data.sections}

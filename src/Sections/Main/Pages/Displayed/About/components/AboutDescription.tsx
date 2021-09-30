@@ -2,7 +2,7 @@
 import DescriptionData from "Data/Main/Displayed/About/DescriptionData"
 
 const displayedDescriptions = DescriptionData.map((obj) => (
-    <div className="site-col-4">
+    <div className="site-col-4" key={obj.title}>
         <h3>{obj.title}</h3>
         <p className="w-80 m-auto">
             {obj.description}

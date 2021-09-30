@@ -9,9 +9,9 @@ const SiteCollapsibleComponent = (props: CollapsibleProps) => {
     
     const displayedTabs = props.data.map(tab => (
         <SingleTabComponent
+            key={tab.title}
             title={tab.title}
             content={tab.content}
-            key={tab.title}
         />
     ))
 

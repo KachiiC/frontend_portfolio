@@ -19,6 +19,7 @@ const FilterGalleryButtons = (props: FilterButtonProps) => {
     // The setFunction is fed in and sets the current button to the state on the level above
     const filterButtons = props.data.map(type => (
         <SingleFilterButton
+            key={type}
             title={type}
             click={() => props.setFilterFunction(type)}
         />
@@ -28,6 +29,7 @@ const FilterGalleryButtons = (props: FilterButtonProps) => {
     // setAll property will be defined on level above to return all objects in the array 
     filterButtons.unshift(
         <SingleFilterButton
+            key="All"
             title="All"
             click={props.setAll}
         />

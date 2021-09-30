@@ -9,11 +9,11 @@ const ImageTextComponent = (props: ImageTextComponentProps) => {
 
     const displayRows = props.data.map(project => (
         <ImageTextRow
+            key={project.title}
             title={project.title}
             image={project.image}
             link={project.link}
             description={project.description}
-            key={project.title}
         />
     ))
 

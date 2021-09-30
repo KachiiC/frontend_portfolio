@@ -5,7 +5,9 @@ const FilterTableHeaders = (props: FilterTableHeaderProps) => {
 
     // returns table heading in uppercase for each key.
     const displayHeaders = props.keys.map((data: string) => (
-        <th key={data}>{data.toUpperCase()}</th>
+        <th key={data}>
+            {data.toUpperCase()}
+        </th>
     ))
 
     return (

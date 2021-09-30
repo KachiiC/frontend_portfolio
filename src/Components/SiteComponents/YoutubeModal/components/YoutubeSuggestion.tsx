@@ -22,6 +22,7 @@ const YoutubeSuggestions = (props: YoutubeSuggestionProps) => {
     const displaySuggestions = props.data.map(obj => (
         // Sets the object as
         <SingleYoutubeSuggestion
+            key={obj.video_title}
             video_title={obj.video_title}
             video_thumbnail={obj.video_thumbnail}
             // Sets the object which is clicked as the current displayedVideo on level above

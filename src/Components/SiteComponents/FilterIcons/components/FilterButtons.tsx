@@ -6,7 +6,9 @@ const FilterButtons = (props: FilterIconButtonsProps) => {
     // For each string in the array, returns a SingleFilterButton.
     // The setFunction is fed in and sets the current button to the state on the level above
     const displayButtons = props.data.map(stack => (
-        <button onClick={() => props.setFunction(stack)}>
+        <button onClick={() => props.setFunction(stack)}
+            key={stack}
+        >
             {stack}
         </button>
     ))
@@ -14,7 +16,9 @@ const FilterButtons = (props: FilterIconButtonsProps) => {
     // Add a button named "all" at front of list, 
     // setAll property will be defined on level above to return all objects in the array 
     displayButtons.unshift(
-        <button onClick={props.setAll}>
+        <button onClick={props.setAll}
+            key="All"
+        >
             All
         </button>
     )

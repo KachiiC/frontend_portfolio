@@ -14,6 +14,7 @@ const SiteCards = (props: SiteCardProps) => {
     const displayCards = data.map(card => (
         // returns a card for each object in the array
         <SingleCard
+            key={card.title}
             image={card.image}
             title= {card.title}
             description={card.description}

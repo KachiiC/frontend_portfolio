@@ -11,7 +11,7 @@ const DisplayContact = () => {
         const value = Object.values(ContactInfomation)[index]
         
         return (
-            <div className="contact-card">
+            <div className="contact-card" key={key}>
                 <SiteIcon type={key} size="2x" />
                 <p>{key.toUpperCase()}: {value}</p>
             </div>
