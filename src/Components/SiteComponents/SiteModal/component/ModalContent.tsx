@@ -1,5 +1,4 @@
 // CSS
-// CSS
 import '../SiteModal.css'
 // PROPS
 import { modalContentProps } from 'Props/Components/ModalProps'

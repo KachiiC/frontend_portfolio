@@ -5,15 +5,14 @@ import './SiteModal.css'
 import { ModalComponent } from 'Props/Components/ModalProps'
 // COMPONENTS
 import ModalContent from './component/ModalContent'
+// TOOLS
+import { StateLogic } from 'Tools/FunctionTools'
 
 const SiteModalComponent = (props: ModalComponent) => {
 
     const [displayModal, setDisplayModal] = useState(false)
 
-    const modalLogic = () => !displayModal ? 
-        setDisplayModal(true) 
-        : 
-        setDisplayModal(false)
+    const modalLogic = () => StateLogic(displayModal, setDisplayModal) 
 
     const modalContent = (
         <ModalContent

@@ -1,67 +1,60 @@
 import { useState } from "react"
 // CSS
-import './GalleryComponent.css'
+import './SiteGallery.css'
 // PROPS
 import { GalleryProps } from "Props/Components/GalleryProps"
 // TOOLS
+import { TitleLogic } from "Tools/StringTools"
+import { RenderLogic } from "Tools/FunctionTools"
 // COMPONENTS
 import SiteModalComponent from "../SiteModal"
-import GalleryImage from "./components/GalleryImage"
+import { GalleryModalImage, GallerySelectedImage } from "./components/GalleryImage"
 import GalleryImagesRow from "./components/GalleryImagesRow"
 
-const GalleryComponent = (props: GalleryProps) => {
+
+const SiteGallery = (props: GalleryProps) => {
 
     const { data, title, width, number } = props
 
     // WIDTH LOGIC
-    const widthLogic = width ? width : 80
-    // NUMBER LOGIC
-    const numberLogic = number ? number : 4
-
-    // TITLE LOGIC
-    const titleLogic = () => {
-        if (title) return <h2>{title}</h2>
-    }
+    const widthLogic = RenderLogic(width, 80)
 
     // IMAGE LOGIC
     const [displayedImage, setDisplayedImage] = useState(0)
 
     // The displayed selected image which opens the modal
     const gallerySelectedImage = (
-        <GalleryImage 
-            image={data[displayedImage].image} 
-            title={data[displayedImage].title}
+        <GallerySelectedImage 
+            image={data[displayedImage].image}
             width={widthLogic}
-            type="display"
         />
     )
     
     // The image displayed in the modal when clicked
     const galleryModalImage = (
-        <GalleryImage 
-            image={data[displayedImage].image}
+        <GalleryModalImage 
             title={data[displayedImage].title}
+            image={data[displayedImage].image}
             width={50}
         />
     )
 
     return (
         <div className="site-gallery-component">
-            {titleLogic()}
+            {TitleLogic(title, "h2")}
             <SiteModalComponent
-                type="blank"
                 component={gallerySelectedImage}
                 content={galleryModalImage}
+                type="blank"
             />
-            <div className={`w-${widthLogic} m-auto`}>
-                <GalleryImagesRow 
-                    data={data}
-                    function={setDisplayedImage}
-                    row_number={numberLogic}
-                />
-            </div>
+            <GalleryImagesRow 
+                data={data}
+                row_number={RenderLogic(number, 4)}
+                setFunction={setDisplayedImage}
+                width={widthLogic}
+            />
         </div>
     )
 }
 
-export default GalleryComponent
+export default SiteGallery

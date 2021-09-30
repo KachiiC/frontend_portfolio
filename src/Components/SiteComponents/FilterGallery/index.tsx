@@ -4,6 +4,7 @@ import './FilterGallery.css'
 // PROPS
 import { SiteCardProps } from "Props/Components/CardProps"
 // TOOLS
+import { RenderLogic } from "Tools/FunctionTools"
 import { UnqiueValues } from "Tools/ObjectDataTools"
 // COMPONENTS
 import FilterGalleryButtons from "./components/FilterGalleryButtons"
@@ -32,15 +33,13 @@ const FilterGallery = (props: SiteCardProps) => {
             setAll={() => setResultsData(props.data)}
         />
     )
-
-    // If card size is not defined, it is set to medium as a default.
-    const cardSizeLogic = props.card_size ? props.card_size : "medium"
     
     return (
         <FilterGalleryComponent 
-            buttons={filterButtons}
-            card_size={cardSizeLogic}
             data={resultsData}
+            buttons={filterButtons}
+            // If card size is not defined, it is set to medium as a default.
+            card_size={RenderLogic(props.card_size, "medium")}
         />
     )
 }

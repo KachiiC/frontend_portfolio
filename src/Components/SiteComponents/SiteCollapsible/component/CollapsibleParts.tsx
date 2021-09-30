@@ -10,7 +10,7 @@ export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
     // Direction is detirmined by whether tab is open or not
     return (
         <div className={`site-collapsible m-auto cursor-pointer`} 
-            onClick={click}
+            onClick={() => click}
         >
             {title}
             <div className="collapsible-icon">

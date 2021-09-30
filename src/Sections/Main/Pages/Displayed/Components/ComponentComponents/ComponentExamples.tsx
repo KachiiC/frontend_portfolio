@@ -38,7 +38,7 @@ export const FilterCollapsibleExample = (
     <FilterCollapsible
         data={CollapsibleData} 
         width={80}
-        placeholder="example placeholder"
+        placeholder="example placeholders"
     />
 )
 

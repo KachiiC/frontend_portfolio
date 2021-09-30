@@ -6,7 +6,7 @@ export interface ObjectDataProps {
 }
 
 
-export interface targetProps { 
+export interface TargetProps { 
     target: { 
         value: any; 
     }

@@ -4,9 +4,11 @@ import { FilterIconProps } from "Props/Components/FilterIconProps"
 // CSS 
 import './FilterIcons.css'
 // TOOLS
+import { TitleLogic } from "Tools/StringTools"
+import { UnqiueValues } from "Tools/ObjectDataTools"
+// COMPONENTS
 import FilterButtons from "./components/FilterButtons"
 import IconsList from "./components/IconList"
-import { UnqiueValues } from "Tools/ObjectDataTools"
 
 const FilterIcons = (props: FilterIconProps) => {
 
@@ -14,11 +16,6 @@ const FilterIcons = (props: FilterIconProps) => {
     const [filterType, setFilterType] = useState('')
     // The results is set when filtered, inital state is the input data.
     const [resultsData, setResultsData] = useState(props.data)
-
-    // Only returns a title is passed as an argument
-    const titleLogic = () => {
-        if (props.title) return <h1>{props.title}</h1>
-    }
 
     useEffect(() => {
         // Logic is only set when filter type is set.
@@ -30,7 +27,8 @@ const FilterIcons = (props: FilterIconProps) => {
     
     return (
         <div className="filter-icons">
-            {titleLogic()}
+            {/* Only returns a title is passed as an argument */}
+            {TitleLogic(props.title, "h1")}
             <FilterButtons 
                 data={UnqiueValues(props.data, "type")} 
                 setFunction={setFilterType}

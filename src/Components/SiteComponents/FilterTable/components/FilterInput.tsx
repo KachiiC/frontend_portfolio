@@ -1,9 +1,5 @@
 // PROPS
-import { 
-    FilterInputProps, 
-    FilterSearchProps, 
-    FilterSelectProps 
-} from "Props/Components/FilterProps"
+import { FilterInputProps, FilterSearchProps, FilterSelectProps } from "Props/Components/FilterProps"
 
 export const FilterInput = (props: FilterInputProps) => (
     // input component which takes value and placeholder.

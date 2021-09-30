@@ -5,6 +5,7 @@ import { CSSTransition} from 'react-transition-group';
 import { singleCollapsibleProps } from "Props/Components/CollapsibleProps"
 // COMPONENTS
 import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
+import { StateLogic } from "Tools/FunctionTools";
 
 const SingleCollapsible = (props: singleCollapsibleProps) => {
 
@@ -15,10 +16,7 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
 
     const clickLogic = () => {
         // Each tabs content is open or closed depending on state
-        !displayContent ?
-            setDisplayContent(true) 
-            : 
-            setDisplayContent(false);
+        StateLogic(displayContent, setDisplayContent)
         
         collapisbleDirection === "left" ? 
             setCollapisbleDirection("down") 
@@ -30,9 +28,9 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
         <>
             <CollapsibleHeading
                 // on click will change direction and show or clsose content
+                title={props.title}
                 click={() => clickLogic()}
                 direction={collapisbleDirection}
-                title={props.title}
             />
             <CSSTransition
                 in={displayContent}

@@ -2,9 +2,10 @@ import { useState } from "react"
 // CSS
 import './FilterCollapsible.css'
 // PROPS
-import { targetProps } from "Props/ToolProps"
-// PROPS
 import { FilterCollapsibleProps } from "Props/Components/FilterCollapsibleProps"
+import { TargetProps } from "Props/ToolProps"
+// TOOLS
+import { RenderLogic } from "Tools/FunctionTools"
 // COMPONENTS
 import SiteCollapsible from "../SiteCollapsible"
 
@@ -18,7 +19,7 @@ const FilterCollapsible = (props: FilterCollapsibleProps) => {
     const [foundResults, setFoundResults] = useState(data)
 
     // Filters the data and returns the titles which begin with the same letters as input 
-    const filterFunction = (e: targetProps) => {
+    const filterFunction = (e: TargetProps) => {
         const keyword = e.target.value;
 
         // words that begin with input are returned
@@ -32,11 +33,8 @@ const FilterCollapsible = (props: FilterCollapsibleProps) => {
         setInput(keyword)
     }
 
-    // If no placeholder is specified, "search" is used as the placeholder
-    const placeholderLogic = placeholder ? placeholder : "search"
-
     // Width is 100% by default 
-    const widthLogic = width ? width : 100
+    const widthLogic = RenderLogic(width, 100)
 
     // Filters the collpasible component titles and returns "No results found!" foundResults is empty.
     const filterLogic = foundResults && foundResults.length > 0 ? 
@@ -54,7 +52,8 @@ const FilterCollapsible = (props: FilterCollapsibleProps) => {
             {/* Filter begins on change */}
             <input onChange={filterFunction} 
                 className={`w-${widthLogic}`}
-                placeholder={placeholderLogic}
+                // If no placeholder is specified, "search" is used as the placeholder
+                placeholder={RenderLogic(placeholder, "search")}
             />
             {filterLogic}
         </div>

@@ -6,22 +6,24 @@ import ModalVideoPlayer from "./ModalVideoPlayer"
 import YoutubeSuggestions from "./YoutubeSuggestion"
 
 const YoutubeModalContent = (props: YoutubeModalProps) => {
-    
+
+    // Current displayed video, the default is the current
     const [displayedVideo, setDisplayedVideo] = useState(props.current)
 
-    const {video_title, video_id, video_description, upload_date} = displayedVideo
+    const { video_title, video_id, video_description, upload_date } = displayedVideo
 
     return (
         <div className="site-grid-system youtube-modal-content">
-            <ModalVideoPlayer 
+            <ModalVideoPlayer
+                video_id={video_id}
+                video_thumbnail={""}
                 video_title={video_title}
                 video_description={video_description}
-                video_id={video_id}
-                upload_date={upload_date} 
-                video_thumbnail={""}            
+                upload_date={upload_date}
             />
-            <YoutubeSuggestions 
+            <YoutubeSuggestions
                 data={props.data}
+                // Clicking a suggestion changes the displayedVideo
                 setFunction={setDisplayedVideo}
             />
         </div>

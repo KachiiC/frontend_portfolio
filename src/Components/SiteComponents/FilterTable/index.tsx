@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './FilterList.css'
 // PROPS
 import { FilterProps } from "Props/Components/FilterProps"
-import { targetProps } from 'Props/ToolProps'
+import { TargetProps } from 'Props/ToolProps'
 // TOOLS
 import { parseIntChecker } from 'Tools/IntergerTools'
 import { ArrrayObjectKeys } from 'Tools/ObjectDataTools'
@@ -24,7 +24,7 @@ const FilterTable = (props: FilterProps) => {
     const [column, setColumn] = useState(columnLogic)
 
     // Column can be changed and can be set in form  
-    const columnFunction = (e : targetProps) => {
+    const columnFunction = (e : TargetProps) => {
         setColumn(e.target.value)
     }
 
@@ -39,7 +39,7 @@ const FilterTable = (props: FilterProps) => {
     const placeholderLogic = placeholder ? placeholder : `search ${column}s`
     
     // Filters the data and returns the column type which begin with the same letters as input 
-    const filterFunction = (e: targetProps) => {
+    const filterFunction = (e: TargetProps) => {
         const keyword = e.target.value;
 
         const resultsLogic = data.filter(result => 

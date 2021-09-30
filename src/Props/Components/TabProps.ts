@@ -15,6 +15,12 @@ export interface TabLinkProps {
     title: string;
 } 
 
+export interface TabLinkRowProps {
+    data: SingleTab[];
+    // title: string;
+    setFunction: Function;
+}
+
 export interface TabContentProps { 
     content: JSX.Element 
 }

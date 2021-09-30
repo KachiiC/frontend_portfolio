@@ -3,40 +3,25 @@ import { useState } from "react"
 import { SiteTabsProps } from "Props/Components/TabProps"
 // CSS
 import './SiteTabs.css'
+// TOOLS
+import { RenderLogic } from "Tools/FunctionTools"
 // COMPONENTS
-import {TabContent, TabLink} from './components/TabComponents'
+import { TabContent, TabLinksRow } from './components/TabComponents'
 
 const SiteTabs = (props: SiteTabsProps) => {
 
-    const { data, width } = props
-
-    // COMPONENT WIDTH
-    const widthLogic = width ? width : 90
-
-    // TAB LOGIC
+    // displayTab detirmines which tabs is current displayed, default is first tab
     const [displayTab, setDisplayTab] = useState(0)
 
-    // TAB LINKS
-    const displayedTabs = data.map(tab => {
-
-        const clickLogic = () => setDisplayTab(data.indexOf(tab))
-
-        return (
-            <TabLink
-                click={() => clickLogic()}
-                title={tab.title}
-                key={tab.title}
-            />
-        )
-    })
-
     return (
-        <div className={`site-tabs-component w-${widthLogic} m-auto`}>
-            <div className="site-tab-rows">
-                {displayedTabs}
-            </div>
+        // By default width of component is 90%
+        <div className={`site-tabs-component m-auto w-${RenderLogic(props.width, 90)}`}>
+            <TabLinksRow
+                data={props.data}
+                setFunction={setDisplayTab}
+            />
             <TabContent 
-                content={data[displayTab].content} 
+                content={props.data[displayTab].content} 
             />
         </div>
     )

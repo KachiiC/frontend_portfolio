@@ -1,44 +1,42 @@
 // PROPS
-import { GalleryRowProps } from "Props/Components/GalleryProps"
+import { GalleryImageProps, GalleryImageRowProps } from "Props/Components/GalleryProps"
 // TOOLS
 import { GridStyle } from "Tools/GridTools"
+// COMPONENTS
+import { GalleryImage } from "./GalleryImage"
 
-const SingleRowImage = (props: GalleryRowProps) => {
+const SingleRowImage = (props: GalleryImageProps) => (
+    
+    <div className="site-col-1">
+        <GalleryImage 
+            title={props.title}
+            image={props.image}
+            click={props.click}
+        />
+    </div>
+)
 
-    const {image, title, click} = props
+const GalleryImagesRow = (props: GalleryImageRowProps) => {
 
-    return (
-        <div className="site-col-1 site-border-white">
-            <img src={image} 
-                alt={title}
-                className="site-responsive-image cursor-pointer"
-                onClick={click}
-            />
-        </div>
-    )
-}
+    const { data, row_number, width, setFunction } = props
 
-const GalleryImagesRow = (props:any) => {
-
-    const displayedRows = props.data.map((item:any) => {
-
-        const clickFunction = () => props.function(props.data.indexOf(item))
-
-        return (
+    const displayedRows = data.map((item) => (
             <SingleRowImage
                 key={item.title}
                 title={item.title}
                 image={item.image}
-                click={clickFunction}
+                click={() => setFunction(data.indexOf(item))}
             />
         )
-    }).slice(0, props.row_number)
+    ).slice(0, row_number)
 
     return (
-        <div className="site-grid" 
-            style={GridStyle(props.row_number)}
-        >
-            {displayedRows}
+        <div className={`w-${width} m-auto`}>
+            <div className="site-grid" 
+                style={GridStyle(row_number)}
+            >
+                {displayedRows}
+            </div>
         </div>
     )
 }

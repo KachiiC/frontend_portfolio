@@ -6,12 +6,8 @@ import FilterTableRows from "./FilterTableRows"
 
 const FilterTableComponent = (props: FilterTableProps) => (
     <table className="filter-table">
-        <FilterTableHeaders 
-            keys={props.keys} 
-        />
-        <FilterTableRows 
-            data={props.data} 
-        />
+        <FilterTableHeaders keys={props.keys} />
+        <FilterTableRows data={props.data} />
     </table>
 )
 
