@@ -12,7 +12,7 @@ export interface CollapsibleProps {
 }
 
 export interface CollapsibleHeadingProps { 
-    click: MouseEventHandler<HTMLDivElement>; 
+    click: any;
     direction: string; 
     title: string; 
 }

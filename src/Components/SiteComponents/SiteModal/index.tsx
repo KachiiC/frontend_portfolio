@@ -1,30 +1,27 @@
-import { useState } from 'react'
+import { useReducer } from 'react'
 // CSS
 import './SiteModal.css'
 // PROPS
 import { ModalComponent } from 'Props/Components/ModalProps'
 // COMPONENTS
 import ModalContent from './component/ModalContent'
-// TOOLS
-import { StateLogic } from 'Tools/FunctionTools'
 
 const SiteModalComponent = (props: ModalComponent) => {
 
-    const [displayModal, setDisplayModal] = useState(false)
-
-    const modalLogic = () => StateLogic(displayModal, setDisplayModal) 
+    // toggle detirmines if modal is display or not. Intital state is false. 
+    const [displayModal, toggle] = useReducer(displayModal => !displayModal, false)
 
     const modalContent = (
         <ModalContent
+            click={toggle}
             type={props.type} 
-            click={() => modalLogic()}
             content={props.content}
         />
     )
 
     return (
         <>
-            <div onClick={() => modalLogic()}>
+            <div onClick={toggle}>
                 {props.component}
             </div>
             {displayModal && modalContent}
