@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.7d7ab10d.chunk.css",
-    "main.js": "/static/js/main.aaf58aad.chunk.js",
-    "main.js.map": "/static/js/main.aaf58aad.chunk.js.map",
+    "main.js": "/static/js/main.86e9f46d.chunk.js",
+    "main.js.map": "/static/js/main.86e9f46d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1fdf44ac.js",
     "runtime-main.js.map": "/static/js/runtime-main.1fdf44ac.js.map",
     "static/css/2.786ae0dd.chunk.css": "/static/css/2.786ae0dd.chunk.css",
@@ -15,12 +15,14 @@
     "static/css/main.7d7ab10d.chunk.css.map": "/static/css/main.7d7ab10d.chunk.css.map",
     "static/js/2.8172f4c2.chunk.js.LICENSE.txt": "/static/js/2.8172f4c2.chunk.js.LICENSE.txt",
     "static/media/About_Image.7074687c.jpeg": "/static/media/About_Image.7074687c.jpeg",
+    "static/media/ComponentsImage.a7708735.png": "/static/media/ComponentsImage.a7708735.png",
     "static/media/FooterData.1f31703a.png": "/static/media/FooterData.1f31703a.png",
     "static/media/FooterImage.c6736bd7.png": "/static/media/FooterImage.c6736bd7.png",
     "static/media/HomeImage.9038a413.png": "/static/media/HomeImage.9038a413.png",
     "static/media/NavbarImage.d4bb3ae8.png": "/static/media/NavbarImage.d4bb3ae8.png",
     "static/media/NavbarResponsiveImage.42555391.png": "/static/media/NavbarResponsiveImage.42555391.png",
     "static/media/Playkrown.65c74134.png": "/static/media/Playkrown.65c74134.png",
+    "static/media/ProjectsImage.5e51ddc2.png": "/static/media/ProjectsImage.5e51ddc2.png",
     "static/media/SnuggleBunny.66c36258.png": "/static/media/SnuggleBunny.66c36258.png"
   },
   "entrypoints": [
@@ -28,6 +30,6 @@
     "static/css/2.786ae0dd.chunk.css",
     "static/js/2.8172f4c2.chunk.js",
     "static/css/main.7d7ab10d.chunk.css",
-    "static/js/main.aaf58aad.chunk.js"
+    "static/js/main.86e9f46d.chunk.js"
   ]
 }
