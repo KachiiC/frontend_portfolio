@@ -10,6 +10,8 @@ import YoutubeModalContent from "./components/YoutubeModalContent"
 
 const YoutubeModal = (props: YoutubeModalProps) => {
 
+    const { current, component, data } = props
+
     // Thumbnail of current object
     const currentThumbnail = (
         <img src={props.current.video_thumbnail} 
@@ -20,15 +22,15 @@ const YoutubeModal = (props: YoutubeModalProps) => {
     // Content of the modal
     const modalContent = (
         <YoutubeModalContent 
-            data={props.data}
-            current={props.current}
+            data={data}
+            current={current}
         />
     )
 
     return (
         <SiteModalComponent
             // If no component is specificed, the thumbnail for current object is used instead 
-            component={RenderLogic(props.component, currentThumbnail)}
+            component={RenderLogic(component, currentThumbnail)}
             content={modalContent}
             type="modal"
         />

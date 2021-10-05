@@ -5,6 +5,7 @@ import SiteIcon from "Tools/SiteIcon"
 
 export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
 
+    // PROPS
     const {click, direction, title} = props
     
     // Direction is detirmined by whether tab is open or not
@@ -23,8 +24,14 @@ export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
     )
 }
 
-export const CollapsibleContent = (props: CollapsibleContentProps) => (
-    <div className={`site-collapsible-content w-${props.width} m-auto site-border`}>
-        {props.content}
-    </div>
-)
+export const CollapsibleContent = (props: CollapsibleContentProps) => {
+    
+    // PROPS
+    const { content, width } = props
+
+    return (
+        <div className={`site-collapsible-content m-auto site-border w-${width}`}>
+            {content}
+        </div>
+    )
+}

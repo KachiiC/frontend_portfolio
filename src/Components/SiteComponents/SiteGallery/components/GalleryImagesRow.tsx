@@ -5,27 +5,32 @@ import { GridStyle } from "Tools/GridTools"
 // COMPONENTS
 import { GalleryImage } from "./GalleryImage"
 
-const SingleRowImage = (props: GalleryImageProps) => (
+const SingleRowImage = (props: GalleryImageProps) => {
     
-    <div className="site-col-1">
-        <GalleryImage 
-            title={props.title}
-            image={props.image}
-            click={props.click}
-        />
-    </div>
-)
+    // PROPS
+    const { title, click, image } = props
+    
+    return (
+        <div className="site-col-1">
+            <GalleryImage 
+                title={title}
+                image={image}
+                click={click}
+            />
+        </div>
+    )
+}
 
 const GalleryImagesRow = (props: GalleryImageRowProps) => {
 
-    const { data, row_number, width, setFunction } = props
+    const { data, row_number, setFunction, width } = props
 
     const displayedRows = data.map((item) => (
             <SingleRowImage
                 key={item.title}
                 title={item.title}
-                image={item.image}
                 click={() => setFunction(data.indexOf(item))}
+                image={item.image}
             />
         )
     ).slice(0, row_number)

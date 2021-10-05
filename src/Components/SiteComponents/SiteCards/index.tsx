@@ -9,15 +9,16 @@ import SingleCard from "./components/SingleCard"
 
 const SiteCards = (props: SiteCardProps) => {
 
+    // PROPS
     const { card_size , data } = props
     
     const displayCards = data.map(card => (
         // returns a card for each object in the array
         <SingleCard
             key={card.title}
-            image={card.image}
             title= {card.title}
             description={card.description}
+            image={card.image}
             link={card.link}
             link_type={card.link_type}
             // Size of card can be passed through, default is "small" (4 cards a row)

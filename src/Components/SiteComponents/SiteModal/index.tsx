@@ -8,21 +8,26 @@ import ModalContent from './component/ModalContent'
 
 const SiteModalComponent = (props: ModalComponent) => {
 
+    const { component, content, type } = props
+
     // toggle detirmines if modal is display or not. Intital state is false. 
-    const [displayModal, toggle] = useReducer(displayModal => !displayModal, false)
+    const [displayModal, toggle] = useReducer(
+        displayModal => !displayModal, 
+        false
+    )
 
     const modalContent = (
         <ModalContent
             click={toggle}
-            type={props.type} 
-            content={props.content}
+            type={type}
+            content={content}
         />
     )
 
     return (
         <>
             <div onClick={toggle}>
-                {props.component}
+                {component}
             </div>
             {displayModal && modalContent}
         </>

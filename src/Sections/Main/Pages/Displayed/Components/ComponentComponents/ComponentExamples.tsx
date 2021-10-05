@@ -5,7 +5,6 @@ import SiteCards from "Components/SiteComponents/SiteCards"
 import Collapsible from "Components/SiteComponents/SiteCollapsible"
 import Gallery from "Components/SiteComponents/SiteGallery"
 import Modal from "Components/SiteComponents/SiteModal"
-import SiteSlideshow from "Components/SiteComponents/SiteSlideshow"
 import Tabs from "Components/SiteComponents/SiteTabs"
 import Timeline from "Components/SiteComponents/SiteTimeline"
 import YoutubeModal from "Components/SiteComponents/YoutubeModal"
@@ -15,7 +14,6 @@ import { CollapsibleData } from "Data/Main/Displayed/Components/ComponentsListDa
 import { FilterListData } from "Data/Main/Displayed/Components/ComponentsListData/FilterListData"
 import { GalleryData } from "Data/Main/Displayed/Components/ComponentsListData/GalleryData"
 import { ModalData } from "Data/Main/Displayed/Components/ComponentsListData/ModalData"
-import { SlideShowData } from "Data/Main/Displayed/Components/ComponentsListData/SlideshowData"
 import { TabsData } from "Data/Main/Displayed/Components/ComponentsListData/TabsData"
 import { TimelineData } from "Data/Main/Displayed/Components/ComponentsListData/TimelineData"
 import { YoutubeModalCurrentExample, YoutubeModalData } from "Data/Main/Displayed/Components/ComponentsListData/YoutubeModalData"
@@ -83,13 +81,6 @@ export const ModalComponentExample = (
         </>
     )
 
-export const SlideshowExample = (
-    <SiteSlideshow 
-        data={SlideShowData} 
-        thumbnails={5}
-        width={50}
-    />
-)
 
 export const TabsExample = (
         <Tabs 

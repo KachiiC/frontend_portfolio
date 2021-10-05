@@ -3,23 +3,32 @@ import { SingleYoutubeSuggestionProps, YoutubeSuggestionProps } from "Props/Comp
 // TOOLS
 import { TitleTrimmer } from "Tools/StringTools"
 
-const SingleYoutubeSuggestion = (props: SingleYoutubeSuggestionProps) => (
-    <div className="site-flex suggestion-row w-90 m-auto">
-        <div className="youtube-suggestion-title cursor-pointer w-50 m-auto">
-            {TitleTrimmer(props.video_title, 45)}
+const SingleYoutubeSuggestion = (props: SingleYoutubeSuggestionProps) => {
+    
+    // PROPS
+    const { click, video_title, video_thumbnail, } = props
+
+    return (
+        <div className="site-flex suggestion-row w-90 m-auto">
+            <div className="youtube-suggestion-title cursor-pointer w-50 m-auto">
+                {TitleTrimmer(video_title, 45)}
+            </div>
+            <div className="youtube-thumbnail w-50 cursor-pointer" onClick={click}>
+                <img src={video_thumbnail} 
+                    alt={video_title} 
+                    className="site-responsive-image"
+                />
+            </div>
         </div>
-        <div className="youtube-thumbnail w-50 cursor-pointer" onClick={props.click}>
-            <img src={props.video_thumbnail} 
-                alt={props.video_title} 
-                className="site-responsive-image"
-            />
-        </div>
-    </div>
-)
+    )
+}
 
 const YoutubeSuggestions = (props: YoutubeSuggestionProps) => {
 
-    const displaySuggestions = props.data.map(obj => (
+    // PROPS
+    const { data } = props
+
+    const displaySuggestions = data.map(obj => (
         // Sets the object as
         <SingleYoutubeSuggestion
             key={obj.video_title}

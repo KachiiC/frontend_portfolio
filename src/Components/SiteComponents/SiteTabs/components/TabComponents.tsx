@@ -6,20 +6,27 @@ import {
 } from "Props/Components/TabProps"
 
 
-export const TabLink = (props: TabLinkProps) => (
-    <div className="site-tab-link cursor-pointer"
-        onClick={props.click}
-    >
-        {props.title}
-    </div>
-)
+export const TabLink = (props: TabLinkProps) => {
+    
+    // PROPS
+    const { title, click } = props
+
+    return (
+        <div className="site-tab-link cursor-pointer"
+            onClick={click}
+        >
+            {title}
+        </div>
+    )
+}
 
 export const TabLinksRow = (props: TabLinkRowProps) => {
-
+    
+    // PROPS
     const { data, setFunction} = props
 
     // Returns a tab for each object in data array
-    const displayedTabs = props.data.map(tab => (
+    const displayedTabs = data.map(tab => (
             <TabLink
                 key={tab.title}
                 title={tab.title}

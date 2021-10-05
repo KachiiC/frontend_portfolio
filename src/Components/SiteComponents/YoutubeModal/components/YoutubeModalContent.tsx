@@ -9,9 +9,9 @@ const YoutubeModalContent = (props: YoutubeModalProps) => {
 
     // Current displayed video, the default is the current
     const [displayedVideo, setDisplayedVideo] = useState(props.current)
-
+    // PROPS
     const { video_title, video_id, video_description, upload_date } = displayedVideo
-
+    
     return (
         <div className="site-grid-system youtube-modal-content">
             <ModalVideoPlayer

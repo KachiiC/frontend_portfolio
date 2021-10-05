@@ -9,37 +9,42 @@ const SiteModalContent = (props: modalContentProps) => {
 
     const { content, click, type } = props
 
+    // Close Button for Modal
+    const closeButton = (
+        <SiteCloseButton 
+            click={click} 
+            type={type}
+        />
+    )
+
+    // Contents for a modal with a white background
     const modalContent = (
 
         <div className="modal-container">
-            <SiteCloseButton 
-                click={click} 
-                type="modal"
-            />
+            {closeButton}
             <div className="modal-container-content">
                 {content}
             </div>
         </div>
     )
 
+    // Contents for a blank modal with no background
     const modalBlankContent = (
         <>
-            <SiteCloseButton 
-                click={click} 
-                type="blank"
-            />
+            {closeButton}
             {content}
         </>
     )
 
-    const modalContentLogic = type === "blank" ?  
+    // Renders type of modal depending on type prop
+    const modalLogic = type === "blank" ?  
         modalBlankContent 
         : 
         modalContent
 
     return (
         <div className="modal-component">
-            {modalContentLogic}
+            {modalLogic}
         </div>
     )
 }

@@ -4,12 +4,12 @@ import './SiteGallery.css'
 // PROPS
 import { GalleryProps } from "Props/Components/GalleryProps"
 // TOOLS
-import { TitleLogic } from "Tools/StringTools"
 import { RenderLogic } from "Tools/FunctionTools"
+import { TitleLogic } from "Tools/StringTools"
 // COMPONENTS
-import SiteModalComponent from "../SiteModal"
 import { GalleryModalImage, GallerySelectedImage } from "./components/GalleryImage"
 import GalleryImagesRow from "./components/GalleryImagesRow"
+import SiteModalComponent from "../SiteModal"
 
 
 const SiteGallery = (props: GalleryProps) => {

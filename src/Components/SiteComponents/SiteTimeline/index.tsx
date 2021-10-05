@@ -9,8 +9,10 @@ import TimelineEvent from './components/TimelineEvent'
 
 const SiteTimeline = (props: SiteTimelineProps) => {
 
+    const { data, width } = props
+
     // A Timeline even is returned for each object in data
-    const displayEvents = props.data.map(event => (
+    const displayEvents = data.map(event => (
         <TimelineEvent
             key={event.event}
             event={event.event}
@@ -21,7 +23,7 @@ const SiteTimeline = (props: SiteTimelineProps) => {
 
     return (
         // Width of component is 100% by default
-        <div className={`timeline w-${RenderLogic(props.width, 100)}`}>
+        <div className={`timeline w-${RenderLogic(width, 100)}`}>
             {displayEvents}
         </div>
     )

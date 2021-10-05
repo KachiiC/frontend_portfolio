@@ -8,6 +8,9 @@ import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
 
 const SingleCollapsible = (props: singleCollapsibleProps) => {
 
+    // PROPS
+    const { title, width, content } = props
+
     // Each tabs content is open or closed depending on this reducder
     const [displayContent, toggleContent] = useReducer(
         displayContent => !displayContent,
@@ -30,20 +33,20 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
         <>
             <CollapsibleHeading
                 // on click will change direction and show or closes content
-                title={props.title}
+                title={title}
                 click={() => clickLogic()}
                 direction={collapisbleDirection}
             />
             <CSSTransition
+                classNames="collapsible-transition"
                 in={displayContent}
                 timeout={500}
-                classNames="collapsible-transition"
                 unmountOnExit
                 appear
             >
                 <CollapsibleContent 
-                    width={props.width} 
-                    content={props.content} 
+                    content={content}
+                    width={width} 
                 />
             </CSSTransition>
             

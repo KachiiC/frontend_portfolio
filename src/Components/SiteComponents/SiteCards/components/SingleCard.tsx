@@ -3,9 +3,9 @@ import { LinkLogicProps, SiteSingleCardProps } from "Props/Components/CardProps"
 //COMPONENTS
 import { Link } from "react-router-dom"
 
-
 const SingleCard = (props: SiteSingleCardProps) => {
 
+    // PROPS
     const { title, description, image, span } = props
 
     const LinkLogic = (comp: LinkLogicProps) => {
@@ -31,7 +31,10 @@ const SingleCard = (props: SiteSingleCardProps) => {
             {/* If link is passed, returns a link based on type, else it will just return the image */}
             <LinkLogic 
                 component={
-                    <img src={image} alt={title} className="site-responsive-image" />
+                    <img className="site-responsive-image" 
+                        src={image} 
+                        alt={title} 
+                    />
                 }
             /> 
             <div className="site-text-container">
