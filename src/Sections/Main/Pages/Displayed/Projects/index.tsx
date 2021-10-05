@@ -1,9 +1,9 @@
 // CSS
 import './Projects.css'
-// COMPONENTS
-import AntdTabs from 'Components/ExternalLibraries/AntdTabs'
 // DATA
 import ProjectsData from 'Data/Main/Displayed/ProjectsData'
+// COMPONENTS
+import AntdTabs from 'Components/ExternalLibraries/AntdTabs'
 
 const Projects = (
     <div className="projects-page">

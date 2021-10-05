@@ -25,7 +25,7 @@ const SiteNavbar = (props: SiteNavbarProps) => {
     )
     
     return (
-        <>
+        <header>
             <NavMenu
                 title={title}
                 data={data} 
@@ -34,7 +34,7 @@ const SiteNavbar = (props: SiteNavbarProps) => {
                 small_menu_click={toggleMenu}
             />
             {smallMenu && SmallScreenMenu}
-        </>
+        </header>
     )
 }
 

@@ -53,13 +53,13 @@ export const MyProjectsData = [
 export const FreelanceProjects = [
     {
         title: "Snuggle Bunny Clothing",
-        description: "This is a clothing e-commerce website built with shopify",
+        description: "This is a clothing e-commerce website built with shopify, the basic template uses the debut theme but most (if not all) the pages are redesigned to include various components and transitions to enhance the customer exprience.",
         image: SnuggleBunnyImage,
         link: "https://www.snugglebunnyclothing.com/",
     },
     {
         title: "PlayKrown Ent",
-        description: "This is playkrown ent",
+        description: "This website is built for an events company, the website is built with shopify and the template uses the debut theme. The pages and components of the website including the navbar, banners, product pages and transitions were all redesigned from scratch.",
         image: PlaykrownImage,
         link: "https://playkrown.co.uk/"
     }
