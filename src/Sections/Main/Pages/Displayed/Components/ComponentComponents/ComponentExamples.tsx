@@ -1,3 +1,4 @@
+// COMPONENTS
 import FilterCollapsible from "Components/SiteComponents/FilterCollapsible"
 import FilterGallery from "Components/SiteComponents/FilterGallery"
 import FilterList from "Components/SiteComponents/FilterTable"

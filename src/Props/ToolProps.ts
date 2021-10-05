@@ -12,7 +12,6 @@ export interface TargetProps {
     }
 }
 
-
 // SITE ICON
 export interface SiteIconProps {
     type: string | undefined; 
@@ -26,4 +25,11 @@ export interface LinkRendererProps {
     icon?: string;
     content?: string | JSX.Element;
     external_link?: string 
+}
+
+// Site Link Props
+export interface SiteLinkProps {
+    link: string;
+    type: "local" | "external"
+    placeholder: string | number | undefined
 }

@@ -4,13 +4,11 @@ import PagesData from "Data/Main/Displayed/PagesData"
 import SiteNavbar from "./SiteNavbar"
 
 const SiteHeader = (
-    <header>
-        <SiteNavbar
-            title="Kachi's Portfolio" 
-            data={PagesData}
-            menu_number={5}
-        />
-    </header>
+    <SiteNavbar
+        title="Kachi's Portfolio" 
+        data={PagesData}
+        menu_number={5}
+    />
 )
 
 export default SiteHeader

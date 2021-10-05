@@ -12,6 +12,8 @@ export interface NavMenuProps {
     data: pageDataProps[]; 
     menu_number?: number | undefined; 
     menu_type: string; 
+    title: string;
+    small_menu_click: any; 
 }
 
 export interface NavLinkProps {
@@ -23,10 +25,11 @@ export interface NavLinkProps {
 export interface SiteNavLinkProps { 
     click?: MouseEventHandler<HTMLDivElement>;
     data: NavLinkProps
-    type?: string; 
+    type?: "small" | "full" 
 }
 
 export interface SmallMenuBlockProps { 
+    menu_number?: number | undefined; 
     data: pageDataProps[]; 
     click: MouseEventHandler<HTMLDivElement>
 }
