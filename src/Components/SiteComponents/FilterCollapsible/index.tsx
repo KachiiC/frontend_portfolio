@@ -11,7 +11,8 @@ import SiteCollapsible from "../SiteCollapsible"
 
 const FilterCollapsible = (props: FilterCollapsibleProps) => {
 
-    const { data, width, placeholder } = props
+    // PROPS
+    const { data, placeholder, width } = props
 
     // The input string used to filter
     const [input, setInput] = useState('')
@@ -50,8 +51,9 @@ const FilterCollapsible = (props: FilterCollapsibleProps) => {
     return (
         <div className="filter-collapsible">
             {/* Filter begins on change */}
-            <input onChange={filterFunction} 
-                className={`w-${widthLogic}`}
+            <input onChange={filterFunction}
+            
+                className={`w-${RenderLogic(width, 100)}`}
                 // If no placeholder is specified, "search" is used as the placeholder
                 placeholder={RenderLogic(placeholder, "search")}
             />

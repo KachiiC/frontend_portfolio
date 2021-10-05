@@ -5,6 +5,10 @@ export interface FilterIconDataProps {
     skill: string;
 }
 
+export interface IconsListProps {
+    data: FilterIconDataProps[]
+}
+
 export interface FilterIconProps {
     data: FilterIconDataProps[]
     title?: string;

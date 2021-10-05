@@ -12,27 +12,30 @@ import IconsList from "./components/IconList"
 
 const FilterIcons = (props: FilterIconProps) => {
 
+    // PROPS
+    const {data, title} = props
+
     // The filter type's initial state is empty
     const [filterType, setFilterType] = useState('')
     // The results is set when filtered, inital state is the input data.
-    const [resultsData, setResultsData] = useState(props.data)
+    const [resultsData, setResultsData] = useState(data)
 
     useEffect(() => {
         // Logic is only set when filter type is set.
         if (filterType !== '') {
             // The results is set when filtered, inital state is the input data.
-            setResultsData(props.data.filter(data => data.type === filterType))
+            setResultsData(data.filter(obj=> obj.type === filterType))
         }
-    },[filterType, props.data])
+    },[filterType, data])
     
     return (
         <div className="filter-icons">
             {/* Only returns a title is passed as an argument */}
-            {TitleLogic(props.title, "h1")}
+            {TitleLogic(title, "h1")}
             <FilterButtons 
-                data={UnqiueValues(props.data, "type")} 
+                data={UnqiueValues(data, "type")} 
                 setFunction={setFilterType}
-                setAll={() => setResultsData(props.data)}
+                setAll={() => setResultsData(data)}
             />
             <IconsList 
                 data={resultsData} 

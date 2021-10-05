@@ -5,8 +5,9 @@ import './FilterList.css'
 import { FilterProps } from "Props/Components/FilterProps"
 import { TargetProps } from 'Props/ToolProps'
 // TOOLS
-import { parseIntChecker } from 'Tools/IntergerTools'
 import { ArrrayObjectKeys } from 'Tools/ObjectDataTools'
+import { parseIntChecker } from 'Tools/IntergerTools'
+import { RenderLogic } from 'Tools/FunctionTools'
 // COMPONENTS
 import FilterSearch from './components/FilterInput'
 import FilterTableComponent from './components/FilterTableComponent'
@@ -20,7 +21,7 @@ const FilterTable = (props: FilterProps) => {
     // ** Make sure all objects have the same keys **
     const columnOptions = ArrrayObjectKeys(data)
     // Column which can be searched can be defined, set to first key by default
-    const columnLogic = default_column ? default_column : columnOptions[0]
+    const columnLogic = RenderLogic(default_column, columnOptions[0])
     const [column, setColumn] = useState(columnLogic)
 
     // Column can be changed and can be set in form  
@@ -34,9 +35,9 @@ const FilterTable = (props: FilterProps) => {
     const [foundResults, setFoundResults] = useState(data)
 
     // Width of table
-    const widthLogic = width ? width : 90
+    const widthLogic = RenderLogic(width, 90)
     // Placeholder for input detirmined by input search column
-    const placeholderLogic = placeholder ? placeholder : `search ${column}s`
+    const placeholderLogic = RenderLogic(placeholder,`search ${column}s`)
     
     // Filters the data and returns the column type which begin with the same letters as input 
     const filterFunction = (e: TargetProps) => {
@@ -72,9 +73,9 @@ const FilterTable = (props: FilterProps) => {
     return (
         <div className={`filter-list w-${widthLogic}`}>
             <FilterSearch
+                column_function={columnFunction}
                 data={columnOptions}
-                default={default_column}
-                function={columnFunction}
+                default_value={columnLogic}
                 on_change={filterFunction}
                 placeholder={placeholderLogic}
                 value={input}

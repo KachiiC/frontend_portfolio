@@ -1,24 +1,25 @@
-import { useEffect, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
 
-export const SiteFetcher = (url: RequestInfo) => {
+export const SiteFetcher = (url: RequestInfo, initial: any) => {
 
-    const [fetchData, setFetchData] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [displayable, setDisplayable] = useState(false)
+    const [fetchData, setFetchData] = useState(initial)
+    const [loading, toggleLoading] = useReducer(loading => !loading, true)
+    const [displayable, toggleDisplay] = useReducer(display => !display, false)
 
     useEffect(() => {
         fetch(url)
         .then(response => response.json())
         .then(data => {
             setFetchData(data)
-            setDisplayable(true)
-            setLoading(false)
+            toggleDisplay()
+            toggleLoading()
         })
         .catch(error => {
             console.log(error)
-            setLoading(false)
+            toggleLoading()
         })
     },[url])
+
 
     return {
         loading,
@@ -28,16 +29,16 @@ export const SiteFetcher = (url: RequestInfo) => {
     
 }
 
-export const DataRender = (url: RequestInfo) => {
+// export const DataRender = (url: RequestInfo) => {
 
-    const { fetchData, loading, displayable } = SiteFetcher(url)
+//     const { fetchData, loading, displayable } = SiteFetcher(url)
 
-    const renderLogic = loading === true ? 
-        <h1>Loading</h1> 
-        : displayable === true ?
-            fetchData
-            :
-            <h1>Cannot Load</h1>
+//     const renderLogic = loading === true ? 
+//         <h1>Loading</h1> 
+//         : displayable === true ?
+//             fetchData
+//             :
+//             <h1>Cannot Load</h1>
 
-    return <>{renderLogic}</>
-}
+//     return <>{renderLogic}</>
+// }

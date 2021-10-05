@@ -4,6 +4,7 @@ import { LinkRenderer } from "Tools/RoutersRender"
 import About from "Sections/Main/Pages/Displayed/About"
 import Components from "Sections/Main/Pages/Displayed/Components"
 import Projects from "Sections/Main/Pages/Displayed/Projects"
+import Api from "Sections/Main/Pages/Displayed/Api"
 
 const PagesData = [
     {
@@ -13,6 +14,10 @@ const PagesData = [
     {
         title: "Components",
         content: Components
+    },
+    {
+        title: "Api",
+        content: Api
     },
     {
         title: "About",

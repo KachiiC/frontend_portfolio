@@ -15,12 +15,14 @@ export interface FilterInputProps {
 
 export interface FilterSelectProps { 
     data: string[]; 
-    function: ChangeEventHandler<HTMLSelectElement> | undefined; default: string | number | readonly string[] | undefined 
+    column_function: ChangeEventHandler<HTMLSelectElement> | undefined 
+    default_value: string;
 }
 
-export interface FilterSearchProps { 
+export interface FilterSearchProps {
+    default_value: string; 
     data: any[]; 
-    function: ChangeEventHandler<HTMLSelectElement> | undefined; default: string | number | readonly string[] | undefined 
+    column_function: ChangeEventHandler<HTMLSelectElement> | undefined
     value: string; 
     on_change: any; 
     placeholder: string 

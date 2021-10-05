@@ -7,7 +7,6 @@ import SingleCard from './components/SingleCard'
 
 const AntdCards = (props: antdCardProps) => {
 
-
     const displayCards = props.data.map((card: singleCardProps) => {
 
         const { description, image, link, title } = card

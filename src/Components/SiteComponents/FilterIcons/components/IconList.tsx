@@ -1,11 +1,14 @@
 // PROPS
-import { FilterIconDataProps } from "Props/Components/FilterIconProps"
+import { IconsListProps } from "Props/Components/FilterIconProps"
 // TOOLS
 import SiteIcon from "Tools/SiteIcon"
 
-const IconsList = (props: any) => {
+const IconsList = (props: IconsListProps) => {
 
-    const displayedIcons = props.data.map((obj: FilterIconDataProps) => (
+    // PROPS
+    const { data } = props
+
+    const displayedIcons = data.map(obj => (
         <div className="site-col-2 filter-icons-icon" 
             key={obj.skill}
         >

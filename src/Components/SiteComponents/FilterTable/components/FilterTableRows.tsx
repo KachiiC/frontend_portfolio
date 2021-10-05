@@ -2,8 +2,11 @@
 import { FilterTableRowProps } from "Props/Components/FilterProps"
 
 const FilterTableRows = (props: FilterTableRowProps) => {
+
+    // PROPS
+    const { data } = props
     
-    const table_rows = props.data.map((obj, index) => {
+    const table_rows = data.map((obj, index) => {
 
         // returns array for every object value
         const values_list = Object.values(obj)

@@ -1,27 +1,34 @@
 // PROPS
 import { FilterButtonProps, SingleFilterButtonProps } from "Props/Components/FilterGalleryProps"
 
-const SingleFilterButton = (props: SingleFilterButtonProps) => (
-
-    // Takes title as a string and click as arguments and returns a button
-    <div className="filter-button cursor-pointer" 
-        id={props.title}
-        onClick={props.click} 
-        key={props.title}
-    >
-        {props.title}
-    </div>
-)
+const SingleFilterButton = (props: SingleFilterButtonProps) => {
+    
+    // PROPS
+    const {click, title} = props
+    
+    return (
+        // Takes title as a string and click as arguments and returns a button
+        <div className="filter-button cursor-pointer" 
+            id={title}
+            onClick={click} 
+            key={title}
+        >
+            {title}
+        </div>
+    )
+}
 
 const FilterGalleryButtons = (props: FilterButtonProps) => {
 
+    const {data, setAll, setFilterFunction } = props
+
     // For each string in the array, returns a SingleFilterButton.
     // The setFunction is fed in and sets the current button to the state on the level above
-    const filterButtons = props.data.map(type => (
+    const filterButtons = data.map(type => (
         <SingleFilterButton
             key={type}
             title={type}
-            click={() => props.setFilterFunction(type)}
+            click={() => setFilterFunction(type)}
         />
     )) 
     
@@ -31,7 +38,7 @@ const FilterGalleryButtons = (props: FilterButtonProps) => {
         <SingleFilterButton
             key="All"
             title="All"
-            click={props.setAll}
+            click={setAll}
         />
     )
 
