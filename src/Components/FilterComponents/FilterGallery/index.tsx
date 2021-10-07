@@ -32,7 +32,7 @@ const FilterGallery = (props: SiteCardProps) => {
     const filterButtons = (
         <FilterGalleryButtons
             data={UnqiueValues(data, "type")}
-            setFilterFunction={setFilterType}
+            setFunction={setFilterType}
             setAll={() => setResultsData(props.data)}
         />
     )

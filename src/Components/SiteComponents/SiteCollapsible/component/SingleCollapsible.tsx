@@ -1,15 +1,14 @@
 import { useReducer, useState } from "react"
-// CSS
-import { CSSTransition} from 'react-transition-group';
 // PROPS
 import { singleCollapsibleProps } from "Props/Components/CollapsibleProps"
 // COMPONENTS
 import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
+import CollapsibleTransition from "./CollapsibleTransition";
 
 const SingleCollapsible = (props: singleCollapsibleProps) => {
 
     // PROPS
-    const { title, width, content } = props
+    const { title, content } = props
 
     // Each tabs content is open or closed depending on this reducder
     const [displayContent, toggleContent] = useReducer(
@@ -17,16 +16,16 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
         false
     )
     // if tab is open, direction will point down, if closed will point left (default)
-    const [collapisbleDirection, setCollapisbleDirection] = useState("left")
+    const [direction, setDirection] = useState("left")
 
     const clickLogic = () => {
         // Each tabs content is open or closed depending on stateToggle
         toggleContent()
         
-        collapisbleDirection === "left" ? 
-            setCollapisbleDirection("down") 
+        direction === "left" ? 
+            setDirection("down") 
             : 
-            setCollapisbleDirection("left")
+            setDirection("left")
     }
 
     return (
@@ -35,21 +34,15 @@ const SingleCollapsible = (props: singleCollapsibleProps) => {
                 // on click will change direction and show or closes content
                 title={title}
                 click={() => clickLogic()}
-                direction={collapisbleDirection}
+                direction={direction}
             />
-            <CSSTransition
-                classNames="collapsible-transition"
-                in={displayContent}
-                timeout={500}
-                unmountOnExit
-                appear
+            <CollapsibleTransition 
+                DisplayContent={displayContent}
             >
                 <CollapsibleContent 
                     content={content}
-                    width={width} 
                 />
-            </CSSTransition>
-            
+            </CollapsibleTransition>
         </>
     )
 }

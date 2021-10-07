@@ -1,7 +1,6 @@
-import { MouseEventHandler } from "react";
+import { Dispatch, MouseEventHandler, SetStateAction } from "react";
 // PROPS
 import { SiteSingleCardProps } from "../CardProps";
-
 
 export interface SingleFilterButtonProps {
     title: string
@@ -16,6 +15,6 @@ export interface FilterGalleryProps {
 
 export interface FilterButtonProps {
     data: string[];
-    setFilterFunction: Function;
+    setFunction: Dispatch<SetStateAction<string>>;
     setAll: MouseEventHandler<HTMLImageElement> | undefined;
 }

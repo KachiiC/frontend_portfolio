@@ -6,7 +6,7 @@ const ModalExampleUsage = `
     
     const ModalList = () => {
     
-        const OpenButton = (props: any) => <button>Click here to open {props.title} modal</button>
+        const OpenButton = (props: {title: string}) => <button>Click here to open {props.title} modal</button>
     
         // MODAL 
         const ModalExample = (

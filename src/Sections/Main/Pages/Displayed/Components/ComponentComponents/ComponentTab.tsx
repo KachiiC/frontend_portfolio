@@ -1,13 +1,17 @@
 // PROPS
-import { SectionExampleProps } from "Props/DataProps"
+import { ComponentTabProps } from "Props/ComponentProps"
 // COMPONENTS
 import SectionExample from "Components/SiteComponents/SectionExample"
 
-const ComponentsTab = (props: any) => {
+const ComponentsTab = (props: ComponentTabProps) => {
 
     const {component, introduction, sections } = props
 
-    const displaySections = sections.map((nav: SectionExampleProps) => (
+    const componentLogic = () => {
+        if (component) return component
+    }
+
+    const displaySections = sections.map(nav => (
         <SectionExample
             title={nav.title}
             example={nav.example}
@@ -16,10 +20,6 @@ const ComponentsTab = (props: any) => {
             key={nav.title}
         />
     ))
-
-    const componentLogic = () => {
-        if (component) return component
-    }
 
     return (
         <>

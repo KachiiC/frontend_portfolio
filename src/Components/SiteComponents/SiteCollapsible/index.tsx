@@ -2,6 +2,8 @@
 import './SiteCollapsible.css'
 // PROPS
 import { CollapsibleProps } from 'Props/Components/CollapsibleProps'
+// TOOLS
+import { RenderLogic } from 'Tools/FunctionTools'
 // COMPONENTS
 import SingleTabComponent from "./component/SingleCollapsible"
 
@@ -18,7 +20,7 @@ const SiteCollapsibleComponent = (props: CollapsibleProps) => {
     ))
 
     return (
-        <div className={`site-collapsible-container w-${width}`}>
+        <div className={`site-collapsible-container w-${RenderLogic(width, 100)}`}>
             {displayedTabs}
         </div>
     )

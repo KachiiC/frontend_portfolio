@@ -8,7 +8,7 @@ export interface ObjectDataProps {
 
 export interface TargetProps { 
     target: { 
-        value: any; 
+        value: string 
     }
 }
 
@@ -30,15 +30,15 @@ export interface LinkRendererProps {
 // Site Link Props
 export interface SiteLinkProps {
     link: string;
-    type: "local" | "external"
-    placeholder: string | number | undefined
+    type: "local" | "external" | undefined | string
+    placeholder: string | number | undefined | JSX.Element
 }
 
 export interface SiteRenderProps { 
     fetch: { 
         loading: boolean; 
         error: boolean; 
-        response: any
+        response: Object | never[]
     }; 
     component: JSX.IntrinsicAttributes; 
 }

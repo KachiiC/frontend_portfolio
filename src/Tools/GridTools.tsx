@@ -1,4 +1,4 @@
-export const GridSpanSwitcher = (input_size: any) => {
+export const GridSpanSwitcher = (input_size: 'xs'|'small'|'medium'|'large'|'xl' | undefined) => {
     
     var spanLogic
 

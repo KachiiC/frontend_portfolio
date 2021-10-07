@@ -1,9 +1,10 @@
 import { MouseEventHandler } from "react";
+import { widthProps } from "Props/PropsTemplates";
 
 export interface GalleryProps {
     number?: number
     title?: string| undefined;
-    width: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100; 
+    width: typeof widthProps
     data: GalleryImageProps[]
 }
 
@@ -17,16 +18,16 @@ export interface GalleryImageRowProps {
     data: GalleryImageProps[]; 
     setFunction: Function;
     row_number: number; 
-    width: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100; 
+    width: typeof widthProps
 }
 
 export interface GallerySelectedImageProps {
-    width: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100; 
+    width: typeof widthProps
     image: string;
 }
 
 export interface GalleryModalImageProps {
     title: string; 
     image: string; 
-    width: 10 | 20 | 30 | 40| 50| 60| 70| 80| 90| 100; 
+    width: typeof widthProps
 }

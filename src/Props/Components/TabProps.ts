@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 export interface SingleTab {
     title: string; 
@@ -17,8 +17,7 @@ export interface TabLinkProps {
 
 export interface TabLinkRowProps {
     data: SingleTab[];
-    // title: string;
-    setFunction: Function;
+    setFunction: Dispatch<SetStateAction<number>>;
 }
 
 export interface TabContentProps { 

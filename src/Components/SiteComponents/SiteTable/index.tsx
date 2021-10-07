@@ -18,10 +18,10 @@ const SiteTable = (props: SiteTableProps) => {
             <table className="site-table w-100">
                 <SiteTableHeaders 
                     keys={RenderLogic(keys,ArrrayObjectKeys(data))} 
-                    />
+                />
                 <SiteTableRows 
                     data={data} 
-                    />
+                />
             </table>
         </div>
     )

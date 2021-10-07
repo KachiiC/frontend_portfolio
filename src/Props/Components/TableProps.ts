@@ -1,5 +1,7 @@
+import { objectData } from "../PropsTemplates";
+
 export interface SiteTableProps {
-    data: any[]; 
+    data: objectData[]; 
     keys?: string[]
 }
 
@@ -8,11 +10,9 @@ export interface SiteTableHeaderProps {
 }
 
 export interface SiteTableRowProps {
-    data: Object[];
+    data: objectData[] | Object[]
 }
 
 export interface SiteTableSingleRowProps { 
-    data: {
-        [s: string]: unknown 
-    } | Object 
+    data: objectData[] | Object
 }

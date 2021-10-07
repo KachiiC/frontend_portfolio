@@ -10,7 +10,7 @@ export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
     
     // Direction is detirmined by whether tab is open or not
     return (
-        <div className={`site-collapsible m-auto cursor-pointer`} 
+        <div className={`site-collapsible m-auto cursor-pointer w-100`} 
             onClick={click}
         >
             {title}
@@ -27,10 +27,10 @@ export const CollapsibleHeading = (props: CollapsibleHeadingProps) => {
 export const CollapsibleContent = (props: CollapsibleContentProps) => {
     
     // PROPS
-    const { content, width } = props
+    const { content } = props
 
     return (
-        <div className={`site-collapsible-content m-auto site-border w-${width}`}>
+        <div className={`site-collapsible-content m-auto site-border w-100`}>
             {content}
         </div>
     )

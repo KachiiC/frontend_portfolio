@@ -23,11 +23,11 @@ export const ObjectDataRender = (data: ObjectDataProps , type: string) => {
     return data_links
 }
 
-export const UnqiueValues = (data: any, value: any) =>  {
+export const UnqiueValues = (data: any[], value: string) =>  {
 
-    const allValues = data.map((obj:any) => obj[value])
+    const allValues = data.map(obj => obj[value])
 
-    const uniqueArray = allValues.filter(function(item: any, pos: any) {
+    const uniqueArray = allValues.filter(function(item, pos) {
         return allValues.indexOf(item) === pos;
     })
 

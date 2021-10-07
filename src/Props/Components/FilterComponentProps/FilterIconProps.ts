@@ -17,5 +17,5 @@ export interface FilterIconProps {
 export interface FilterIconButtonsProps { 
     data: string[]; 
     setFunction: (arg0: string) => void; 
-    setAll: MouseEventHandler<HTMLButtonElement> | undefined 
+    setAll: MouseEventHandler<HTMLButtonElement>
 }

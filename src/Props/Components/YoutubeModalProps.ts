@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { Dispatch, MouseEventHandler, SetStateAction } from "react";
 
 export interface YoutubeItemProps {
     video_title: string;
@@ -15,11 +15,11 @@ export interface SingleYoutubeSuggestionProps {
 }
 export interface YoutubeSuggestionProps {
     data: YoutubeItemProps[]
-    setFunction: Function
+    setFunction: Dispatch<SetStateAction<YoutubeItemProps>>;
 }
 
 export interface YoutubeModalProps { 
-    component?: any; 
+    component?: JSX.Element; 
     current: YoutubeItemProps; 
     data: YoutubeItemProps[];
 }
