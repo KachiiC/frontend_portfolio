@@ -1,5 +1,5 @@
 // PROPS
-import { FilterIconButtonsProps } from "Props/Components/FilterIconProps"
+import { FilterIconButtonsProps } from "Props/Components/FilterComponentProps/FilterIconProps"
 
 const FilterButtons = (props: FilterIconButtonsProps) => {
 

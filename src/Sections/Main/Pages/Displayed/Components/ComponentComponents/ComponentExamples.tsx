@@ -9,9 +9,9 @@ import Tabs from "Components/SiteComponents/SiteTabs"
 import Timeline from "Components/SiteComponents/SiteTimeline"
 import YoutubeModal from "Components/SiteComponents/YoutubeModal"
 //// Filter components
-import FilterCollapsible from "Components/SiteComponents/FilterCollapsible"
-import FilterGallery from "Components/SiteComponents/FilterGallery"
-import FilterTable from "Components/SiteComponents/FilterTable"
+import FilterCollapsible from "Components/FilterComponents/FilterCollapsible"
+import FilterGallery from "Components/FilterComponents/FilterGallery"
+import FilterTable from "Components/FilterComponents/FilterTable"
 // DATA
 import { CardsData } from "Data/Main/Displayed/Components/ComponentsListData/CardsData"
 import { CollapsibleData } from "Data/Main/Displayed/Components/ComponentsListData/CollapsibleData"

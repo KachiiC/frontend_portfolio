@@ -12,8 +12,8 @@ export interface NavMenuProps {
     data: pageDataProps[]; 
     menu_number?: number | undefined; 
     menu_type: string; 
+    small_menu_click: MouseEventHandler<HTMLDivElement>
     title: string;
-    small_menu_click: any; 
 }
 
 export interface NavLinkProps {

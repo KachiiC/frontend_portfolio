@@ -1,4 +1,4 @@
-import { singleCollapsibleProps } from "./CollapsibleProps";
+import { singleCollapsibleProps } from "../CollapsibleProps";
 
 export interface FilterCollapsibleProps {
     data: singleCollapsibleProps[]

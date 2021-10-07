@@ -2,7 +2,7 @@ import { useState } from 'react'
 // CSS
 import './FilterList.css'
 // PROPS
-import { FilterProps } from "Props/Components/FilterTableProps"
+import { FilterProps } from "Props/Components/FilterComponentProps/FilterTableProps"
 import { TargetProps } from 'Props/ToolProps'
 // TOOLS
 import { ArrrayObjectKeys } from 'Tools/ObjectDataTools'

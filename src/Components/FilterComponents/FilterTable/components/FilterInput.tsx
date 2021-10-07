@@ -3,7 +3,7 @@ import {
     FilterInputProps, 
     FilterSearchProps, 
     FilterSelectProps 
-} from "Props/Components/FilterTableProps"
+} from "Props/Components/FilterComponentProps/FilterTableProps"
 // TOOLS
 import { StringUppercase } from "Tools/StringTools"
 

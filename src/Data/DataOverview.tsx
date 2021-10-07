@@ -10,6 +10,15 @@ const DataOverview = {
         tiktok: "tiktok",
         youtube: "youtube",
     },
+    navbar_data: {
+        title: "Kachi's Portfolio",
+        menu_number: 5 
+    },
+    footer_data: {
+        heading: "Useful Links",
+        name: "Kachi Cheong",
+        year: "2021"
+    },
     footer_pages: {
         // Replace this with your own pages or remove key and value if not required 
         about: <h1>About</h1>,

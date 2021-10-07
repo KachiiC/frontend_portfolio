@@ -4,16 +4,18 @@ import { FooterLogoData, FooterPages } from 'Data/Footer/FooterData'
 import './Footer.css'
 // COMPONENTS
 import SiteFooter from './components/SiteFooter'
+import DataOverview from 'Data/DataOverview'
 
+const footerData = DataOverview.footer_data
 
 const Footer = (
     <footer>
         <SiteFooter 
-            heading="Useful Links"
+            heading={footerData.heading}
             logo_data={FooterLogoData}
             links_data={FooterPages}
-            name="Kachi Cheong"
-            year="2021"
+            name={footerData.name}
+            year={footerData.year}
         />
     </footer>
 )

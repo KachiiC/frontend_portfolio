@@ -2,12 +2,12 @@ import { useState } from "react"
 // CSS
 import './FilterCollapsible.css'
 // PROPS
-import { FilterCollapsibleProps } from "Props/Components/FilterCollapsibleProps"
+import { FilterCollapsibleProps } from "Props/Components/FilterComponentProps/FilterCollapsibleProps"
 import { TargetProps } from "Props/ToolProps"
 // TOOLS
 import { RenderLogic } from "Tools/FunctionTools"
 // COMPONENTS
-import SiteCollapsible from "../SiteCollapsible"
+import SiteCollapsible from "Components/SiteComponents/SiteCollapsible"
 
 const FilterCollapsible = (props: FilterCollapsibleProps) => {
 
@@ -32,21 +32,17 @@ const FilterCollapsible = (props: FilterCollapsibleProps) => {
         keyword !== '' ? setFoundResults(resultsLogic) : setFoundResults(data)
         
         setInput(keyword)
-    }
-
-    // Width is 100% by default 
-    const widthLogic = RenderLogic(width, 100)
+    } 
 
     // Filters the collpasible component titles and returns "No results found!" foundResults is empty.
     const filterLogic = foundResults && foundResults.length > 0 ? 
         <SiteCollapsible 
-            data={foundResults} 
-            width={widthLogic}
+            data={foundResults}
+            // Width is 100% by default
+            width={RenderLogic(width, 100)}
         />
         : 
-        <div>
-            <h2>No results found!</h2>
-        </div>
+        <h2>No results found!</h2>
 
     return (
         <div className="filter-collapsible">

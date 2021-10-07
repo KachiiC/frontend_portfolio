@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 // PROPS
-import { SiteSingleCardProps } from "./CardProps";
+import { SiteSingleCardProps } from "../CardProps";
 
 
 export interface SingleFilterButtonProps {

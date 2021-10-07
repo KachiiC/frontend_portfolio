@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 // PROPS
-import { FilterIconProps } from "Props/Components/FilterIconProps"
+import { FilterIconProps } from "Props/Components/FilterComponentProps/FilterIconProps"
 // CSS 
 import './FilterIcons.css'
 // TOOLS

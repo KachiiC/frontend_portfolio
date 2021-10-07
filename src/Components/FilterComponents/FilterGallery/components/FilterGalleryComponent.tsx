@@ -1,5 +1,5 @@
 // PROPS
-import { FilterGalleryProps } from "Props/Components/FilterGalleryProps"
+import { FilterGalleryProps } from "Props/Components/FilterComponentProps/FilterGalleryProps"
 // COMPONENTS
 import SiteCards from "Components/SiteComponents/SiteCards"
 

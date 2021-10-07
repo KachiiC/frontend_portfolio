@@ -1,8 +1,7 @@
 // COMPONENTS
-import FilterTable from "Components/SiteComponents/FilterTable"
+import FilterTable from "Components/FilterComponents/FilterTable"
 // TOOLS
 import { SiteFetcher, SiteRender } from "Tools/SiteFetcherTool"
-
 
 const HskApi = () => {
 

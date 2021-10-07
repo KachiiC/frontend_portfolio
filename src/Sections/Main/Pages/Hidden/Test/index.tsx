@@ -2,7 +2,7 @@
 import './Test.css'
 // TOOLS
 import { SiteFetcher, SiteRender } from 'Tools/SiteFetcherTool'
-import FilterTable from 'Components/SiteComponents/FilterTable'
+import FilterTable from 'Components/FilterComponents/FilterTable'
 // DATA
 // import { TableData } from 'Data/Main/Displayed/Components/ComponentsListData/TableData'
 // COMPONENTS
