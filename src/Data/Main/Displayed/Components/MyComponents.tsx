@@ -3,16 +3,16 @@ import { MyComponentsDataProps } from "Props/ComponentProps"
 // DATA
 import { CardsSectionData } from "./ComponentsListData/CardsData"
 import { CollapsibleSectionsData } from "./ComponentsListData/CollapsibleData"
-import { FilterListSectionData } from "./ComponentsListData/FilterListData"
+import { FilterListSectionData } from "./ComponentsListData/TableData"
 import { FilterCollapsibleData } from "./ComponentsListData/FilterCollapsibleData"
 import { FilterGallerySectionsData } from "./ComponentsListData/FilterGalleryData"
 import { FooterSectionData } from "./ComponentsListData/FooterData"
 import { GallerySectionData } from "./ComponentsListData/GalleryData"
 import { ModalSectionExample } from "./ComponentsListData/ModalData"
 import { NavSectionData } from "./ComponentsListData/NavbarData"
-// import { SlideshowSectionData } from "./ComponentsListData/SlideshowData"
 import { TabsSectionExample } from "./ComponentsListData/TabsData"
 import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
+import { YoutubeModalExample } from "./ComponentsListData/YoutubeModalData"
 // COMPONENTS
 import ComponentsTab from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentTab"
 import { 
@@ -20,15 +20,13 @@ import {
     CollapsibleExample, 
     FilterCollapsibleExample, 
     FilterGalleryExample, 
-    FilterListExample, 
+    FilterTableExample, 
     GalleryExample, 
     ModalComponentExample, 
-    // SlideshowExample, 
     TabsExample, 
     TimelineExample,
     YoutubeModalPlayerExample
 } from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
-import { YoutubeModalExample } from "./ComponentsListData/YoutubeModalData"
 
 const githubDirect = "https://github.com/KachiiC/"
 
@@ -78,7 +76,7 @@ export const MyComponentsData = [
         title: "Filter List",
         introduction: "This is a filter list component built with react hooks, typscript and forms.",
         sections: FilterListSectionData,
-        component: FilterListExample,
+        component: FilterTableExample,
         link: githubDirect + "react_filter_list",
     },
     {

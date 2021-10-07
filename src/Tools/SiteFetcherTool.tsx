@@ -1,8 +1,10 @@
 import { useEffect, useReducer, useState } from "react"
+// PROPS
+import { SiteRenderProps } from "Props/ToolProps"
 
 export const SiteFetcher = (url: string, argument?: string ) => {
     
-    const [response, setResponse] = useState<any>([])
+    const [response, setResponse] = useState([])
     const [loading, toggleLoading] = useReducer(
         loading => !loading, true
     )
@@ -31,20 +33,11 @@ export const SiteFetcher = (url: string, argument?: string ) => {
       loading,
       error
     }
-};
-
-interface SiteRenderProps { 
-    fetch: { 
-        loading: boolean; 
-        error: boolean; 
-        response: any
-    }; 
-    component: JSX.IntrinsicAttributes; 
 }
 
 export const SiteRender = (props: SiteRenderProps) => {
 
-    const {error, loading} = props.fetch
+    const { error, loading } = props.fetch
 
     const displayLogic = loading ? 
         <h1>Loading</h1>
@@ -54,9 +47,6 @@ export const SiteRender = (props: SiteRenderProps) => {
             :
             props.component
 
-    return (
-        <>
-            {displayLogic}
-        </>
-    )
+    return <>{displayLogic}</>
+    
 }

@@ -3,7 +3,9 @@ import {
     FilterInputProps, 
     FilterSearchProps, 
     FilterSelectProps 
-} from "Props/Components/FilterProps"
+} from "Props/Components/FilterTableProps"
+// TOOLS
+import { StringUppercase } from "Tools/StringTools"
 
 export const FilterInput = (props: FilterInputProps) => {
     
@@ -32,7 +34,7 @@ export const FilterSelect = (props: FilterSelectProps) => {
         <option value={column} 
             key={column}
         >
-            {column.toUpperCase()}
+            {StringUppercase(column)}
         </option>
     ))
 

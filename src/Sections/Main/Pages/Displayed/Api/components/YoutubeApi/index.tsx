@@ -2,7 +2,7 @@
 import SiteCollapsibleComponent from "Components/SiteComponents/SiteCollapsible"
 // TOOLS
 import {SiteRender, SiteFetcher } from "Tools/SiteFetcherTool"
-import { YoutubeData } from "./YoutubeApi/YoutubeData"
+import { YoutubeData } from "./YoutubeData"
 
 const YoutubeApi = () => {
 
@@ -20,7 +20,6 @@ const YoutubeApi = () => {
 
     return (
         <>
-            <h1>Youtube Api</h1>
             <SiteRender fetch={fetchData} component={YoutubeCollapsibles} />
         </>
     )

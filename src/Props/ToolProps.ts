@@ -33,3 +33,12 @@ export interface SiteLinkProps {
     type: "local" | "external"
     placeholder: string | number | undefined
 }
+
+export interface SiteRenderProps { 
+    fetch: { 
+        loading: boolean; 
+        error: boolean; 
+        response: any
+    }; 
+    component: JSX.IntrinsicAttributes; 
+}

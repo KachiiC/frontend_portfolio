@@ -1,4 +1,4 @@
-export const FilterListData = [
+export const TableData = [
   { 
     id: 1, 
     name: 'Andy', 

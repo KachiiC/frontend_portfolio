@@ -2,15 +2,16 @@ import { useState } from 'react'
 // CSS
 import './FilterList.css'
 // PROPS
-import { FilterProps } from "Props/Components/FilterProps"
+import { FilterProps } from "Props/Components/FilterTableProps"
 import { TargetProps } from 'Props/ToolProps'
 // TOOLS
 import { ArrrayObjectKeys } from 'Tools/ObjectDataTools'
 import { parseIntChecker } from 'Tools/IntergerTools'
 import { RenderLogic } from 'Tools/FunctionTools'
+import { StringUppercase } from 'Tools/StringTools'
 // COMPONENTS
 import FilterSearch from './components/FilterInput'
-import FilterTableComponent from './components/FilterTableComponent'
+import SiteTable from 'Components/SiteComponents/SiteTable'
 
 const FilterTable = (props: FilterProps) => {
 
@@ -37,7 +38,7 @@ const FilterTable = (props: FilterProps) => {
     // Width of table
     const widthLogic = RenderLogic(width, 90)
     // Placeholder for input detirmined by input search column
-    const placeholderLogic = RenderLogic(placeholder,`search ${column}s`)
+    const placeholderLogic = RenderLogic(placeholder,`SEARCH ${StringUppercase(column)}S`)
     
     // Filters the data and returns the column type which begin with the same letters as input 
     const filterFunction = (e: TargetProps) => {
@@ -61,7 +62,7 @@ const FilterTable = (props: FilterProps) => {
 
     // Filters the table component by input column returns "No results found!" foundResults is empty.
     const tableLogic = foundResults && foundResults.length > 0 ? 
-        <FilterTableComponent
+        <SiteTable
             keys={columnOptions}
             data={foundResults} 
         />
@@ -80,7 +81,9 @@ const FilterTable = (props: FilterProps) => {
                 placeholder={placeholderLogic}
                 value={input}
             />
-            {tableLogic}
+            <div className="filter-table-container site-overflow w-100">
+                {tableLogic}
+            </div>
         </div>
     )
 }

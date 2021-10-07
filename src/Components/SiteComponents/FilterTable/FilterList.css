@@ -11,29 +11,6 @@
     padding: 8px 15px;
 }
 
-.filter-table {
-    margin: 20px auto;
-}
-
-.filter-table tr {
-    border: 1px solid black;
-}
-
-.filter-table th {
-    border: 1px solid black;
-}
-
-.filter-table td,
-.filter-table th {
-    padding: 10px;
-    font-size: 15px;
-}
-
-.filter-table tr th {
-    background: black;
-    color: white;
-}
-
-.filter-table tr:nth-child(odd) {
-    background: rgb(230, 230, 230);
+.filter-table-container {
+    margin: 25px auto;
 }

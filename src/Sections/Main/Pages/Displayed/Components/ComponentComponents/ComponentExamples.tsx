@@ -1,26 +1,32 @@
 // COMPONENTS
-import FilterCollapsible from "Components/SiteComponents/FilterCollapsible"
-import FilterGallery from "Components/SiteComponents/FilterGallery"
-import FilterList from "Components/SiteComponents/FilterTable"
-import SiteCards from "Components/SiteComponents/SiteCards"
+//// Regular components
+import Cards from "Components/SiteComponents/SiteCards"
 import Collapsible from "Components/SiteComponents/SiteCollapsible"
 import Gallery from "Components/SiteComponents/SiteGallery"
 import Modal from "Components/SiteComponents/SiteModal"
+import Table from 'Components/SiteComponents/SiteTable'
 import Tabs from "Components/SiteComponents/SiteTabs"
 import Timeline from "Components/SiteComponents/SiteTimeline"
 import YoutubeModal from "Components/SiteComponents/YoutubeModal"
+//// Filter components
+import FilterCollapsible from "Components/SiteComponents/FilterCollapsible"
+import FilterGallery from "Components/SiteComponents/FilterGallery"
+import FilterTable from "Components/SiteComponents/FilterTable"
 // DATA
 import { CardsData } from "Data/Main/Displayed/Components/ComponentsListData/CardsData"
 import { CollapsibleData } from "Data/Main/Displayed/Components/ComponentsListData/CollapsibleData"
-import { FilterListData } from "Data/Main/Displayed/Components/ComponentsListData/FilterListData"
 import { GalleryData } from "Data/Main/Displayed/Components/ComponentsListData/GalleryData"
 import { ModalData } from "Data/Main/Displayed/Components/ComponentsListData/ModalData"
+import { TableData } from "Data/Main/Displayed/Components/ComponentsListData/TableData"
 import { TabsData } from "Data/Main/Displayed/Components/ComponentsListData/TabsData"
 import { TimelineData } from "Data/Main/Displayed/Components/ComponentsListData/TimelineData"
-import { YoutubeModalCurrentExample, YoutubeModalData } from "Data/Main/Displayed/Components/ComponentsListData/YoutubeModalData"
+import { 
+    YoutubeModalCurrentExample, 
+    YoutubeModalData 
+} from "Data/Main/Displayed/Components/ComponentsListData/YoutubeModalData"
 
 export const CardsExample = (
-    <SiteCards
+    <Cards
         data={CardsData}
         card_size="large"
     />
@@ -48,9 +54,9 @@ export const FilterGalleryExample = (
     />
 )
 
-export const FilterListExample = (
-    <FilterList 
-        data={FilterListData} 
+export const FilterTableExample = (
+    <FilterTable 
+        data={TableData} 
         default_column="name"
         width={80}
         placeholder="example placeholder"
@@ -82,6 +88,11 @@ export const ModalComponentExample = (
         </>
     )
 
+export const TableExample = (
+    <Table 
+        data={TableData}
+    />
+)
 
 export const TabsExample = (
         <Tabs 
