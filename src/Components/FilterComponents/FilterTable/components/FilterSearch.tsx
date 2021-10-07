@@ -1,9 +1,5 @@
 // PROPS
-import { 
-    FilterInputProps, 
-    FilterSearchProps, 
-    FilterSelectProps 
-} from "Props/Components/FilterComponentProps/FilterTableProps"
+import { FilterInputProps, FilterSelectProps } from "Props/Components/FilterComponentProps/FilterTableProps"
 // TOOLS
 import { StringUppercase } from "Tools/StringTools"
 
@@ -49,34 +45,3 @@ export const FilterSelect = (props: FilterSelectProps) => {
         </select>
     )
 }
-
-export const FilterSearch = (props: FilterSearchProps) => {
-
-    // PROPS
-    // const { data, column_function, default_value, value, on_change, placeholder } = props
-    const {
-        value,
-        on_change,
-        placeholder,
-        data,
-        column_function,
-        default_value
-    } = props
-
-    return (
-        <div className="filter-search">
-            <FilterSelect 
-                column_function={column_function}
-                data={data} 
-                default_value={default_value}
-            />
-            <FilterInput
-                on_change={on_change}
-                placeholder={placeholder}
-                value={value}
-            />
-        </div>
-    )
-}
-
-export default FilterSearch

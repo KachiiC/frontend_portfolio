@@ -10,12 +10,12 @@ import { parseIntChecker } from 'Tools/IntergerTools'
 import { RenderLogic } from 'Tools/FunctionTools'
 import { StringUppercase } from 'Tools/StringTools'
 // COMPONENTS
-import FilterSearch from './components/FilterInput'
+import { FilterInput, FilterSelect } from './components/FilterSearch'
 import SiteTable from 'Components/SiteComponents/SiteTable'
 
 const FilterTable = (props: FilterProps) => {
 
-    const { data, default_column, placeholder, width } = props
+    const { data, default_column, placeholder, width, overflow } = props
 
     // COLUMNS
     // Returns each key from the first object in the array as a string.
@@ -65,6 +65,7 @@ const FilterTable = (props: FilterProps) => {
         <SiteTable
             keys={columnOptions}
             data={foundResults} 
+            overflow={RenderLogic(overflow, true)}
         />
         : 
         <div>
@@ -73,14 +74,18 @@ const FilterTable = (props: FilterProps) => {
 
     return (
         <div className={`filter-list w-${widthLogic}`}>
-            <FilterSearch
-                column_function={columnFunction}
-                data={columnOptions}
-                default_value={columnLogic}
-                on_change={filterFunction}
-                placeholder={placeholderLogic}
-                value={input}
-            />
+            <div className="filter-search">
+                <FilterSelect 
+                    column_function={columnFunction}
+                    data={columnOptions}
+                    default_value={columnLogic}
+                />
+                <FilterInput 
+                    on_change={filterFunction}
+                    placeholder={placeholderLogic}
+                    value={input}
+                />
+            </div>
             <div className="filter-table-container site-overflow w-100">
                 {tableLogic}
             </div>

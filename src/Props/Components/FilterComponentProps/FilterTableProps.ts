@@ -5,6 +5,7 @@ export interface FilterProps {
     placeholder?: string;
     default_column?: string;
     width?: number | string 
+    overflow?: boolean 
 }
 
 export interface FilterSelectProps { 
@@ -17,14 +18,4 @@ export interface FilterInputProps {
     on_change: ChangeEventHandler<HTMLInputElement>
     placeholder: string;
     value: string;
-}
-
-
-export interface FilterSearchProps {
-    default_value: string; 
-    data: string[]; 
-    column_function: ChangeEventHandler<HTMLSelectElement>
-    on_change: ChangeEventHandler<HTMLInputElement>; 
-    placeholder: string 
-    value: string; 
 }

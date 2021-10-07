@@ -11,10 +11,14 @@ import SiteTableRows from "./components/TableRows"
 
 const SiteTable = (props: SiteTableProps) => {
 
-    const { data, keys } = props
+    const { data, keys, overflow } = props
+
+    const overflowStyle = () => {
+        if (overflow) return "site-table-overflow"
+    }
     
     return (
-        <div className="site-table-container">
+        <div className={`site-table-container ${overflowStyle()}`}>
             <table className="site-table w-100">
                 <SiteTableHeaders 
                     keys={RenderLogic(keys,ArrrayObjectKeys(data))} 
