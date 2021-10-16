@@ -6,13 +6,14 @@ import './AntdTabs.css'
 // COMPONENTS
 import { Tabs } from 'antd';
 import SingleTab from './components/SingleTab';
+import { RenderLogic } from 'Tools/FunctionTools';
 
 const AntdTabs = (props: AntdTabsProps) => {
 
     const { TabPane } = Tabs;
 
-    const sizeLogic = props.size ? props.size : "small"
-    const positionLogic = props.position ? props.position : "top"
+    const sizeLogic = RenderLogic(props.size, "small")
+    const positionLogic = RenderLogic (props.position, "top")
     
     const renderTabs = props.data.map(tab =>
         <TabPane 

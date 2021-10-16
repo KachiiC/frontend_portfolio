@@ -1,6 +1,7 @@
 import { useEffect, useReducer, useState } from "react"
 // PROPS
 import { SiteRenderProps } from "Props/ToolProps"
+import { SiteError, SiteLoading } from "CSS/Transitions"
 
 export const SiteFetcher = (url: string, argument?: string ) => {
     
@@ -35,15 +36,16 @@ export const SiteFetcher = (url: string, argument?: string ) => {
     }
 }
 
+
 export const SiteRender = (props: SiteRenderProps) => {
 
     const { error, loading } = props.fetch
 
     const displayLogic = loading ? 
-        <h1>Loading</h1>
+        SiteLoading
         : 
         error ?
-            <h1>Failed</h1>
+            SiteError
             :
             props.component
 

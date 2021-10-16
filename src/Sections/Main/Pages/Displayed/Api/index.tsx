@@ -1,21 +1,26 @@
+// CSS
 import './Api.css'
+// COMPONENTS
 import AntdTabs from "Components/ExternalLibraries/AntdTabs"
+// TABS
 import HskApi from "./components/HskApi"
 import YoutubeApi from "./components/YoutubeApi"
 import ApiTutorial from './components/ApiTutorial'
-import ItunesApi from './components/ItunesApi'
+import StoreApi from './components/StoreApi'
+// import ItunesApi from './components/ItunesApi'
 
 const ApiData = [
+
     {
-        title: "Itunes",
-        content: <ItunesApi />   
+        title: "Store",
+        content: <StoreApi />   
     },
     {
         title: "Youtube",
         content: <YoutubeApi />   
     },
     {
-        title: "Hsk",
+        title: "HSK",
         content: <HskApi />   
     },
     {

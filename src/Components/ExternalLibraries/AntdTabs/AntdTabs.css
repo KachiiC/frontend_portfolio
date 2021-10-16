@@ -3,7 +3,7 @@
 }
 
 .tabs-description {
-    min-height: 80px;
+    min-height: 50px;
 }
 
 .tabs-description,
@@ -24,6 +24,11 @@
     .tabs-description,
     .tabs-content {
         width: 100%;
+    }
+
+    .tabs-content {
+        height: 60vh;
+        overflow-y: scroll;
     }
 }
 
