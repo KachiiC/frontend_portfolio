@@ -5,20 +5,24 @@ import { SectionExampleProps } from "Props/DataProps"
 
 const SectionExample = (props: SectionExampleProps) => {
 
-    const displayLogic = props.image ? 
+    const { title, image, example, description} = props
+
+    const displayLogic = image ? 
         <img className="site-responsive-image" 
-            alt={props.title} 
-            src={props.image} 
+            alt={title} 
+            src={image} 
         />
         :
         <pre>
-            {`${props.example}`}
+            {`${example}`}
         </pre>
     
     return (
         <div className="section-example-container">
-            <h3>{props.title}</h3>
-            <p className="m-auto">{props.description}</p>
+            <h3>{title}</h3>
+            <p className="m-auto">
+                {description}
+            </p>
             {displayLogic}
         </div>
     )

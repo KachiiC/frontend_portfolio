@@ -1,7 +1,7 @@
-// COMPONENTS
 import {render} from 'react-dom'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
+// COMPONENTS
+import App from './App'
 // CSS
 import 'CSS/index.css'
 

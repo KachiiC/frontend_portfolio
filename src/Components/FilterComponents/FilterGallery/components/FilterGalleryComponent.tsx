@@ -6,7 +6,7 @@ import SiteCards from "Components/SiteComponents/SiteCards"
 const GalleryComponent = (props: FilterGalleryProps) => {
     
     // PROPS
-    const {buttons, card_size, data } = props
+    const { buttons, card_size, data } = props
 
     return (
         <>

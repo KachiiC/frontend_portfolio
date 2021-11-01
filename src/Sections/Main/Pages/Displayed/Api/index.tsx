@@ -3,31 +3,8 @@ import './Api.css'
 // COMPONENTS
 import AntdTabs from "Components/ExternalLibraries/AntdTabs"
 // TABS
-import HskApi from "./components/HskApi"
-import YoutubeApi from "./components/YoutubeApi"
-import ApiTutorial from './components/ApiTutorial'
-import StoreApi from './components/StoreApi'
-// import ItunesApi from './components/ItunesApi'
+import ApiData from 'Data/Main/Displayed/Api/ApiData'
 
-const ApiData = [
-
-    {
-        title: "Store",
-        content: <StoreApi />   
-    },
-    {
-        title: "Youtube",
-        content: <YoutubeApi />   
-    },
-    {
-        title: "HSK",
-        content: <HskApi />   
-    },
-    {
-        title: "How does it work?",
-        content: ApiTutorial
-    },
-]
 
 const Api = (
     <div className="components-page-container">

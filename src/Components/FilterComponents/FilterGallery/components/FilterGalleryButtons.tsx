@@ -1,5 +1,8 @@
 // PROPS
-import { FilterButtonProps, SingleFilterButtonProps } from "Props/Components/FilterComponentProps/FilterGalleryProps"
+import { 
+    FilterButtonProps, 
+    SingleFilterButtonProps 
+} from "Props/Components/FilterComponentProps/FilterGalleryProps"
 
 const SingleFilterButton = (props: SingleFilterButtonProps) => {
     
@@ -10,8 +13,8 @@ const SingleFilterButton = (props: SingleFilterButtonProps) => {
         // Takes title as a string and click as arguments and returns a button
         <div className="filter-button cursor-pointer" 
             id={title}
-            onClick={click} 
             key={title}
+            onClick={click}
         >
             {title}
         </div>

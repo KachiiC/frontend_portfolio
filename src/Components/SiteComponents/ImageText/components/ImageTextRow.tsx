@@ -1,24 +1,29 @@
 // PROPS
 import { ImageTextRowProps } from "Props/Components/ImageText"
 
-const ImageTextRow = (props: ImageTextRowProps) => (
-    <div className="site-flex">
-        <div className="row-image">
-            <a href={props.link} 
-                target="_blank" 
-                rel="noreferrer"
-            >
-                <img className="site-responsive-image" 
-                    alt={props.title}
-                    src={props.image}
-                />
-            </a>
+const ImageTextRow = (props: ImageTextRowProps) => {
+
+    const { link, title, image, description } = props
+
+    return (
+        <div className="site-flex">
+            <div className="row-image">
+                <a href={link} 
+                    target="_blank" 
+                    rel="noreferrer"
+                >
+                    <img className="site-responsive-image" 
+                        alt={title}
+                        src={image}
+                    />
+                </a>
+            </div>
+            <div className="row-description">
+                <h2>{title}</h2>
+                <p>{description}</p>
+            </div>
         </div>
-        <div className="row-description">
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-        </div>
-    </div>
-)
+    )
+}
 
 export default ImageTextRow

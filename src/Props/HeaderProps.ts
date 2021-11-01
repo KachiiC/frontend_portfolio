@@ -1,39 +1,32 @@
 import { MouseEventHandler } from "react";
+// PROPS
 import { pageDataProps } from "./MainProps";
 
 export interface SiteNavbarProps { 
     title: string; 
-    menu_number: number;
+    click?: MouseEventHandler<HTMLDivElement>
     data: pageDataProps[]
 }
 
-export interface NavMenuProps { 
+export interface SiteNavLinkProps { 
     click?: MouseEventHandler<HTMLDivElement>
-    data: pageDataProps[]; 
-    menu_number?: number | undefined; 
-    menu_type: string; 
-    small_menu_click: MouseEventHandler<HTMLDivElement>
+    link_type: "small" | "nav" | "dropdown" 
+    link?: string;
     title: string;
 }
 
-export interface NavLinkProps {
-    link?: string | undefined; 
-    title?: string | undefined; 
-    external_link?: string;
+export interface DisplayMenuTypeProps  { 
+    data: pageDataProps; 
+    type: "small" | "nav" | "dropdown" ; 
+    click?: MouseEventHandler<HTMLDivElement>
 }
 
-export interface SiteNavLinkProps { 
-    click?: MouseEventHandler<HTMLDivElement>;
-    data: NavLinkProps
-    type?: "small" | "full" 
-}
-
-export interface SmallMenuBlockProps { 
-    menu_number?: number | undefined; 
+export interface DisplayMenuListProps {
     data: pageDataProps[]; 
-    click: MouseEventHandler<HTMLDivElement>
+    type: "small" | "nav" | "dropdown"  
+    click?: MouseEventHandler<HTMLDivElement>
 }
 
 export interface SmallMenuIconProps {
-    click: MouseEventHandler<HTMLDivElement>
+    click: any
 }

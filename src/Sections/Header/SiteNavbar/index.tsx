@@ -1,39 +1,35 @@
-import { useReducer } from 'react'
-// PROPS
-import { SiteNavbarProps } from 'Props/HeaderProps'
+import { useReducer } from "react"
 // CSS
-import './SiteNavBar.css'
+import "./SiteNavbar.css"
+// PROPS
+import { SiteNavbarProps } from "Props/HeaderProps"
 // COMPONENTS
-import NavMenu from './components/NavMenu'
-import SmallMenuBlock from './components/SmallMenuBlock'
+import { SiteNavMenu, SmallNavMenu } from "./components/SiteNavMenu"
 
 const SiteNavbar = (props: SiteNavbarProps) => {
 
-    // PROPS
-    const {title, data, menu_number } = props
+    const { data, title } = props
 
     const [smallMenu, toggleMenu] = useReducer(
         smallMenu => !smallMenu, false
     )
 
-    // Menu which is displayed on click for small screen
     const SmallScreenMenu = (
-        <SmallMenuBlock 
+        <SmallNavMenu
+            click={toggleMenu}
             data={data} 
-            click={toggleMenu} 
+            title="Small Menu"
         />
     )
     
     return (
-        <header>
-            <NavMenu
+        <header>     
+            <SiteNavMenu 
+                data={data}
+                click={toggleMenu}
                 title={title}
-                data={data} 
-                menu_number={menu_number}
-                menu_type="full"
-                small_menu_click={toggleMenu}
             />
-            {smallMenu && SmallScreenMenu}
+            { smallMenu && SmallScreenMenu }
         </header>
     )
 }

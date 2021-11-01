@@ -1,8 +1,10 @@
 export const TitleTrimmer = (word: string, length: number) => {
 
-    const output_word = word.length < length ? word : word.slice(0,length) + "..."
+    return word.length < length ? 
+        word 
+        : 
+        word.slice(0,length) + "..."
 
-    return output_word
 }
 
 export const TitleLogic = (title: string | undefined, size: string | undefined) => {
@@ -34,6 +36,7 @@ export const TitleLogic = (title: string | undefined, size: string | undefined) 
     if (title) return displaytitle
 }
 
-export const StringUppercase = (string: string) => {
-    return string.split("_").join(" ").toUpperCase()
-}
+
+export const StringUppercase = (string: string) => string.split("_").join(" ").toUpperCase()
+
+export const StringJoiner = (string: string) => string.split(" ").join("-")
