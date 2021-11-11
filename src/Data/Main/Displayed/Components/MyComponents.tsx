@@ -1,5 +1,5 @@
 // PROPS
-import { MyComponentsDataProps } from "Props/ComponentProps"
+import { ComponentTabProps } from "Props/ComponentProps"
 // DATA
 import { CardsSectionData } from "./ComponentsListData/CardsData"
 import { CollapsibleSectionsData } from "./ComponentsListData/CollapsibleData"
@@ -14,7 +14,7 @@ import { TabsSectionExample } from "./ComponentsListData/TabsData"
 import { TimelineSectionExample } from "./ComponentsListData/TimelineData"
 import { YoutubeModalExample } from "./ComponentsListData/YoutubeModalData"
 // COMPONENTS
-import ComponentsTab from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentTab"
+import ComponentsTab from "./ComponentTab"
 import { 
     CardsExample,
     CollapsibleExample, 
@@ -26,12 +26,12 @@ import {
     TabsExample, 
     TimelineExample,
     YoutubeModalPlayerExample
-} from "Sections/Main/Pages/Displayed/Components/ComponentComponents/ComponentExamples"
+} from "./ComponentExamples"
 
 const githubDirect = "https://github.com/KachiiC/"
 
 
-export const MyComponentsData = [
+export const components_data = [
     {
         title: "Navbar",
         introduction: "The navigation bar for this portfolio is a responsive component built with react and typscript.",
@@ -112,26 +112,23 @@ export const MyComponentsData = [
         introduction: "This is a youtube player component built with react hooks, in coperating iframe and the modal component.",
         sections: YoutubeModalExample,
         component: YoutubeModalPlayerExample,
-        // link: githubDirect + "react_timeline",
+        link: githubDirect + "youtube_player"
     },
-    // {
-    //     title: "Slideshow",
-    //     introduction: "This is a Slideshow component built for with react hooks",
-    //     sections: SlideshowSectionData,
-    //     component: SlideshowExample,
-    // },
 ]
 
-MyComponentsData.map((data: MyComponentsDataProps) => {
-    
-    data.content = (
-        <ComponentsTab
-            key={data.title}
-            introduction={data.introduction}
-            component={data.component}
-            sections={data.sections}
-        />
-    )
+export const MyComponentsData = components_data.map((data: ComponentTabProps) => {
 
-    return data
+    return {
+        title: data.title,
+        content: (
+            <ComponentsTab
+                key={data.title}
+                title={data.title}
+                link={data.link}
+                introduction={data.introduction}
+                component={data.component}
+                sections={data.sections}
+            />
+        )
+    }
 })

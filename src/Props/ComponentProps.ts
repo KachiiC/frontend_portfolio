@@ -1,14 +1,17 @@
 import { SectionExampleProps } from "./DataProps";
 
-export interface ComponentTabProps { 
+export interface ComponentTabProps {
+    title: string;
     component?: JSX.Element; 
     introduction: string; 
+    link: string;
     sections: SectionExampleProps[]
 }
 
 export interface MyComponentsDataProps {
     title: string;
     introduction: string;
+    link: string;
     sections: SectionExampleProps[];
     component?: JSX.Element;
     content?: JSX.Element;

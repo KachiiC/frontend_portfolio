@@ -2,18 +2,18 @@
 import { LinkRenderer } from "Tools/RoutersRender"
 // PAGES
 import About from "Sections/Main/Pages/Displayed/About"
-import Components from "Sections/Main/Pages/Displayed/Components"
-import Projects from "Sections/Main/Pages/Displayed/Projects"
 import Api from "Sections/Main/Pages/Displayed/Api"
+import { MyComponentsData } from "./Components/MyComponents"
+import ProjectsData from "./ProjectsData"
 
 const PagesData = [
     {
         title: "Projects",
-        content: Projects
+        sub_menu: ProjectsData
     },
     {
         title: "Components",
-        content: Components
+        sub_menu: MyComponentsData
     },
     {
         title: "Api",

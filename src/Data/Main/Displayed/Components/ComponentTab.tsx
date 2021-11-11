@@ -2,10 +2,11 @@
 import { ComponentTabProps } from "Props/ComponentProps"
 // COMPONENTS
 import SectionExample from "Components/SiteComponents/SectionExample"
+import { SiteLink } from "Tools/LinkTools"
 
 const ComponentsTab = (props: ComponentTabProps) => {
 
-    const {component, introduction, sections } = props
+    const { title, link, component, introduction, sections } = props
 
     const componentLogic = () => {
         if (component) return component
@@ -13,20 +14,25 @@ const ComponentsTab = (props: ComponentTabProps) => {
 
     const displaySections = sections.map(nav => (
         <SectionExample
-            title={nav.title}
+            key={nav.title}
+            description={nav.description}
             example={nav.example}
             image={nav.image}
-            description={nav.description}
-            key={nav.title}
+            title={nav.title}
         />
     ))
 
     return (
-        <>
+        <div className="components-page-container">
+            <SiteLink
+                placeholder={<h1>{title}</h1>}
+                type="external" 
+                link={link}                
+            />
             <p>{introduction}</p>
             {componentLogic()}
             {displaySections}
-        </>
+        </div>
     )
 
 }
