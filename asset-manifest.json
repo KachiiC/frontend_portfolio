@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/kach_portfolio/static/css/main.9a6266ee.chunk.css",
-    "main.js": "/kach_portfolio/static/js/main.da16154b.chunk.js",
-    "main.js.map": "/kach_portfolio/static/js/main.da16154b.chunk.js.map",
-    "runtime-main.js": "/kach_portfolio/static/js/runtime-main.5cf1deef.js",
-    "runtime-main.js.map": "/kach_portfolio/static/js/runtime-main.5cf1deef.js.map",
+    "main.css": "/kach_portfolio/static/css/main.4e33506c.chunk.css",
+    "main.js": "/kach_portfolio/static/js/main.2b88e32b.chunk.js",
+    "main.js.map": "/kach_portfolio/static/js/main.2b88e32b.chunk.js.map",
+    "runtime-main.js": "/kach_portfolio/static/js/runtime-main.41b996cb.js",
+    "runtime-main.js.map": "/kach_portfolio/static/js/runtime-main.41b996cb.js.map",
     "static/css/2.786ae0dd.chunk.css": "/kach_portfolio/static/css/2.786ae0dd.chunk.css",
-    "static/js/2.cb46ce7d.chunk.js": "/kach_portfolio/static/js/2.cb46ce7d.chunk.js",
-    "static/js/2.cb46ce7d.chunk.js.map": "/kach_portfolio/static/js/2.cb46ce7d.chunk.js.map",
-    "static/js/3.53ec7480.chunk.js": "/kach_portfolio/static/js/3.53ec7480.chunk.js",
-    "static/js/3.53ec7480.chunk.js.map": "/kach_portfolio/static/js/3.53ec7480.chunk.js.map",
+    "static/js/2.384dadf3.chunk.js": "/kach_portfolio/static/js/2.384dadf3.chunk.js",
+    "static/js/2.384dadf3.chunk.js.map": "/kach_portfolio/static/js/2.384dadf3.chunk.js.map",
+    "static/js/3.9cf1f268.chunk.js": "/kach_portfolio/static/js/3.9cf1f268.chunk.js",
+    "static/js/3.9cf1f268.chunk.js.map": "/kach_portfolio/static/js/3.9cf1f268.chunk.js.map",
     "index.html": "/kach_portfolio/index.html",
     "static/css/2.786ae0dd.chunk.css.map": "/kach_portfolio/static/css/2.786ae0dd.chunk.css.map",
-    "static/css/main.9a6266ee.chunk.css.map": "/kach_portfolio/static/css/main.9a6266ee.chunk.css.map",
-    "static/js/2.cb46ce7d.chunk.js.LICENSE.txt": "/kach_portfolio/static/js/2.cb46ce7d.chunk.js.LICENSE.txt",
+    "static/css/main.4e33506c.chunk.css.map": "/kach_portfolio/static/css/main.4e33506c.chunk.css.map",
+    "static/js/2.384dadf3.chunk.js.LICENSE.txt": "/kach_portfolio/static/js/2.384dadf3.chunk.js.LICENSE.txt",
     "static/media/About_Image.7074687c.jpeg": "/kach_portfolio/static/media/About_Image.7074687c.jpeg",
     "static/media/ComponentsImage.a7708735.png": "/kach_portfolio/static/media/ComponentsImage.a7708735.png",
     "static/media/FooterData.1f31703a.png": "/kach_portfolio/static/media/FooterData.1f31703a.png",
     "static/media/FooterImage.c6736bd7.png": "/kach_portfolio/static/media/FooterImage.c6736bd7.png",
     "static/media/HomeImage.9038a413.png": "/kach_portfolio/static/media/HomeImage.9038a413.png",
+    "static/media/LoadingError.bacb5cd4.gif": "/kach_portfolio/static/media/LoadingError.bacb5cd4.gif",
     "static/media/NavbarImage.d4bb3ae8.png": "/kach_portfolio/static/media/NavbarImage.d4bb3ae8.png",
     "static/media/NavbarResponsiveImage.42555391.png": "/kach_portfolio/static/media/NavbarResponsiveImage.42555391.png",
     "static/media/Playkrown.65c74134.png": "/kach_portfolio/static/media/Playkrown.65c74134.png",
@@ -26,10 +27,10 @@
     "static/media/SnuggleBunny.66c36258.png": "/kach_portfolio/static/media/SnuggleBunny.66c36258.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5cf1deef.js",
+    "static/js/runtime-main.41b996cb.js",
     "static/css/2.786ae0dd.chunk.css",
-    "static/js/2.cb46ce7d.chunk.js",
-    "static/css/main.9a6266ee.chunk.css",
-    "static/js/main.da16154b.chunk.js"
+    "static/js/2.384dadf3.chunk.js",
+    "static/css/main.4e33506c.chunk.css",
+    "static/js/main.2b88e32b.chunk.js"
   ]
 }
