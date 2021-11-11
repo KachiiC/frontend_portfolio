@@ -1,8 +1,8 @@
 {
-  "name": "kach_portfolio",
+  "name": "frontend_portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kachiic.github.io/kach_portfolio/",
+  "homepage": "https://kachiic.github.io/frontend_portfolio/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
