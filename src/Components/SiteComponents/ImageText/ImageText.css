@@ -1,6 +1,5 @@
 .image-text-container .row-image {
     float: right;
-
 }
 
 .row-image,
@@ -8,12 +7,6 @@
     width: 50%;
     padding: 20px
 }
-
-/* .row-description h2, 
-.row-description p {
-    margin-top: 10px;
-    text-align: center;
-} */
 
 @media screen and (max-width: 800px) {
 

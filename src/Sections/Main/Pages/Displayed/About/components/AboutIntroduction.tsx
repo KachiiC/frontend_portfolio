@@ -1,17 +1,19 @@
 // IMAGES
 import AboutImage from 'Images/About_Image.jpeg'
+import { SiteLink } from 'Tools/LinkTools'
 
 const AboutIntroductionImage = (
     <div className="site-col-6 w-50 about-image">
-        <a href="https://github.com/KachiiC" 
-            target="_blank" 
-            rel="noreferrer"
-        >
-            <img src={AboutImage} 
-                className="site-responsive-image"
-                alt="display-pic" 
-            />
-        </a>
+        <SiteLink 
+            link="https://github.com/KachiiC" 
+            type="external"
+            placeholder={
+                <img src={AboutImage} 
+                    className="site-responsive-image"
+                    alt="display-pic" 
+                />
+            }
+        />
     </div>
 )
 
