@@ -3,7 +3,7 @@ import { YoutubeItemProps } from "Props/Components/YoutubeModalProps"
 // COMPONENTS
 import YoutubePlayer from "Components/ExternalLibraries/YoutubePlayer"
 
-export const YoutubeData = (data: YoutubeItemProps[]) => {
+const YoutubeDataConverter = (data: YoutubeItemProps[]) => {
 
     return data.map(video => {
 
@@ -22,4 +22,4 @@ export const YoutubeData = (data: YoutubeItemProps[]) => {
     })
 }
 
-export default YoutubeData
+export default YoutubeDataConverter

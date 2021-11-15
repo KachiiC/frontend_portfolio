@@ -11,22 +11,22 @@ export interface SiteNavbarProps {
 export interface SiteNavLinkProps { 
     click?: MouseEventHandler<HTMLDivElement>
     link_type: "small" | "nav" | "dropdown" 
-    link?: string;
-    title: string;
+    link?: string
+    title: string
 }
 
 export interface DisplayMenuTypeProps  { 
-    data: pageDataProps; 
-    type: "small" | "nav" | "dropdown" ; 
     click?: MouseEventHandler<HTMLDivElement>
+    data: pageDataProps; 
+    type: "small" | "nav" | "dropdown"
 }
 
 export interface DisplayMenuListProps {
-    data: pageDataProps[]; 
+    data: pageDataProps[]
     type: "small" | "nav" | "dropdown"  
     click?: MouseEventHandler<HTMLDivElement>
 }
 
 export interface SmallMenuIconProps {
-    click: any
+    click: MouseEventHandler<HTMLDivElement> | undefined
 }

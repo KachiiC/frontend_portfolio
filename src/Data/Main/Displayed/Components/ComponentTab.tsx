@@ -12,15 +12,29 @@ const ComponentsTab = (props: ComponentTabProps) => {
         if (component) return component
     }
 
-    const displaySections = sections.map(nav => (
-        <SectionExample
-            key={nav.title}
-            description={nav.description}
-            example={nav.example}
-            image={nav.image}
-            title={nav.title}
-        />
-    ))
+    const displaySections = sections.map(nav => {
+        
+        const {
+            title,
+            description,
+            example,
+            image,
+        } = nav
+
+        const SectionExampleProps = {
+            key: title,
+            description: description,
+            example: example,
+            image: image,
+            title: title,
+        }
+
+        return (
+            <SectionExample 
+                {...SectionExampleProps}
+            />
+        )
+    })
 
     return (
         <div className="components-page-container">

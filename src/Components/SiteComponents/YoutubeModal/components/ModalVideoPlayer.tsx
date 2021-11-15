@@ -7,7 +7,12 @@ import YoutubePlayer from "Components/ExternalLibraries/YoutubePlayer";
 
 const ModalVideoPlayer = (props: YoutubeItemProps) => {
 
-    const { video_title, video_id, upload_date, video_description } = props
+    const { 
+        upload_date,
+        video_description,
+        video_id,
+        video_title
+    } = props
 
     return (
     

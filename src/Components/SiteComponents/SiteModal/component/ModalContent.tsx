@@ -7,7 +7,7 @@ import SiteCloseButton from './SiteCloseButton'
 
 const SiteModalContent = (props: modalContentProps) => {
 
-    const { content, click, type } = props
+    const { click, content, type } = props
 
     // Close Button for Modal
     const closeButton = (

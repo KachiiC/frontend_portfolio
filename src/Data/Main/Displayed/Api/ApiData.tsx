@@ -1,9 +1,8 @@
-import ApiTutorial from "Sections/Main/Pages/Displayed/Api/components/ApiTutorial";
-import CryptoApi from "Sections/Main/Pages/Displayed/Api/components/CryptoApi";
-import HskApi from "Sections/Main/Pages/Displayed/Api/components/HskApi";
-import StoreApi from "Sections/Main/Pages/Displayed/Api/components/StoreApi";
-import StockApi from "Sections/Main/Pages/Displayed/Api/components/StockApi";
-import YoutubeApi from "Sections/Main/Pages/Displayed/Api/components/YoutubeApi";
+import ApiTutorial from "Sections/Main/Pages/Displayed/Api/components/ApiTutorial"
+import FinanceApi from "Sections/Main/Pages/Displayed/Api/components/FinanceApi"
+import HskApi from "Sections/Main/Pages/Displayed/Api/components/HskApi"
+import StoreApi from "Sections/Main/Pages/Displayed/Api/components/StoreApi"
+import YoutubeApi from "Sections/Main/Pages/Displayed/Api/components/YoutubeApi"
 
 const ApiData = [
     {
@@ -12,11 +11,11 @@ const ApiData = [
     },
     {
         title: "Crypto",
-        content: <CryptoApi />   
+        content: <FinanceApi type="crypto" />
     },
     {
         title: "Stock",
-        content: <StockApi />
+        content: <FinanceApi type="stock" />
     },
     {
         title: "Store",

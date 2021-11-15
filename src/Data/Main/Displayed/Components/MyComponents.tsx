@@ -30,7 +30,6 @@ import {
 
 const githubDirect = "https://github.com/KachiiC/"
 
-
 export const components_data = [
     {
         title: "Navbar",

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // CSS
-import './FilterList.css'
+import './FilterTable.css'
 // PROPS
 import { FilterProps } from "Props/Components/FilterComponentProps/FilterTableProps"
 import { TargetProps } from 'Props/ToolProps'

@@ -25,6 +25,7 @@ import {
     YoutubeModalData 
 } from "Data/Main/Displayed/Components/ComponentsListData/YoutubeModalData"
 
+
 export const CardsExample = (
     <Cards
         data={CardsData}
@@ -58,16 +59,16 @@ export const FilterTableExample = (
     <FilterTable 
         data={TableData} 
         default_column="name"
-        width={80}
         placeholder="example placeholder"
+        width={80}
     />
 )
 
 export const GalleryExample = (
         <Gallery
             data={GalleryData} 
-            width={80} 
             number={4}
+            width={80}
         />
     )
 

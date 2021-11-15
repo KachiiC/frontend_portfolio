@@ -1,6 +1,4 @@
-import { MouseEventHandler } from "react"
-
-export const IfStatement = (arg: MouseEventHandler<HTMLDivElement> | undefined) => {
+export const IfStatement = (arg: any) => {
     if (arg) return arg
 }
 

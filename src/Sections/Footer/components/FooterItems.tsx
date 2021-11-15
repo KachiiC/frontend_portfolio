@@ -4,6 +4,7 @@ import { footerCopyrightProps, footerSectionDataProps } from "Props/FooterProps"
 // TOOLS
 import SiteIcon from "Tools/SiteIcon";
 import { RenderLogic } from "Tools/FunctionTools";
+import { SiteLink } from "Tools/LinkTools";
 
 export const FooterHeading = (props: {heading?: string}) => RenderLogic(<h3>{props.heading}</h3>, "")
 
@@ -13,15 +14,16 @@ export const FooterLogos = (props: footerSectionDataProps) => {
 
     return (
         <div className="site-span-1">
-            <a href={link} 
-                target="_blank" 
-                rel="noreferrer"
-            >
-                <SiteIcon 
-                    type={icon} 
-                    size="2x"
-                />
-            </a>
+            <SiteLink
+                type="external"
+                placeholder={
+                    <SiteIcon 
+                        type={icon} 
+                        size="2x"
+                    />
+                }
+                link={RenderLogic(link, "")}
+            />
         </div>
     )
 }

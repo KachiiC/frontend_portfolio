@@ -14,19 +14,28 @@ const AntdTabs = (props: AntdTabsProps) => {
     const { TabPane } = Tabs;
     const { data, position, size } = props
     
-    const renderTabs = data.map(tab =>
-        <TabPane 
-            key={tab.title}
-            tab={tab.title} 
-        >
-            <SingleTab
-                link={tab.link}
-                title={tab.title}
-                content={tab.content}
-                description={tab.description}
-            />
-        </TabPane>
-    )
+    const renderTabs = data.map(tab => {
+        // PROPS
+        const { content, description, link, title } = tab
+        
+        const tabProperties = {
+            link: link,
+            title: title,
+            content: content,
+            description: description,
+        }
+
+        return (
+            <TabPane 
+                key={title}
+                tab={title} 
+            >
+                <SingleTab 
+                    {...tabProperties} 
+                />
+            </TabPane>
+        )
+    })
 
     return (
         <Tabs 

@@ -1,8 +1,8 @@
+// COMPONENTS
 // CSS
 import './Test.css'
-// TOOLS
 // DATA
-// COMPONENTS
+// TOOLS
 
 const Test = () => {
 

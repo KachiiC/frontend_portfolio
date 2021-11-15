@@ -1,10 +1,10 @@
 // COMPONENTS
 import SiteCollapsibleComponent from "Components/SiteComponents/SiteCollapsible"
-import { SiteLink } from "Tools/LinkTools"
+import YoutubeDataConverter from "./YoutubeDataConverter"
 // TOOLS
+import { SiteLink } from "Tools/LinkTools"
 import {SiteRender, SiteFetcher } from "Tools/SiteFetcherTool"
 import { KachiiRestApi } from "URLs/KachiisRestApi"
-import { YoutubeData } from "./YoutubeDataConverter"
 
 const youtube_link = KachiiRestApi("api", "youtube/playlist=PLkqz3S84Tw-RfPS9HHi3MRmrinOBKxIr8")
 
@@ -14,7 +14,7 @@ const YoutubeApi = () => {
 
     const YoutubeCollapsibles = (
         <SiteCollapsibleComponent 
-            data={YoutubeData(fetchData.response)} 
+            data={YoutubeDataConverter(fetchData.response)} 
             width={80}
         />
     )

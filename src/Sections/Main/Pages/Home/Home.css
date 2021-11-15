@@ -4,37 +4,44 @@
 }
 
 .home-header-image {
-    width: 100%;
     height: 80vh;
     object-fit: cover;
 }
 
 .home-header-text {
-    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    width: 100%;
 }
 
 .home-header p {
     font-size: 16px;
 }
 
+.home-header,
+.home-header-text {
+    text-align: center;
+}
+
+.home-header,
+.home-header-text {
+    width: 100%;
+}
+
 .home-header h2,
-.home-header p {
+.home-header p,
+.home-header-text {
     color: white;
 }
 
 .home-header button {
     color: black;
-    padding: 10px;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-decoration: none;
     cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .home-portfolio {

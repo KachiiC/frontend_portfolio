@@ -1,10 +1,9 @@
 // PROPS
 import { StoreDataProps } from "Props/Api/StoreDataProps"
 
-const StoreData = (data: StoreDataProps[]) => {
+const StoreDataConverter = (data: StoreDataProps[]) => {
 
-    return data.map((item) => {
-
+    return data.map(item => {
         return {
             title: item.name,
             description: `£${item.price}`,
@@ -17,4 +16,4 @@ const StoreData = (data: StoreDataProps[]) => {
 
 
 
-export default StoreData
+export default StoreDataConverter

@@ -1,16 +1,16 @@
 // COMPONENTS
 import SiteCards from "Components/SiteComponents/SiteCards"
-import { SiteLink } from "Tools/LinkTools"
-// TOOLS
-import { SiteFetcher, SiteRender } from "Tools/SiteFetcherTool"
-import { KachiiRestApi } from "URLs/KachiisRestApi"
 import StoreData from "./StoreDataConverter"
+// TOOLS
+import { KachiiRestApi } from "URLs/KachiisRestApi"
+import { SiteFetcher, SiteRender } from "Tools/SiteFetcherTool"
+import { SiteLink } from "Tools/LinkTools"
 
-const hsk_link = KachiiRestApi("backend", "mma/store")
+const store_link = KachiiRestApi("backend", "mma/store")
 
 const StoreApi = () => {
 
-    const fetchData = SiteFetcher(hsk_link)
+    const fetchData = SiteFetcher(store_link)
 
     const StoreCards = (
         <SiteCards 

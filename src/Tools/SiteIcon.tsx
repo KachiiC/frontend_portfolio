@@ -9,6 +9,7 @@ import {
     faHtml5, 
     faInstagram, 
     faJsSquare, 
+    faLinkedinIn, 
     faPinterest, 
     faPython, 
     faReact, 
@@ -76,6 +77,9 @@ const SiteIcon = (props: SiteIconProps) => {
         case "left":
             icon = faCaretLeft
             break;
+        case "linkedIn":
+            icon = faLinkedinIn
+            break
         case "mobile":
             icon = faMobile
             break;
