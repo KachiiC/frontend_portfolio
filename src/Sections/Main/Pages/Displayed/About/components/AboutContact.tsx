@@ -1,14 +1,16 @@
-// TOOLS
-import SiteIcon from "Tools/SiteIcon"
 // DATA
 import ContactInfomation from "Data/ContactInformation"
+// TOOLS
+import { ObjKeys, ObjValue } from "Tools/ObjectDataTools"
+import SiteIcon from "Tools/SiteIcon"
 
 const DisplayContact = () => {
-    const keys = Object.keys(ContactInfomation)
+
+    const keys = ObjKeys(ContactInfomation)
     
     const displayedInformation = keys.map((key, index) => {
 
-        const value = Object.values(ContactInfomation)[index]
+        const value = ObjValue(ContactInfomation)[index]
         
         return (
             <div className="contact-card" key={key}>
@@ -22,7 +24,6 @@ const DisplayContact = () => {
         <div className="site-flex">
             {displayedInformation}
         </div>
-
     )
 
 }

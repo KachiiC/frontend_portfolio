@@ -3,7 +3,7 @@ import SiteCollapsibleComponent from "Components/SiteComponents/SiteCollapsible"
 import YoutubeDataConverter from "./YoutubeDataConverter"
 // TOOLS
 import { SiteLink } from "Tools/LinkTools"
-import {SiteRender, SiteFetcher } from "Tools/SiteFetcherTool"
+import { SiteRender, SiteFetcher } from "Tools/SiteFetcherTool"
 import { KachiiRestApi } from "URLs/KachiisRestApi"
 
 const youtube_link = KachiiRestApi("api", "youtube/playlist=PLkqz3S84Tw-RfPS9HHi3MRmrinOBKxIr8")

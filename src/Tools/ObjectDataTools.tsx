@@ -42,6 +42,10 @@ export const setLogic = (first: number | string, last: number | string, setFunct
     })
 }
 
+export const ObjKeys = (input: Object) => Object.keys(input)
+
+export const ObjValue = (input: Object) => Object.values(input)
+
 export const ArrrayObjectKeys = (data: Object[]) => Object.keys(data[0])
 
 export const EmptyObjectChecker = (obj: {}) => Object.keys(obj).length === 0 ? true : false

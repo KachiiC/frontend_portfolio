@@ -8,11 +8,16 @@ import { RoutesRender } from "Tools/RoutersRender";
 // PAGES
 import Home from "../Pages/Home";
 
-const PageRoutes = RoutesRender(DisplayedData)
-const FooterRoutes = RoutesRender(FooterPages)
-const HiddenRoutes = RoutesRender(HiddenData)
+const Routes = [
+    DisplayedData,
+    FooterPages,
+    HiddenData,
+]
 
-HiddenRoutes.push(
+const RenderRoutes = Routes.map(route => RoutesRender(route))
+
+// Pushes home to last route
+RenderRoutes[RenderRoutes.length - 1].push(
     <Route key="home">
         {Home}
     </Route>
@@ -20,9 +25,7 @@ HiddenRoutes.push(
 
 const PagesRouter = ( 
     <Switch>
-        {PageRoutes}
-        {FooterRoutes}
-        {HiddenRoutes}
+        {RenderRoutes}
     </Switch>
 )
 

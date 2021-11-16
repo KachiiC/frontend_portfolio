@@ -7,21 +7,15 @@
     animation: fadeInUp 1.5s;
 }
 
+/* ABOUT */
+.about-contact,
+.about-description,
+.about-introduction,
+.about-skills-container, 
+.about-title,
+/* COMPONENTS */
+.components-page,
 /* PROJECTS */
 .projects-page {
-    animation: fadeInUp 2s;
-}
-
-/* COMPONENTS */
-.components-page-container {
-    animation: fadeInUp 2s;
-}
-
-/* ABOUT */
-.about-title,
-.about-introduction,
-.about-description,
-.about-contact,
-.about-skills-container {
     animation: fadeInUp 2s;
 }

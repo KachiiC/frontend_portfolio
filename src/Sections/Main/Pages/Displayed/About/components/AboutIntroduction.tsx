@@ -1,5 +1,6 @@
 // IMAGES
 import AboutImage from 'Images/About_Image.jpeg'
+// TOOLS
 import { SiteLink } from 'Tools/LinkTools'
 
 const AboutIntroductionImage = (

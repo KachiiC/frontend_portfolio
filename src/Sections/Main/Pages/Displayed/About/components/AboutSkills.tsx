@@ -1,7 +1,7 @@
-// DATA
-import SkillsData from "Data/Main/Displayed/About/SkillsData"
 // COMPONENTS
 import FilterIcons from "Components/FilterComponents/FilterIcons"
+// DATA
+import SkillsData from "Data/Main/Displayed/About/SkillsData"
 
 const AboutSkills = (
     <div className="about-skills-container">

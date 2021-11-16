@@ -1,9 +1,9 @@
-// CSS
-import './About.css'
 // COMPONENTS
 import AboutContact from './components/AboutContact'
 import AboutIntroduction from './components/AboutIntroduction'
 import AboutSkills from './components/AboutSkills'
+// CSS
+import './About.css'
 // DATA
 import AboutDescription from './components/AboutDescription'
 

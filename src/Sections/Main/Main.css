@@ -5,13 +5,13 @@ main {
     background: white;
 }
 
-.components-page-container p {
+.components-page p {
     width: 60%;
     margin: 25px auto;
 }
 
 @media screen and (max-width: 1080px) {
-    .components-page-container p {
+    .components-page p {
         width: 90%;
     }
 }

@@ -37,7 +37,7 @@ const ComponentsTab = (props: ComponentTabProps) => {
     })
 
     return (
-        <div className="components-page-container">
+        <div className="components-page">
             <SiteLink
                 placeholder={<h1>{title}</h1>}
                 type="external" 
