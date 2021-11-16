@@ -1,4 +1,6 @@
 import { useState } from "react"
+// COMPONENTS
+import SiteCollapsible from "Components/SiteComponents/SiteCollapsible"
 // CSS
 import './FilterCollapsible.css'
 // PROPS
@@ -6,8 +8,6 @@ import { FilterCollapsibleProps } from "Props/Components/FilterComponentProps/Fi
 import { TargetProps } from "Props/ToolProps"
 // TOOLS
 import { RenderLogic } from "Tools/FunctionTools"
-// COMPONENTS
-import SiteCollapsible from "Components/SiteComponents/SiteCollapsible"
 
 const FilterCollapsible = (props: FilterCollapsibleProps) => {
 

@@ -5,7 +5,7 @@ import { SectionExampleProps } from "Props/DataProps"
 
 const SectionExample = (props: SectionExampleProps) => {
 
-    const { title, image, example, description } = props
+    const { description, example, image, title } = props
 
     const displayLogic = image ? 
         <img className="site-responsive-image" 

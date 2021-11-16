@@ -12,7 +12,7 @@ const LinkProps = {
 const HomeHeader = (
     <div className="home-header">
         <img src={HomeImage} 
-            alt="photographer" 
+            alt="home-header-img" 
             className="home-header-image"
         />
         <div className="home-header-text">

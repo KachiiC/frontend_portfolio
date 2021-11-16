@@ -1,10 +1,10 @@
 import { useReducer } from 'react'
+// COMPONENTS
+import ModalContent from './component/ModalContent'
 // CSS
 import './SiteModal.css'
 // PROPS
 import { ModalComponent } from 'Props/Components/ModalProps'
-// COMPONENTS
-import ModalContent from './component/ModalContent'
 
 const SiteModal = (props: ModalComponent) => {
 

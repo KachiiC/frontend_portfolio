@@ -1,4 +1,7 @@
 import { useState } from 'react'
+// COMPONENTS
+import { FilterInput, FilterSelect } from './components/FilterSearch'
+import SiteTable from 'Components/SiteComponents/SiteTable'
 // CSS
 import './FilterTable.css'
 // PROPS
@@ -9,9 +12,6 @@ import { ArrrayObjectKeys } from 'Tools/ObjectDataTools'
 import { parseIntChecker } from 'Tools/IntergerTools'
 import { RenderLogic } from 'Tools/FunctionTools'
 import { StringUppercase } from 'Tools/StringTools'
-// COMPONENTS
-import { FilterInput, FilterSelect } from './components/FilterSearch'
-import SiteTable from 'Components/SiteComponents/SiteTable'
 
 const FilterTable = (props: FilterProps) => {
 
@@ -26,9 +26,7 @@ const FilterTable = (props: FilterProps) => {
     const [column, setColumn] = useState(columnLogic)
 
     // Column can be changed and can be set in form  
-    const columnFunction = (e : TargetProps) => {
-        setColumn(e.target.value)
-    }
+    const columnFunction = (e : TargetProps) => setColumn(e.target.value)
 
     // The input string used to filter
     const [input, setInput] = useState('')

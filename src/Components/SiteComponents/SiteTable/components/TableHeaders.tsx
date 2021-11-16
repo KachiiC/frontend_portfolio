@@ -9,11 +9,11 @@ const SiteTableHeaders = (props: SiteTableHeaderProps) => {
     const { keys } = props
 
     // returns table heading in uppercase for each key.
-    const displayHeaders = keys.map(data => (
+    const displayHeaders = keys.map(data => 
         <th key={data}>
             {StringUppercase(data)}
         </th>
-    ))
+    )
 
     return (
         <thead>

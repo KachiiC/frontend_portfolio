@@ -1,7 +1,7 @@
-// PROPS
-import { SingleTabProps } from "../AntdTabsProps"
 // COMPONENTS
 import { SiteLink } from "Tools/LinkTools"
+// PROPS
+import { SingleTabProps } from "../AntdTabsProps"
 
 const SingleTab = (props: SingleTabProps) => {
 

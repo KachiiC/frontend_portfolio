@@ -1,6 +1,5 @@
 .home-header {
     position: relative;
-    text-align: center;
 }
 
 .home-header-image {
@@ -24,7 +23,7 @@
     text-align: center;
 }
 
-.home-header,
+.home-header-image,
 .home-header-text {
     width: 100%;
 }
@@ -37,11 +36,11 @@
 
 .home-header button {
     color: black;
-    cursor: pointer;
-    font-size: 15px;
     padding: 10px;
-    text-decoration: none;
+    font-size: 15px;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .home-portfolio {

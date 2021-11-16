@@ -13,15 +13,16 @@ const SiteTimeline = (props: SiteTimelineProps) => {
 
     // A Timeline even is returned for each object in data
     const displayEvents = data.map(events => {
+
         // PROPS
         const { description, event, year } = events
-        
+
+        // Timeline Event Props
         const TimelineProps = {
             key: event,
             event: event,
             year: year,
-            description: description,
-
+            description: description
         }
 
         return (

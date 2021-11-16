@@ -1,12 +1,12 @@
-// PROPS
-import { AntdTabsProps } from './AntdTabsProps'
-// CSS
-import 'antd/dist/antd.css';
-import './AntdTabs.css'
 // COMPONENTS
 import { RenderLogic } from 'Tools/FunctionTools';
 import SingleTab from './components/SingleTab';
 import { Tabs } from 'antd';
+// CSS
+import 'antd/dist/antd.css';
+import './AntdTabs.css'
+// PROPS
+import { AntdTabsProps } from './AntdTabsProps'
 
 const AntdTabs = (props: AntdTabsProps) => {
 

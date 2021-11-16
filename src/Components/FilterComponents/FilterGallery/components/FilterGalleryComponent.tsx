@@ -1,7 +1,7 @@
-// PROPS
-import { FilterGalleryProps } from "Props/Components/FilterComponentProps/FilterGalleryProps"
 // COMPONENTS
 import SiteCards from "Components/SiteComponents/SiteCards"
+// PROPS
+import { FilterGalleryProps } from "Props/Components/FilterComponentProps/FilterGalleryProps"
 
 const GalleryComponent = (props: FilterGalleryProps) => {
     

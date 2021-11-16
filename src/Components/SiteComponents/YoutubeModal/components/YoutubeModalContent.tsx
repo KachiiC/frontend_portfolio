@@ -1,9 +1,9 @@
 import { useState } from "react"
-// PROPS
-import { YoutubeModalProps } from "Props/Components/YoutubeModalProps"
 // COMPONENTS
 import ModalVideoPlayer from "./ModalVideoPlayer"
 import YoutubeSuggestions from "./YoutubeSuggestion"
+// PROPS
+import { YoutubeModalProps } from "Props/Components/YoutubeModalProps"
 
 const YoutubeModalContent = (props: YoutubeModalProps) => {
 

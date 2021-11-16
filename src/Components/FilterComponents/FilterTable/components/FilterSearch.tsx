@@ -26,13 +26,13 @@ export const FilterSelect = (props: FilterSelectProps) => {
     const { column_function, data, default_value } = props
 
     // Takes a array of strings and returns an option for each one
-    const displayOptions = data.map(column => (
+    const displayOptions = data.map(column => 
         <option value={column} 
             key={column}
         >
             {StringUppercase(column)}
         </option>
-    ))
+    )
 
     return (
         // When column is selected, the level above sets the column for useState
