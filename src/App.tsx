@@ -6,7 +6,7 @@ import 'CSS/KachiiStrap.css'
 import 'CSS/Transitions/PageTransitions.css'
 import 'CSS/Transitions/Transitions.css'
 // SECTIONS
-import ScrollToTop from 'Tools/ScrollToTop'
+import ScrollToTop from 'CSS/Transitions/ScrollToTop'
 import SiteFooter from 'Sections/Footer'
 import SiteHeader from 'Sections/Header'
 import SiteMain from 'Sections/Main'

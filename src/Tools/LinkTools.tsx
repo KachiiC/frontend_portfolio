@@ -2,10 +2,11 @@ import { Link } from "react-router-dom"
 // PROPS
 import { SiteLinkProps } from "Props/ToolProps"
 
+// A site Link for local and external
 export const SiteLink = (props: SiteLinkProps) => {
 
     // PROPS
-    const { link, type, placeholder } = props
+    const { link, placeholder, type } = props
 
     const LinkLogic = type === "external" ?
         <a href={link} 
@@ -20,5 +21,4 @@ export const SiteLink = (props: SiteLinkProps) => {
         </Link>
 
     return LinkLogic
-
 }

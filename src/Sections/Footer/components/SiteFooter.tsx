@@ -16,9 +16,7 @@ const SiteFooter = (props: SiteFooterProps) => {
 
     return (
         <>
-            <FooterHeading 
-                heading={heading}
-            />
+            <FooterHeading heading={heading} />
             <FooterSection 
                 data={logo_data} 
                 type="logos"

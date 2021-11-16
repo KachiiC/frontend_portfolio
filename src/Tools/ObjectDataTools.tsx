@@ -1,9 +1,33 @@
 // PROPS
 import { ObjectDataProps } from "Props/ToolProps"
 
+// Returns keys of an object
+export const ObjKeys = (input: Object) => Object.keys(input)
+
+// Returns values of an object
+export const ObjValue = (input: Object) => Object.values(input)
+
+// Returns keys of first object
+export const ArrrayObjectKeys = (data: Object[]) => ObjKeys(data[0])
+
+// Checks if object is empty
+export const EmptyObjectChecker = (obj: {}) => ObjKeys(obj).length === 0 ? true : false
+
+// Checks if all objects in array of a particular value are unique
+export const UnqiueValues = (data: any[], value: string) =>  {
+
+    const allValues = data.map(obj => obj[value])
+
+    const uniqueArray = allValues.filter(function(item, pos) {
+        return allValues.indexOf(item) === pos;
+    })
+
+    return uniqueArray
+}
+
 export const ObjectDataRender = (data: ObjectDataProps , type: string) => {
 
-    const data_keys = Object.keys(data).filter(key => data[key])
+    const data_keys = ObjKeys(data).filter(key => data[key])
   
     const data_links = data_keys.map((key) => {
 
@@ -23,29 +47,3 @@ export const ObjectDataRender = (data: ObjectDataProps , type: string) => {
 
     return data_links
 }
-
-export const UnqiueValues = (data: any[], value: string) =>  {
-
-    const allValues = data.map(obj => obj[value])
-
-    const uniqueArray = allValues.filter(function(item, pos) {
-        return allValues.indexOf(item) === pos;
-    })
-
-    return uniqueArray
-}
-
-export const setLogic = (first: number | string, last: number | string, setFunction: Function) => {
-    return setFunction({
-        first: first,
-        last: last
-    })
-}
-
-export const ObjKeys = (input: Object) => Object.keys(input)
-
-export const ObjValue = (input: Object) => Object.values(input)
-
-export const ArrrayObjectKeys = (data: Object[]) => Object.keys(data[0])
-
-export const EmptyObjectChecker = (obj: {}) => Object.keys(obj).length === 0 ? true : false

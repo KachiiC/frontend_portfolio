@@ -3,6 +3,7 @@ import { useEffect, useReducer, useState } from "react"
 import { SiteRenderProps } from "Props/ToolProps"
 import { SiteError, SiteLoading } from "CSS/Transitions"
 
+// Fetchs data from api
 export const SiteFetcher = (url: string, argument?: string ) => {
     
     const [response, setResponse] = useState([])
@@ -36,10 +37,11 @@ export const SiteFetcher = (url: string, argument?: string ) => {
     }
 }
 
-
+// Site Render while fetching
 export const SiteRender = (props: SiteRenderProps) => {
 
-    const { error, loading } = props.fetch
+    const {component, fetch } = props
+    const { error, loading } = fetch
 
     const displayLogic = loading ? 
         <SiteLoading />
@@ -47,7 +49,7 @@ export const SiteRender = (props: SiteRenderProps) => {
         error ?
             SiteError
             :
-            props.component
+            component
 
     return <>{displayLogic}</>
     

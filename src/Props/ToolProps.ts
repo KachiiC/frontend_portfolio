@@ -21,15 +21,6 @@ export interface SiteIconProps {
     color?: string;
 }
 
-export interface LinkRendererProps {
-    title: string;
-    link?: string | undefined;
-    icon?: string;
-    content?: string | JSX.Element;
-    external_link?: string
-    sub_menu?: pageDataProps[]
-}
-
 // Site Link Props
 export interface SiteLinkProps {
     link: string;

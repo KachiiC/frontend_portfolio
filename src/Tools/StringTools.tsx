@@ -1,3 +1,4 @@
+// If string is over length trim it and add ... to the end
 export const TitleTrimmer = (word: string, length: number) => {
 
     return word.length < length ? 
@@ -7,6 +8,7 @@ export const TitleTrimmer = (word: string, length: number) => {
 
 }
 
+// Returns title and size
 export const TitleLogic = (title: string | undefined, size: string | undefined) => {
     
     var displaytitle
@@ -30,7 +32,7 @@ export const TitleLogic = (title: string | undefined, size: string | undefined) 
             displaytitle = <h6>{title}</h6>
             break
         default:
-            displaytitle = <h2>title</h2>
+            displaytitle = <h2>{title}</h2>
     }
 
     if (title) return displaytitle

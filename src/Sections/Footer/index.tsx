@@ -18,7 +18,9 @@ const SiteFooterProps = {
 
 const Footer = (
     <footer>
-        <SiteFooter {...SiteFooterProps} />
+        <SiteFooter 
+            {...SiteFooterProps} 
+        />
     </footer>
 )
 
