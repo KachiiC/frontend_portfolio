@@ -2,14 +2,14 @@ import { Route } from "react-router-dom";
 // PROPS
 import { pageDataProps } from "Props/Sections/MainProps"
 // TOOLS
-import { StringJoiner } from "./StringTools"
+import { StringJoin } from "./StringTools"
 
 // Creates links for each object in pages data
 export const LinkRenderer = (data: pageDataProps[]) => {
 
     const link_create = (input: string) => {
         if (input.length > 1) {
-            return StringJoiner(input)
+            return StringJoin(input, " ", "-")
         }
         return input
     }
@@ -19,7 +19,7 @@ export const LinkRenderer = (data: pageDataProps[]) => {
         menu.sub_menu ?
             menu.sub_menu.map(sub => sub.link = link_create(sub.title))
             : 
-            menu.link = StringJoiner(menu.title)
+            menu.link = StringJoin(menu.title, " ", "-")
             
         return menu
     })

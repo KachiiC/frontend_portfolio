@@ -1,7 +1,7 @@
 // PROPS
 import { FilterInputProps, FilterSelectProps } from "Props/Components/FilterComponentProps/FilterTableProps"
 // TOOLS
-import { StringUppercase } from "Tools/StringTools"
+import { StringJoin } from "Tools/StringTools"
 
 export const FilterInput = (props: FilterInputProps) => {
     
@@ -30,7 +30,7 @@ export const FilterSelect = (props: FilterSelectProps) => {
         <option value={column} 
             key={column}
         >
-            {StringUppercase(column)}
+            {StringJoin(column, "_", " ")}
         </option>
     )
 

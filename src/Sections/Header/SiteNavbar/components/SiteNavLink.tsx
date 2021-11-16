@@ -11,7 +11,7 @@ import { DisplayMenuType } from "../tools/SiteNavbarTools"
 import { RenderLogic } from "Tools/FunctionTools"
 import SiteIcon from "Tools/SiteIcon"
 import { SiteLink } from "Tools/LinkTools"
-import { StringJoiner } from "Tools/StringTools"
+import { StringJoin } from "Tools/StringTools"
 
 // NAV LINK
 export const SiteNavLink = (props: SiteNavLinkProps) => {
@@ -32,7 +32,7 @@ export const SiteNavLink = (props: SiteNavLinkProps) => {
         />
         :
         <SiteLink
-            link={`/${StringJoiner(title)}`}
+            link={`/${StringJoin(title, " ", "-")}`}
             placeholder={title}
             type="local"
         />

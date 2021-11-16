@@ -1,7 +1,7 @@
 // PROPS
 import { SiteTableHeaderProps } from "Props/Components/TableProps"
 // TOOLS
-import { StringUppercase } from "Tools/StringTools"
+import { StringJoin } from "Tools/StringTools"
 
 const SiteTableHeaders = (props: SiteTableHeaderProps) => {
 
@@ -11,7 +11,7 @@ const SiteTableHeaders = (props: SiteTableHeaderProps) => {
     // returns table heading in uppercase for each key.
     const displayHeaders = keys.map(data => 
         <th key={data}>
-            {StringUppercase(data)}
+            {StringJoin(data, "_", " ")}
         </th>
     )
 
