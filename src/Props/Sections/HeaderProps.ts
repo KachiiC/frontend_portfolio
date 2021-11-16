@@ -16,15 +16,15 @@ export interface SiteNavLinkProps {
 }
 
 export interface DisplayMenuTypeProps  { 
+    data: pageDataProps;
     click?: MouseEventHandler<HTMLDivElement>
-    data: pageDataProps; 
     type: "small" | "nav" | "dropdown"
 }
 
 export interface DisplayMenuListProps {
-    data: pageDataProps[]
-    type: "small" | "nav" | "dropdown"  
+    data: pageDataProps[] 
     click?: MouseEventHandler<HTMLDivElement>
+    type: "small" | "nav" | "dropdown"  
 }
 
 export interface SmallMenuIconProps {

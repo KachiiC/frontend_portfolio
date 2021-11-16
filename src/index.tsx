@@ -1,5 +1,4 @@
-import {render} from 'react-dom'
-import reportWebVitals from './reportWebVitals'
+import { render } from 'react-dom'
 // COMPONENTS
 import App from './App'
 // CSS
@@ -9,5 +8,3 @@ render(
   App,
   document.getElementById('root')
 )
-
-reportWebVitals()

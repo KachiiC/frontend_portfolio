@@ -1,12 +1,10 @@
-// TOOLS
-import { LinkRenderer } from "Tools/RoutersRender"
 // PAGES
 import About from "Sections/Main/Pages/Displayed/About"
 import Api from "Sections/Main/Pages/Displayed/Api"
 import { MyComponentsData } from "./Components/MyComponents"
 import ProjectsData from "./ProjectsData"
 
-const PagesData = [
+const DisplayedPagesData = [
     {
         title: "Projects",
         sub_menu: ProjectsData
@@ -29,7 +27,4 @@ const PagesData = [
     }
 ]
 
-// Returns the data as links before export
-LinkRenderer(PagesData)
-
-export default PagesData
+export default DisplayedPagesData

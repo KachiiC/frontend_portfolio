@@ -1,12 +1,11 @@
 import { SizeProp } from "@fortawesome/fontawesome-svg-core";
 import { ChangeEventHandler } from "react";
-import { pageDataProps } from "./MainProps";
+import { pageDataProps } from "./Sections/MainProps"
 
 // EXAMPLE TOOLS
 export interface ObjectDataProps { 
     [x: string]: string | JSX.Element | undefined
 }
-
 
 export interface TargetProps {
     preventDefault: ChangeEventHandler<HTMLInputElement>

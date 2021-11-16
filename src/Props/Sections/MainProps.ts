@@ -8,9 +8,9 @@ export interface subMenuProps {
 export interface pageDataProps {
     content?: string | JSX.Element | undefined;
     external_link?: string;
-    title: string;
     link?: string;
     sub_menu?: subMenuProps[]
+    title: string;
 }
 
 export interface pageTemplateProps {

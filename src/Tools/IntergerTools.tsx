@@ -1,3 +1,1 @@
-export const parseIntChecker = (num: any) =>{
-    return !isNaN(num)
-}
+export const parseIntChecker = (num: any) => !isNaN(num)
