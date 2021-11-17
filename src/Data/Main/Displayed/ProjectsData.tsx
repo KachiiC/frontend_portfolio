@@ -1,4 +1,4 @@
-export const ProjectsData = [
+const ProjectsData = [
     {
         title: "Basically MMA",
         external_link: "https://github.com/KachiiC/basically_mma",

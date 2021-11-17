@@ -1,6 +1,6 @@
 // PROPS
 import { pageDataProps } from "Props/Sections/MainProps"
-import { ObjectDataProps } from "Props/ToolProps"
+import { ObjectDataProps } from "Props/Tools/ToolProps"
 // TOOLS
 import { ObjKeys } from "./ObjectDataTools"
 

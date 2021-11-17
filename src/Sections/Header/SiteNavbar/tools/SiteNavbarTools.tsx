@@ -1,7 +1,7 @@
-// PROPS
-import { DisplayMenuListProps, DisplayMenuTypeProps } from "Props/Sections/HeaderProps"
 // COMPONENTS
 import { SiteNavLink, SiteNavDropdown } from "../components/SiteNavLink"
+// PROPS
+import { DisplayMenuListProps, DisplayMenuTypeProps } from "Props/Sections/HeaderProps"
 
 export const DisplayMenuType = (props: DisplayMenuTypeProps) => {
 

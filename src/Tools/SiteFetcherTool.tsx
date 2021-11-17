@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useState } from "react"
 // PROPS
-import { SiteRenderProps } from "Props/ToolProps"
+import { SiteRenderProps } from "Props/Tools/ToolProps"
 import { SiteError, SiteLoading } from "CSS/Transitions"
 
 // Fetchs data from api

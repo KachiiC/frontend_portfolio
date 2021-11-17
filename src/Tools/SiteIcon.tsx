@@ -34,7 +34,7 @@ import {
     faTimes 
 } from "@fortawesome/free-solid-svg-icons"
 // PROPS
-import { SiteIconProps } from "Props/ToolProps"
+import { SiteIconProps } from "Props/Tools/ToolProps"
 // TOOLS
 import { RenderLogic } from "./FunctionTools"
 

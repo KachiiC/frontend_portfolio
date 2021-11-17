@@ -7,7 +7,6 @@ export const TitleTrimmer = (word: string, length: number) => {
         word 
         : 
         word.slice(0,length) + "..."
-
 }
 
 // Returns title and size

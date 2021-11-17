@@ -1,7 +1,7 @@
-// PROPS
-import { YoutubeItemProps } from "Props/Components/YoutubeModalProps"
 // COMPONENTS
 import YoutubePlayer from "Components/ExternalLibraries/YoutubePlayer"
+// PROPS
+import { YoutubeItemProps } from "Props/Components/YoutubeModalProps"
 
 const YoutubeDataConverter = (data: YoutubeItemProps[]) => {
 

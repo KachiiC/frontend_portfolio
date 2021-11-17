@@ -6,7 +6,7 @@ import SiteTable from 'Components/SiteComponents/SiteTable'
 import './FilterTable.css'
 // PROPS
 import { FilterProps } from "Props/Components/FilterComponentProps/FilterTableProps"
-import { TargetProps } from 'Props/ToolProps'
+import { TargetProps } from 'Props/Tools/ToolProps'
 // TOOLS
 import { ArrrayObjectKeys } from 'Tools/ObjectDataTools'
 import { parseIntChecker } from 'Tools/IntergerTools'

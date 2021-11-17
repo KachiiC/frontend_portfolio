@@ -2,13 +2,14 @@
 import FilterTable from "Components/FilterComponents/FilterTable"
 // TOOLS
 import { SiteFetcher, SiteRender } from "Tools/SiteFetcherTool"
+// URLS
 import { KachiiRestApi } from "URLs/KachiisRestApi"
-
-const hsk_link = KachiiRestApi("backend", "hsk/level=all")
 
 const HskApi = () => {
 
-    const fetchData = SiteFetcher(hsk_link)
+    const fetchData = SiteFetcher(
+        KachiiRestApi("backend", "hsk/level=all")
+    )
 
     const HskTable = (
         <FilterTable 

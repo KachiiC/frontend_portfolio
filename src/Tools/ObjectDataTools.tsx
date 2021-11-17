@@ -1,5 +1,5 @@
 // PROPS
-import { ObjectDataProps } from "Props/ToolProps"
+import { ObjectDataProps } from "Props/Tools/ToolProps"
 
 // Returns keys of an object
 export const ObjKeys = (input: Object) => Object.keys(input)

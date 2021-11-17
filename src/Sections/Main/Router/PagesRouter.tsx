@@ -1,12 +1,12 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom"
 // DATA
-import DisplayedData from "Data/Main/Displayed/PagesData";
-import { FooterPages } from "Data/Footer/FooterData";
-import HiddenData from "Data/Main/Hidden/HiddenPages";
+import DisplayedData from "Data/Main/Displayed/PagesData"
+import { FooterPages } from "Data/Footer/FooterData"
+import HiddenData from "Data/Main/Hidden/HiddenPages"
 // PAGES
-import Home from "../Pages/Home";
+import Home from "../Pages/Home"
 // TOOLS
-import { RoutesRender } from "Tools/RoutersRender";
+import { RoutesRender } from "Tools/RoutersRender"
 import { LinkRenderer } from "Tools/RoutersRender"
 
 const Routes = [

@@ -13,17 +13,14 @@ import FilterCollapsible from "Components/FilterComponents/FilterCollapsible"
 import FilterGallery from "Components/FilterComponents/FilterGallery"
 import FilterTable from "Components/FilterComponents/FilterTable"
 // DATA
-import { CardsData } from "Data/Main/Displayed/Components/ComponentsListData/CardsData"
-import { CollapsibleData } from "Data/Main/Displayed/Components/ComponentsListData/CollapsibleData"
-import { GalleryData } from "Data/Main/Displayed/Components/ComponentsListData/GalleryData"
-import { ModalData } from "Data/Main/Displayed/Components/ComponentsListData/ModalData"
-import { TableData } from "Data/Main/Displayed/Components/ComponentsListData/TableData"
-import { TabsData } from "Data/Main/Displayed/Components/ComponentsListData/TabsData"
-import { TimelineData } from "Data/Main/Displayed/Components/ComponentsListData/TimelineData"
-import { 
-    YoutubeModalCurrentExample, 
-    YoutubeModalData 
-} from "Data/Main/Displayed/Components/ComponentsListData/YoutubeModalData"
+import { CardsData } from "./ComponentsListData/CardsData"
+import { CollapsibleData } from "./ComponentsListData/CollapsibleData"
+import { GalleryData } from "./ComponentsListData/GalleryData"
+import { ModalData } from "./ComponentsListData/ModalData"
+import { TableData } from "./ComponentsListData/TableData"
+import { TabsData } from "./ComponentsListData/TabsData"
+import { TimelineData } from "./ComponentsListData/TimelineData"
+import { YoutubeModalCurrentExample, YoutubeModalData } from "./ComponentsListData/YoutubeModalData"
 
 
 export const CardsExample = (

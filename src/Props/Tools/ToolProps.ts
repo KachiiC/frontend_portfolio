@@ -1,6 +1,5 @@
-import { SizeProp } from "@fortawesome/fontawesome-svg-core";
-import { ChangeEventHandler } from "react";
-import { pageDataProps } from "./Sections/MainProps"
+import { ChangeEventHandler } from "react"
+import { SizeProp } from "@fortawesome/fontawesome-svg-core"
 
 // EXAMPLE TOOLS
 export interface ObjectDataProps { 
@@ -10,22 +9,22 @@ export interface ObjectDataProps {
 export interface TargetProps {
     preventDefault: ChangeEventHandler<HTMLInputElement>
     target: { 
-        value: string 
+        value: string
     }
 }
 
 // SITE ICON
 export interface SiteIconProps {
-    type: string | undefined; 
-    size: SizeProp | undefined; 
-    color?: string;
+    type: string | undefined
+    size: SizeProp | undefined
+    color?: string
 }
 
 // Site Link Props
 export interface SiteLinkProps {
     link: string;
-    type: "local" | "external" | undefined | string
-    placeholder: string | number | undefined | JSX.Element
+    type: "local" | "external" | string | undefined
+    placeholder: string | number | JSX.Element | undefined 
 }
 
 export interface SiteRenderProps { 

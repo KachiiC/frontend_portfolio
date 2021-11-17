@@ -1,4 +1,4 @@
-import { SectionExampleProps } from "./DataProps";
+import { SectionExampleProps } from "./DataProps"
 
 export interface ComponentTabProps {
     component?: JSX.Element; 

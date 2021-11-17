@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react"
 // COMPONENTS
 import { CollapsibleContent, CollapsibleHeading } from "./CollapsibleParts"
-import CollapsibleTransition from "./CollapsibleTransition";
+import CollapsibleTransition from "./CollapsibleTransition"
 // PROPS
 import { singleCollapsibleProps } from "Props/Components/CollapsibleProps"
 

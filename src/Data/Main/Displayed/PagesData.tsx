@@ -1,7 +1,7 @@
 // PAGES
 import About from "Sections/Main/Pages/Displayed/About"
 import Api from "Sections/Main/Pages/Displayed/Api"
-import { MyComponentsData } from "./Components/MyComponents"
+import MyComponentsData from "./Components/MyComponents"
 import ProjectsData from "./ProjectsData"
 
 const DisplayedPagesData = [

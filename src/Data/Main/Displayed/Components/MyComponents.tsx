@@ -30,7 +30,7 @@ import {
 
 const githubDirect = "https://github.com/KachiiC/"
 
-export const components_data = [
+const components_data = [
     {
         title: "Navbar",
         introduction: "The navigation bar for this portfolio is a responsive component built with react and typscript.",
@@ -115,19 +115,33 @@ export const components_data = [
     },
 ]
 
-export const MyComponentsData = components_data.map((data: ComponentTabProps) => {
+const MyComponentsData = components_data.map((data: ComponentTabProps) => {
+
+    const {
+        component,
+        introduction,
+        link,
+        sections,
+        title,
+    } = data
+
+    const ComponentTabProps = {
+        component: component,
+        introduction: introduction,
+        link: link,
+        key: title,
+        sections: sections,
+        title: title,
+    }
 
     return {
-        title: data.title,
+        title: title,
         content: (
             <ComponentsTab
-                key={data.title}
-                title={data.title}
-                link={data.link}
-                introduction={data.introduction}
-                component={data.component}
-                sections={data.sections}
+                {...ComponentTabProps}
             />
         )
     }
 })
+
+export default MyComponentsData

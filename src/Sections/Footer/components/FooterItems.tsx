@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 // PROPS
-import { footerCopyrightProps, footerSectionDataProps } from "Props/Sections/FooterProps";
+import { footerCopyrightProps, footerSectionDataProps } from "Props/Sections/FooterProps"
 // TOOLS
-import SiteIcon from "Tools/SiteIcon";
-import { RenderLogic } from "Tools/FunctionTools";
-import { SiteLink } from "Tools/LinkTools";
+import SiteIcon from "Tools/SiteIcon"
+import { RenderLogic } from "Tools/FunctionTools"
+import { SiteLink } from "Tools/LinkTools"
 
 export const FooterHeading = (props: {heading?: string}) => RenderLogic(<h3>{props.heading}</h3>, "")
 
