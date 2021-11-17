@@ -58,27 +58,6 @@ const components_data = [
         link: githubDirect + "react_collapsible",
     },
     {
-        title: "Filter Collapsible",
-        introduction: "This is a filter collapsible component built with react hooks, typscript and forms.",
-        sections: FilterCollapsibleData,
-        component: FilterCollapsibleExample,
-        link: githubDirect + "react_filter_collapsible",
-    },
-    {
-        title: "Filter Gallery",
-        introduction: "This is a filter gallery component built with react hooks, use effect and typscript",
-        sections: FilterGallerySectionsData,
-        link: githubDirect + "react_filter_gallery",
-        component: FilterGalleryExample,
-    },
-    {
-        title: "Filter List",
-        introduction: "This is a filter list component built with react hooks, typscript and forms.",
-        sections: FilterListSectionData,
-        component: FilterTableExample,
-        link: githubDirect + "react_filter_list",
-    },
-    {
         title: "Gallery",
         introduction: "This is a gallery component built using react hooks.",
         sections: GallerySectionData,
