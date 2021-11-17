@@ -15,17 +15,18 @@ const FooterSection = (props: footerSectionProps) => {
         const logoProps = {
             link: link,
             icon: title,
+            title: title,
             key: title
         }
         
         return props.type === "logos" ?
-            <FooterLinks 
-                {...logoProps}
-            /> 
-            : 
-            <FooterLogos 
+            <FooterLogos
                 {...logoProps} 
             />
+            :
+            <FooterLinks
+                {...logoProps}
+            /> 
         
     })
 

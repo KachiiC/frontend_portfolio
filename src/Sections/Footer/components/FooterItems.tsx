@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom"
 // PROPS
 import { footerCopyrightProps, footerSectionDataProps } from "Props/Sections/FooterProps"
 // TOOLS
-import SiteIcon from "Tools/SiteIcon"
 import { RenderLogic } from "Tools/FunctionTools"
+import SiteIcon from "Tools/SiteIcon"
 import { SiteLink } from "Tools/LinkTools"
 
 export const FooterHeading = (props: {heading?: string}) => RenderLogic(<h3>{props.heading}</h3>, "")
@@ -36,9 +35,11 @@ export const FooterLinks = (props: footerSectionDataProps) => {
         <div className="site-span-1" 
             key={title}
         >
-            <Link to={`/${link}`}>
-                {title}
-            </Link>
+            <SiteLink 
+                link={`/${link}`} 
+                type="local" 
+                placeholder={title}
+            />
         </div>
     )
 }
