@@ -3,9 +3,6 @@ import { ComponentTabProps } from "Props/ComponentProps"
 // DATA
 import { CardsSectionData } from "./ComponentsListData/CardsData"
 import { CollapsibleSectionsData } from "./ComponentsListData/CollapsibleData"
-import { FilterListSectionData } from "./ComponentsListData/TableData"
-import { FilterCollapsibleData } from "./ComponentsListData/FilterCollapsibleData"
-import { FilterGallerySectionsData } from "./ComponentsListData/FilterGalleryData"
 import { FooterSectionData } from "./ComponentsListData/FooterData"
 import { GallerySectionData } from "./ComponentsListData/GalleryData"
 import { ModalSectionExample } from "./ComponentsListData/ModalData"
@@ -18,9 +15,6 @@ import ComponentsTab from "./ComponentTab"
 import { 
     CardsExample,
     CollapsibleExample, 
-    FilterCollapsibleExample, 
-    FilterGalleryExample, 
-    FilterTableExample, 
     GalleryExample, 
     ModalComponentExample, 
     TabsExample, 

@@ -14,14 +14,14 @@ export const FooterLogos = (props: footerSectionDataProps) => {
     return (
         <div className="site-span-1">
             <SiteLink
-                type="external"
+                link={RenderLogic(link, "")}
                 placeholder={
                     <SiteIcon 
                         type={icon} 
                         size="2x"
                     />
                 }
-                link={RenderLogic(link, "")}
+                type="external"  
             />
         </div>
     )
