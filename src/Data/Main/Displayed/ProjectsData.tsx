@@ -1,23 +1,15 @@
 const ProjectsData = [
     {
-        title: "Basically MMA",
-        external_link: "https://github.com/KachiiC/basically_mma",
-    },
-    {
         title: "FPL App",
-        external_link: "https://github.com/KachiiC/fpl_fullstack",
+        external_link: "https://github.com/KachiiC/fpl_app",
     },
     {
         title: "Finance Stack",
-        external_link: "https://github.com/KachiiC/finance_stack",
+        external_link: "https://kachiic.github.io/finance_stack",
     },
     {
         title: "HSK App",
         external_link: "https://github.com/KachiiC/HSK",
-    },
-    {
-        title: "Tweet Me App",
-        external_link: "https://github.com/KachiiC/tweet_me",
     },
     {
         title: "Snuggle Bunny Clothing",
